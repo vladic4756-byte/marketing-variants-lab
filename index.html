@@ -23,6 +23,8 @@ header p{color:var(--mut);margin:.2rem 0 1rem;max-width:70ch}
 .brandrow{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem}
 .brand{font-size:1.25rem;margin:0}
 .seg{font-size:.74rem;color:var(--mut);border:1px solid var(--line);padding:.15rem .45rem;border-radius:99px;white-space:nowrap}
+.arch{display:inline-block;font-size:.74rem;font-weight:700;color:#fde68a;background:#78350f55;border:1px solid #b4530933;padding:.15rem .5rem;border-radius:6px}
+.card--proof{outline:2px solid #f59e0b55}
 .angle{margin:0;font-weight:600;color:#cbd5f5}
 .h1q{margin:0;color:var(--mut);font-style:italic;font-size:.9rem}
 .offer{margin:.1rem 0;font-size:.82rem;color:#b9c4e6}
@@ -48,15 +50,94 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
 </style></head><body><div class="wrap">
 <header>
   <h1>🧪 Лаборатория вариантов — ВКИ × БФЛ</h1>
-  <p>Дашборд для оценки 10 тестовых связок «лендинг + рекламная кампания». Открывайте лендинги, сравнивайте углы/офферы/дизайн, смотрите тексты объявлений и баннеры. Все сайты — превью с плейсхолдерами (реквизиты/счётчики/вебхук ещё не подставлены), реклама не запущена.</p>
+  <p>Дашборд для оценки 13 тестовых связок «лендинг + кампания». Жёлтой рамкой — <b>3 proof-варианта в РАЗНЫХ архетипах</b> (калькулятор-апп · статья-адветориал · чат) на одном продукте ВКИ-S1: показывают, что формат может отличаться радикально, а не только цветом. Остальные 10 — по сегментам/офферам. Все сайты — превью с плейсхолдерами, реклама не запущена.</p>
 </header>
 <div class="tabs">
-  <button class="tab active" data-f="all">Все · 10</button>
+  <button class="tab active" data-f="all">Все · 13</button>
+  <button class="tab" data-f="proof">◆ Разные форматы · 3</button>
   <button class="tab" data-f="vki">ВКИ · 5</button>
   <button class="tab" data-f="bfl">БФЛ · 5</button>
 </div>
 <div class="grid">
-  <article class="card" data-product="vki">
+  <article class="card card--proof" data-product="vki" data-group="proof">
+    <a class="thumb" href="l/vki-alt-calc/" target="_blank" rel="noopener" title="Открыть лендинг vki-alt-calc">
+      <img loading="lazy" src="thumbs/vki-alt-calc.png" alt="Превью лендинга БАЛЛ">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">АРХЕТИП</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">БАЛЛ</h2><span class="seg">S1 Ипотечник</span></div>
+      <span class="arch">◆ Калькулятор-апп (один экран)</span>
+      <p class="angle">Вся страница = интерактивный инструмент «Калькулятор кредитного рейтинга под ипотеку». Пользователь двигает сегментированные контролы (ситуация, число просрочек/отказов, давность, цель) и слайдер срока → в реальном времени видит оценку текущего балла, прогноз через 6–9 мес и дельту «+N баллов». Результат раскрывает оффер + CTA → форма в конце потока.</p>
+      <p class="h1q">«На сколько вырастет ваш рейтинг под ипотеку за 6–9 месяцев»</p>
+      <p class="offer">Комплексное восстановление КИ — 59 900 ₽, рассрочка от 9 983 ₽/мес (6 мес)</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>App-подобный формат «один экран = живой калькулятор» (вместо длинного скролла из 11 блоков) повышает вовлечённость на входе (quiz_start при первом же движении контрола) и итоговый CR лендинг→лид (submit_application) за счёт интерактива, мгновенного месседж-мэтча с угла «посчитай свой прогноз» и почти полного отсутствия прокрутки.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-alt-calc/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="muted">объявления в ads/vki-alt-calc/</div></div>
+        <h3>Баннеры (0)</h3>
+        <div class="bans"></div>
+        <p class="muted">Цели: optimization, intermediate, micro · кампания: <code>ads/vki-alt-calc/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card card--proof" data-product="vki" data-group="proof">
+    <a class="thumb" href="l/vki-alt-story/" target="_blank" rel="noopener" title="Открыть лендинг vki-alt-story">
+      <img loading="lazy" src="thumbs/vki-alt-story.png" alt="Превью лендинга РЕЙТУМ">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">АРХЕТИП</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">РЕЙТУМ</h2><span class="seg">S1 Ипотечник</span></div>
+      <span class="arch">◆ Адветориал/статья</span>
+      <p class="angle">Редакционный разбор-адветориал «на правах рекламы»: журналистская статья «Почему банки отказывают в ипотеке даже без просрочек — и что реально помогает». Объясняет механику кредитного рейтинга, честно отсеивает мифы (мошенники «удалим/обнулим КИ», «гарантия одобрения», «секретные банковские программы») и мягко подводит к услуге через нативные CTA и мини-опрос в конце.</p>
+      <p class="h1q">«Почему банки отказывают в ипотеке даже без просрочек — и что реально помогает»</p>
+      <p class="offer">Комплексное восстановление КИ — от 59 900 ₽ (рассрочка 6 мес ≈ от 9 983 ₽/мес); +150–400 баллов за 6–9 мес или возврат 100% стоимости при выполнении рекомендаций. Оффер подан как врезка-справка внутри статьи, не как продающий блок.</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Адветориал-формат (нативная редакционная статья с журналистским тоном, разбором механики и честным отсеиванием мифов) снизит рекламное сопротивление скептичного сегмента S1 «обжёгся на обещаниях» и даст выше вовлечённость (scroll_75, time_on_page) и CR лендинг→лид, чем классический продающий лендинг-донор с hero/квизом: доверие через контент вместо давления через оффер.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-alt-story/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="muted">объявления в ads/vki-alt-story/</div></div>
+        <h3>Баннеры (0)</h3>
+        <div class="bans"></div>
+        <p class="muted">Цели: quiz_start, quiz_complete, submit_application · кампания: <code>ads/vki-alt-story/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card card--proof" data-product="vki" data-group="proof">
+    <a class="thumb" href="l/vki-alt-chat/" target="_blank" rel="noopener" title="Открыть лендинг vki-alt-chat">
+      <img loading="lazy" src="thumbs/vki-alt-chat.png" alt="Превью лендинга ЯСНО">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">АРХЕТИП</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">ЯСНО</h2><span class="seg">S1 Ипотечник</span></div>
+      <span class="arch">◆ Чат/диалог (messenger-style)</span>
+      <p class="angle">Диалоговая квалификация: страница = чат с автоматическим помощником, который сам задаёт вопросы и по ходу диалога выдаёт ориентировочный прогноз, цену и мягко подводит к контакту</p>
+      <p class="h1q">«ЯСНО · рейтинг под ипотеку — автоматический помощник»</p>
+      <p class="offer">Комплексное восстановление КИ — от 59 900 ₽ (рассрочка от 9 983 ₽/мес, 6 мес); +150–400 баллов за 6–9 мес. или возврат 100% стоимости при выполнении рекомендаций</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Диалоговый архетип (страница-чат: помощник сам квалифицирует и раскрывает оффер/цену репликами) даст выше CR посетитель→лид и глубину прохождения квиза, чем классический блочный лендинг-донор: формат снимает барьер «читать лендинг», ощущается как живая переписка и ведёт пользователя по одному действию за экран (chips), а ценность/гарантия/цена всплывают в контексте ответа, а не блоками.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-alt-chat/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="muted">объявления в ads/vki-alt-chat/</div></div>
+        <h3>Баннеры (0)</h3>
+        <div class="bans"></div>
+        <p class="muted">Цели: quiz_start, quiz_complete, submit_application · кампания: <code>ads/vki-alt-chat/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="vki" data-group="vki">
     <a class="thumb" href="l/vki-01-ipoteka/" target="_blank" rel="noopener" title="Открыть лендинг vki-01-ipoteka">
       <img loading="lazy" src="thumbs/vki-01-ipoteka.png" alt="Превью лендинга РЕЙТУМ">
       <span class="badge badge--vki">ВКИ</span>
@@ -64,6 +145,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">РЕЙТУМ</h2><span class="seg">S1 Ипотечник</span></div>
+      
       <p class="angle">Гарантия под одобрение ипотеки</p>
       <p class="h1q">«Готовим ваш кредитный рейтинг под одобрение ипотеки»</p>
       <p class="offer">Комплексное восстановление КИ — 59 900 ₽ (рассрочка 6 мес ≈ от 9 983 ₽/мес); +150–400 баллов за 6–9 мес. или возврат 100% стоимости при выполнении рекомендаций</p>
@@ -81,7 +163,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="vki">
+  <article class="card" data-product="vki" data-group="vki">
     <a class="thumb" href="l/vki-02-forecast/" target="_blank" rel="noopener" title="Открыть лендинг vki-02-forecast">
       <img loading="lazy" src="thumbs/vki-02-forecast.png" alt="Превью лендинга БАЛЛ+">
       <span class="badge badge--vki">ВКИ</span>
@@ -89,6 +171,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">БАЛЛ+</h2><span class="seg">S1 Ипотечник</span></div>
+      
       <p class="angle">Прогноз-калькулятор first — интерактивный расчёт «узнай свой балл и на сколько он вырастет» вынесен на первый экран как ядро оффера</p>
       <p class="h1q">«Узнайте свой кредитный балл — и на сколько он вырастет под ипотеку»</p>
       <p class="offer">Исправление ошибок в КИ — 49 900 ₽, рассрочка 5 мес (≈ от 9 980 ₽/мес)</p>
@@ -106,7 +189,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="vki">
+  <article class="card" data-product="vki" data-group="vki">
     <a class="thumb" href="l/vki-03-bankrupt/" target="_blank" rel="noopener" title="Открыть лендинг vki-03-bankrupt">
       <img loading="lazy" src="thumbs/vki-03-bankrupt.png" alt="Превью лендинга ЗАНОВО">
       <span class="badge badge--vki">ВКИ</span>
@@ -114,6 +197,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">ЗАНОВО</h2><span class="seg">S2 После банкротства</span></div>
+      
       <p class="angle">Чистый старт после банкротства — законно вернуться в кредитную систему</p>
       <p class="h1q">«Банкротство позади, а банки видят только клеймо?»</p>
       <p class="offer">Комплексное восстановление КИ — от 59 900 ₽ (рассрочка ≈ 9 983 ₽/мес × 6 мес): рост рейтинга на 150–400 баллов за 6–9 мес или возврат 100% стоимости при выполнении рекомендаций. Деньги не на руки; запись о банкротстве не удаляем — строим новую положительную историю.</p>
@@ -131,7 +215,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="vki">
+  <article class="card" data-product="vki" data-group="vki">
     <a class="thumb" href="l/vki-04-young/" target="_blank" rel="noopener" title="Открыть лендинг vki-04-young">
       <img loading="lazy" src="thumbs/vki-04-young.png" alt="Превью лендинга СТАРТ">
       <span class="badge badge--vki">ВКИ</span>
@@ -139,6 +223,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">СТАРТ</h2><span class="seg">S3 Молодой</span></div>
+      
       <p class="angle">Одна просрочка ≠ приговор — исправим быстро и законно</p>
       <p class="h1q">«Одна просрочка — не приговор. Исправим быстро и законно»</p>
       <p class="offer">Расширенный анализ КИ 14 900 ₽ → апселл «Исправление ошибок» 49 900 ₽ (рассрочка 5 мес)</p>
@@ -156,7 +241,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="vki">
+  <article class="card" data-product="vki" data-group="vki">
     <a class="thumb" href="l/vki-05-pristavy/" target="_blank" rel="noopener" title="Открыть лендинг vki-05-pristavy">
       <img loading="lazy" src="thumbs/vki-05-pristavy.png" alt="Превью лендинга РЕЙТУМ">
       <span class="badge badge--vki">ВКИ</span>
@@ -164,6 +249,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">РЕЙТУМ</h2><span class="seg">Cross/приставы</span></div>
+      
       <p class="angle">Закрытие исполнительных производств по ст.47 + рост рейтинга</p>
       <p class="h1q">«Исполнительные производства тянут рейтинг вниз — и банки отказывают»</p>
       <p class="offer">Закрытие ИП по ст.47 от 9 900 ₽ (вход) → Комплексное восстановление от 59 900 ₽ (рассрочка от 9 983 ₽/мес)</p>
@@ -181,7 +267,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="bfl">
+  <article class="card" data-product="bfl" data-group="bfl">
     <a class="thumb" href="l/bfl-01-spisanie/" target="_blank" rel="noopener" title="Открыть лендинг bfl-01-spisanie">
       <img loading="lazy" src="thumbs/bfl-01-spisanie.png" alt="Превью лендинга ЧИСТЫЙ ЛИСТ">
       <span class="badge badge--bfl">БФЛ</span>
@@ -189,6 +275,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">ЧИСТЫЙ ЛИСТ</h2><span class="seg">Закредитованный</span></div>
+      
       <p class="angle">Законное списание долгов по 127-ФЗ</p>
       <p class="h1q">«Платежи больше, чем доход? Долги можно списать законно — по 127-ФЗ»</p>
       <p class="offer">Тариф «Минимальный» (долг до 500 000 ₽) — от 99 900 ₽, рассрочка до 10 мес (от 11 990 ₽/мес). Госпошлина и вознаграждение финуправляющего — отдельно.</p>
@@ -206,7 +293,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="bfl">
+  <article class="card" data-product="bfl" data-group="bfl">
     <a class="thumb" href="l/bfl-02-imushchestvo/" target="_blank" rel="noopener" title="Открыть лендинг bfl-02-imushchestvo">
       <img loading="lazy" src="thumbs/bfl-02-imushchestvo.png" alt="Превью лендинга ЩИТ">
       <span class="badge badge--bfl">БФЛ</span>
@@ -214,6 +301,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">ЩИТ</h2><span class="seg">С имуществом</span></div>
+      
       <p class="angle">Банкротство + защита имущества/жилья</p>
       <p class="h1q">«Боитесь потерять квартиру и имущество при банкротстве?»</p>
       <p class="offer">Списание долгов по 127-ФЗ + защита имущества: единственное жильё под защитой закона (кроме ипотеки), реализуемое — защищаем заранее. Банкротство от 119 900 ₽ (рассрочка от 11 990 ₽/мес), досудебная защита имущества от 34 900 ₽, судебная от 69 900 ₽.</p>
@@ -231,7 +319,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="bfl">
+  <article class="card" data-product="bfl" data-group="bfl">
     <a class="thumb" href="l/bfl-03-pristavy/" target="_blank" rel="noopener" title="Открыть лендинг bfl-03-pristavy">
       <img loading="lazy" src="thumbs/bfl-03-pristavy.png" alt="Превью лендинга СВОБОДА">
       <span class="badge badge--bfl">БФЛ</span>
@@ -239,6 +327,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">СВОБОДА</h2><span class="seg">После суда/приставов</span></div>
+      
       <p class="angle">Остановить аресты и удержания приставов — законно, через банкротство</p>
       <p class="h1q">«Приставы арестовали счета и удерживают из зарплаты?»</p>
       <p class="offer">Сопровождение банкротства физлиц — тариф под сумму долга: от 119 900 ₽ (рассрочка до 10 мес от 11 990 ₽/мес) или постоплата (10% при подаче + 90% рассрочка). С введением процедуры удержания прекращаются, аресты снимаются.</p>
@@ -256,7 +345,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="bfl">
+  <article class="card" data-product="bfl" data-group="bfl">
     <a class="thumb" href="l/bfl-04-postoplata/" target="_blank" rel="noopener" title="Открыть лендинг bfl-04-postoplata">
       <img loading="lazy" src="thumbs/bfl-04-postoplata.png" alt="Превью лендинга ЛЕГЧЕ">
       <span class="badge badge--bfl">БФЛ</span>
@@ -264,6 +353,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">ЛЕГЧЕ</h2><span class="seg">Закредитованный/постоплата</span></div>
+      
       <p class="angle">Банкротство с постоплатой — платите после подачи заявления (снятие риска «плати вперёд»)</p>
       <p class="h1q">«Банкротство без оплаты вперёд — платите после подачи заявления»</p>
       <p class="offer">10% при подаче + 90% рассрочка на 8 мес (Минимальный: 10 000 ₽ + 90 000 ₽ / 8 мес ≈ 11 250 ₽/мес, от 99 900 ₽)</p>
@@ -281,7 +371,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
       </div>
     </div>
   </article>
-  <article class="card" data-product="bfl">
+  <article class="card" data-product="bfl" data-group="bfl">
     <a class="thumb" href="l/bfl-05-ipoteka/" target="_blank" rel="noopener" title="Открыть лендинг bfl-05-ipoteka">
       <img loading="lazy" src="thumbs/bfl-05-ipoteka.png" alt="Превью лендинга ОСТ">
       <span class="badge badge--bfl">БФЛ/Защита имущества</span>
@@ -289,6 +379,7 @@ footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid v
     </a>
     <div class="body">
       <div class="brandrow"><h2 class="brand">ОСТ</h2><span class="seg">Ипотечный должник</span></div>
+      
       <p class="angle">Сохранить ипотечную квартиру через суд/мировое соглашение с банком</p>
       <p class="h1q">«Долги растут, а банк грозит забрать ипотечную квартиру?»</p>
       <p class="offer">Защита ипотеки через суд — 49 900–79 900 ₽ по остатку ипотеки, рассрочка до 10 мес</p>
@@ -316,7 +407,13 @@ document.querySelectorAll('[data-toggle]').forEach(b=>b.addEventListener('click'
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
   const f=t.dataset.f;
-  document.querySelectorAll('.card').forEach(c=>{ c.style.display = (f==='all'||c.dataset.product===f)?'':'none'; });
+  document.querySelectorAll('.card').forEach(c=>{
+    let show;
+    if(f==='all') show=true;
+    else if(f==='proof') show=(c.dataset.group==='proof');
+    else show=(c.dataset.product===f && c.dataset.group!=='proof');
+    c.style.display = show?'':'none';
+  });
 }));
 </script>
 </body></html>

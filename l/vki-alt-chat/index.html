@@ -1,0 +1,558 @@
+<!doctype html>
+<!-- build:vki-alt-chat-landing-v1 · ЯСНО · ВКИ сегмент S1 «Ипотечник». АРХЕТИП: чат/диалог (messenger-style). Пламбинг (track/атрибуция/honeypot/согласия) переиспользован из landings/vki_s1_ipoteka/index.html; диалоговый движок — свой (vanilla). НЕ деплой. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>ЯСНО — чат-разбор рейтинга под ипотеку</title>
+<meta name="description" content="Просрочку закрыли, а в ипотеке отказывают? 4 вопроса в чате — и помощник ЯСНО ориентировочно прикинет рост рейтинга под ипотеку. По договору, без звонка."/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="theme-color" content="#2563EB"/>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232563EB'/%3E%3Cpath d='M18 20h28a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H30l-9 8v-8h-3a4 4 0 0 1-4-4V24a4 4 0 0 1 4-4z' fill='%23fff'/%3E%3C/svg%3E"/>
+
+<!-- TODO: production domain — заменить https://TODO-PROD-DOMAIN.example/ на реальный во всех canonical/og:url -->
+<link rel="canonical" href="https://TODO-PROD-DOMAIN.example/chat/"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<meta property="og:site_name" content="ЯСНО"/>
+<meta property="og:title" content="ЯСНО — чат-разбор рейтинга под ипотеку"/>
+<meta property="og:description" content="Ответьте на 4 вопроса в чате — помощник ЯСНО ориентировочно прикинет рост кредитного рейтинга под ипотеку. По договору, без звонка."/>
+<meta property="og:url" content="https://TODO-PROD-DOMAIN.example/chat/"/>
+<meta property="og:image" content="https://TODO-PROD-DOMAIN.example/og-chat.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ЯСНО — чат-разбор рейтинга под ипотеку"/>
+<meta name="twitter:description" content="4 вопроса в чате — и ориентировочный прогноз роста рейтинга под ипотеку. По договору, без звонка."/>
+<meta name="twitter:image" content="https://TODO-PROD-DOMAIN.example/og-chat.png"/>
+
+<!-- Верификация поисковиков -->
+<meta name="yandex-verification" content="{{YANDEX_VERIFICATION}}"/>
+<meta name="google-site-verification" content="{{GOOGLE_VERIFICATION}}"/>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ЯСНО","url":"https://TODO-PROD-DOMAIN.example/","description":"Законное восстановление кредитной истории и рост кредитного рейтинга под одобрение ипотеки. Работа по договору с гарантией результата или возвратом.","areaServed":"RU"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"Восстановление кредитной истории и рост кредитного рейтинга","provider":{"@type":"Organization","name":"ЯСНО"},"areaServed":"RU","description":"Законный рост кредитного рейтинга на 150–400 баллов за 6–9 месяцев под одобрение ипотеки или возврат 100% стоимости при выполнении рекомендаций.","offers":{"@type":"Offer","priceCurrency":"RUB","price":"59900","description":"Комплексное восстановление кредитной истории — от 59 900 ₽, рассрочка от 9 983 ₽ в месяц на 6 месяцев. Цена «от», финальная — по договору."}}
+</script>
+
+<style>
+:root{
+  --blue:#2563EB; --blue-600:#1D4ED8; --indigo:#4F46E5;
+  --bg:#E9EEF6; --panel:#FFFFFF;
+  --bot:#FFFFFF; --bot-border:#E4EAF2;
+  --ink:#0F172A; --body:#33405E; --muted:#64748B; --line:#E2E8F0;
+  --green:#22C55E; --emerald:#059669; --amber:#F59E0B; --danger:#B42318;
+  --user-a:#2563EB; --user-b:#4F46E5;
+  --radius:20px; --shadow:0 24px 60px -24px rgb(30 41 90 / .35);
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--font);color:var(--body);font-size:16px;line-height:1.5;
+  background:#DCE3EF;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums;overflow:hidden}
+@media(min-width:600px){
+  body{background:radial-gradient(120% 120% at 50% 0%,#eef2f9 0%,#c9d4e8 100%)}
+}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Каркас-«телефон» */
+.app{
+  position:relative;display:flex;flex-direction:column;
+  width:100%;max-width:460px;margin:0 auto;height:100dvh;background:var(--bg);
+  background-image:radial-gradient(rgba(37,99,235,.05) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+@media(min-width:600px){
+  .app{height:min(880px,94dvh);margin-top:3dvh;border-radius:34px;overflow:hidden;
+    box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6)}
+}
+
+/* Шапка чата */
+.chat-head{
+  flex:0 0 auto;display:flex;align-items:center;gap:.7rem;
+  padding:calc(.7rem + env(safe-area-inset-top)) 1rem .7rem;
+  background:linear-gradient(120deg,var(--blue),var(--indigo));color:#fff;
+  box-shadow:0 2px 14px -4px rgb(37 99 235 / .5);z-index:5;
+}
+.avatar{flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--blue);
+  display:grid;place-items:center;font-weight:800;font-size:1.05rem;position:relative;box-shadow:0 2px 8px rgb(0 0 0 /.12)}
+.avatar .dot{position:absolute;right:-1px;bottom:-1px;width:13px;height:13px;border-radius:50%;
+  background:var(--green);border:2.5px solid var(--indigo)}
+.ch-title{margin:0;font-size:1.02rem;font-weight:700;line-height:1.15;color:#fff;display:flex;flex-direction:column}
+.ch-title .ch-sub{font-weight:500;font-size:.72rem;opacity:.92;margin-top:2px;letter-spacing:.01em}
+.ch-title .ch-sub b{font-weight:600}
+.ch-badge{margin-left:auto;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:.28rem .5rem;border-radius:999px}
+
+/* Лента сообщений */
+.feed{flex:1 1 auto;overflow-y:auto;overflow-x:hidden;padding:1rem .9rem 1.2rem;
+  display:flex;flex-direction:column;gap:.5rem;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){.feed{scroll-behavior:auto}}
+.day{align-self:center;font-size:.72rem;color:var(--muted);background:rgba(255,255,255,.7);
+  border:1px solid var(--line);padding:.2rem .7rem;border-radius:999px;margin-bottom:.2rem}
+
+.msg{max-width:86%;display:flex;flex-direction:column;animation:pop .28s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.msg{animation:none}}
+.msg--bot{align-self:flex-start}
+.msg--user{align-self:flex-end;align-items:flex-end}
+.bubble{padding:.7rem .9rem;font-size:.98rem;line-height:1.45;border-radius:18px;position:relative;word-wrap:break-word}
+.msg--bot .bubble{background:var(--bot);color:var(--ink);border:1px solid var(--bot-border);
+  border-bottom-left-radius:6px;box-shadow:0 2px 6px -3px rgb(30 41 90 /.14)}
+.msg--user .bubble{background:linear-gradient(135deg,var(--user-a),var(--user-b));color:#fff;
+  border-bottom-right-radius:6px;box-shadow:0 4px 12px -5px rgb(37 99 235 /.5)}
+.bubble b,.bubble strong{font-weight:700}
+.msg--bot .bubble a{color:var(--blue);text-decoration:underline}
+.time{font-size:.66rem;color:var(--muted);margin:.18rem .55rem 0}
+.msg--user .time{color:#8ba0c8}
+
+/* Индикатор «печатает…» */
+.typing{align-self:flex-start;background:var(--bot);border:1px solid var(--bot-border);
+  border-radius:18px;border-bottom-left-radius:6px;padding:.75rem .95rem;display:inline-flex;gap:5px}
+.typing span{width:8px;height:8px;border-radius:50%;background:#9aa7c2;animation:blink 1.2s infinite ease-in-out}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.typing span{animation:none;opacity:.6}}
+
+/* Спец-пузырьки */
+.card-forecast{background:linear-gradient(160deg,#ecfdf5,#ffffff);border:1px solid #b7e6cd !important}
+.fc-lead{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--emerald);margin:0 0 .25rem}
+.fc-range{font-size:1.35rem;font-weight:800;color:var(--emerald);line-height:1.1;margin:0 0 .35rem}
+.fc-meter{height:10px;border-radius:999px;background:#e3e9f2;overflow:hidden;margin:.15rem 0 .5rem}
+.fc-meter i{display:block;height:100%;border-radius:999px;width:0;
+  background:linear-gradient(90deg,#DC2626,#F59E0B,#22C55E,#059669);transition:width 1s ease-out}
+@media (prefers-reduced-motion:reduce){.fc-meter i{transition:none}}
+.fc-disc{font-size:.76rem;color:var(--muted);line-height:1.4;margin:.1rem 0 0}
+.card-price{background:linear-gradient(160deg,#eff4ff,#ffffff);border:1px solid #cfe0fb !important}
+.pa-price{font-weight:800;color:var(--ink);font-size:1.02rem}
+.pa-mo{color:var(--blue);font-weight:700}
+.pa-note{font-size:.76rem;color:var(--muted);margin:.4rem 0 0;line-height:1.4}
+
+/* Чипы-ответы (dock) */
+.dock{flex:0 0 auto;background:var(--panel);border-top:1px solid var(--line);
+  padding:.7rem .8rem calc(.7rem + env(safe-area-inset-bottom));z-index:4;
+  box-shadow:0 -6px 20px -12px rgb(30 41 90 /.25)}
+.dock-hint{font-size:.72rem;color:var(--muted);margin:0 0 .5rem;display:flex;align-items:center;gap:.4rem}
+.dock-hint svg{flex:0 0 auto}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{appearance:none;border:1.5px solid #c7d6f5;background:#f3f7ff;color:var(--blue-600);
+  font-size:.95rem;font-weight:600;padding:.62rem 1.05rem;border-radius:999px;cursor:pointer;
+  min-height:44px;display:inline-flex;align-items:center;transition:transform .12s,background .12s,border-color .12s}
+.chip:hover{background:#e7efff;border-color:var(--blue);transform:translateY(-1px)}
+.chip:active{transform:translateY(0)}
+.chip--go{background:linear-gradient(135deg,var(--blue),var(--indigo));color:#fff;border-color:transparent;
+  box-shadow:0 6px 16px -6px rgb(37 99 235 /.55)}
+.chip--go:hover{background:linear-gradient(135deg,var(--blue-600),var(--indigo))}
+.chip:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* Форма-контакт (карточка-пузырёк) */
+.contact-card{margin-top:.2rem}
+.cc-reassure{background:#f0f6ff;border:1px solid #d3e3fb;border-radius:14px;padding:.6rem .75rem;
+  font-size:.82rem;color:var(--ink);display:flex;gap:.5rem;margin-bottom:.75rem;line-height:1.4}
+.cc-trust{display:flex;flex-wrap:wrap;gap:.35rem .8rem;font-size:.74rem;color:var(--muted);margin:0 0 .75rem}
+.cc-trust span{display:inline-flex;gap:.3rem;align-items:center}
+.field-label{display:block;font-weight:700;color:var(--ink);font-size:.84rem;margin:.7rem 0 .45rem}
+.channels{display:flex;flex-wrap:wrap;gap:.45rem}
+.chpill{position:relative}
+.chpill input{position:absolute;opacity:0;width:0;height:0}
+.chpill label{display:inline-flex;align-items:center;justify-content:center;padding:.5rem .85rem;
+  border:1.5px solid var(--line);border-radius:999px;font-size:.88rem;cursor:pointer;min-height:40px;color:var(--ink);background:#fff}
+.chpill input:checked+label{border-color:var(--blue);background:#eaf1ff;color:var(--blue-600);font-weight:700}
+.chpill input:focus-visible+label{outline:2px solid var(--blue);outline-offset:2px}
+.chan-note{font-size:.74rem;color:var(--muted);margin:.45rem 0 0}
+.inp{width:100%;padding:.75rem .9rem;border:1.5px solid var(--line);border-radius:12px;font-size:16px;
+  font-family:inherit;color:var(--ink);background:#fff;min-height:48px}
+.inp:focus{outline:none;border-color:var(--blue)}
+.guarantee-mini{border:1px solid #b7e6cd;background:#f0fdf7;border-radius:12px;padding:.65rem .8rem;
+  font-size:.82rem;color:var(--ink);margin:.85rem 0}
+.guarantee-mini b{color:var(--emerald)}
+.consents{margin:.85rem 0 .3rem;display:grid;gap:.6rem;border:none;padding:0}
+.consent{display:flex;gap:.55rem;align-items:flex-start;font-size:.78rem;color:var(--muted);line-height:1.4}
+.consent input{margin-top:.12rem;width:19px;height:19px;flex:0 0 auto;accent-color:var(--blue)}
+.consent a{color:var(--blue);text-decoration:underline}
+.form-err{color:var(--danger);font-size:.82rem;margin:.5rem 0 0;min-height:1rem}
+.btn-send{appearance:none;border:none;width:100%;margin-top:.4rem;min-height:52px;border-radius:14px;cursor:pointer;
+  background:linear-gradient(135deg,var(--blue),var(--indigo));color:#fff;font-weight:700;font-size:1.02rem;
+  box-shadow:0 8px 20px -8px rgb(37 99 235 /.6);transition:transform .12s,opacity .12s}
+.btn-send:hover{transform:translateY(-1px)}
+.btn-send:disabled{opacity:.6;cursor:default;transform:none}
+.fine{font-size:.72rem;color:var(--muted);margin:.6rem 0 0;line-height:1.4}
+
+.legalnote{font-size:.68rem;color:var(--muted);line-height:1.4;margin:.7rem .3rem 0;text-align:center}
+.legalnote a{color:var(--blue);text-decoration:underline}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.hidden{display:none !important}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<section class="app" aria-label="Чат с помощником ЯСНО">
+  <header class="chat-head">
+    <span class="avatar" aria-hidden="true">Я<span class="dot"></span></span>
+    <h1 class="ch-title">ЯСНО · рейтинг под ипотеку
+      <span class="ch-sub"><b>Автоматический помощник</b> · на связи</span>
+    </h1>
+    <span class="ch-badge">Онлайн</span>
+  </header>
+
+  <main class="feed" id="feed" aria-live="polite" aria-relevant="additions">
+    <p class="day">Сегодня</p>
+    <!-- сообщения рендерятся JS -->
+  </main>
+
+  <div class="dock" id="dock">
+    <p class="dock-hint" aria-hidden="true">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M12 2a10 10 0 1 0 5 18.7L22 22l-1.3-5A10 10 0 0 0 12 2z" stroke-linejoin="round"/></svg>
+      Выберите ответ — как в обычном чате
+    </p>
+    <div class="chips" id="chips" role="group" aria-label="Варианты ответа"></div>
+  </div>
+</section>
+
+<!-- ШАБЛОН формы-контакта: живёт скрытым, JS переносит в ленту на шаге контакта.
+     Пламбинг (honeypot, time-trap, атрибуция, 3 согласия 152-ФЗ) — из донора vki_s1_ipoteka. -->
+<form id="qcontact" class="hidden" novalidate>
+  <div class="cc-reassure">
+    <span aria-hidden="true">💳</span>
+    <span><b>Деньги не идут вам на руки</b> — вы не берёте новый долг на себя. Мы работаем с записями в БКИ по договору.</span>
+  </div>
+  <div class="cc-trust">
+    <span>🛡 По договору</span><span>🔒 152-ФЗ</span><span>🏛 Официальное юрлицо</span>
+  </div>
+
+  <span class="field-label" id="lbl-channel">Куда прислать персональный разбор?</span>
+  <div class="channels" role="radiogroup" aria-labelledby="lbl-channel">
+    <span class="chpill"><input type="radio" name="channel" id="ch-chat" value="Чат" checked><label for="ch-chat">Чат</label></span>
+    <span class="chpill"><input type="radio" name="channel" id="ch-max" value="MAX"><label for="ch-max">MAX</label></span>
+    <span class="chpill"><input type="radio" name="channel" id="ch-tg" value="Telegram"><label for="ch-tg">Telegram</label></span>
+    <span class="chpill"><input type="radio" name="channel" id="ch-wa" value="WhatsApp"><label for="ch-wa">WhatsApp</label></span>
+    <span class="chpill"><input type="radio" name="channel" id="ch-call" value="Звонок"><label for="ch-call">Звонок</label></span>
+  </div>
+  <p class="chan-note" id="chan-note">Ответим прямо здесь, в чате — контакт вводить не нужно. Telegram и WhatsApp работают не у всех: выберите удобный канал.</p>
+
+  <div id="contact-field-wrap" class="hidden">
+    <label class="field-label" for="contact-input" id="contact-label">Номер телефона</label>
+    <input class="inp" type="text" id="contact-input" name="contact" inputmode="tel" autocomplete="off" aria-describedby="chan-note">
+  </div>
+
+  <label class="field-label" for="name-input">Имя <span style="color:var(--muted);font-weight:400">— по желанию</span></label>
+  <input class="inp" type="text" id="name-input" name="name" autocomplete="given-name">
+
+  <div class="guarantee-mini">
+    <b>Рост на 150–400 баллов за 6–9 месяцев по договору — или возврат 100% стоимости</b> (при выполнении рекомендаций).
+  </div>
+
+  <fieldset class="consents">
+    <legend class="field-label" style="margin:0 0 .45rem">Согласия (152-ФЗ)</legend>
+    <label class="consent"><input type="checkbox" id="c1" name="consent_contact"><span>Согласен(а) на обработку персональных данных для связи по моей заявке и разбора кредитной истории. <a href="#pdn" rel="noopener">Политика обработки ПДн</a></span></label>
+    <label class="consent"><input type="checkbox" id="c2" name="consent_review"><span>Согласен(а) получить персональный разбор и приглашение на консультацию в выбранный канал.</span></label>
+    <label class="consent"><input type="checkbox" id="c3" name="consent_info"><span>Согласен(а) получать информационные материалы. Отписаться — в один клик. <span style="color:var(--muted)">(по желанию)</span></span></label>
+  </fieldset>
+
+  <!-- honeypot + time-trap + скрытые поля атрибуции (из донора) -->
+  <input type="text" name="_hp" id="hp-field" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+  <input type="hidden" name="ts_start" id="ts_start">
+  <input type="hidden" name="forecast_band" id="hf-band">
+  <input type="hidden" name="segment" id="hf-segment" value="S1_ipotechnik">
+  <input type="hidden" name="utm_source" id="hf-utm_source">
+  <input type="hidden" name="utm_medium" id="hf-utm_medium">
+  <input type="hidden" name="utm_campaign" id="hf-utm_campaign">
+  <input type="hidden" name="utm_content" id="hf-utm_content">
+  <input type="hidden" name="utm_term" id="hf-utm_term">
+  <input type="hidden" name="yclid" id="hf-yclid">
+  <input type="hidden" name="cep" id="hf-cep">
+
+  <p class="form-err" id="form-err" role="alert"></p>
+  <button type="submit" class="btn-send" id="submit-btn" data-goal="submit_application">Получить план роста рейтинга</button>
+  <p class="fine">Не звоним без вашего запроса · пишем только в выбранный канал · не передаём номер третьим лицам без отдельного согласия · отписаться — в один клик.</p>
+</form>
+
+<p class="legalnote" id="pdn">
+  <!-- TODO: заказчик — реальные реквизиты: полное наименование + ОПФ + ИНН/ОГРН + юр. адрес -->
+  ООО «[наименование — реквизиты уточняются]» · ИНН [—] · ОГРН [—]. Услуги — по договору; гарантия действует при выполнении рекомендаций (порог, точка замера, срок — в договоре). Мы не удаляем и не изменяем данные в бюро кредитных историй; помогаем законно сформировать положительную историю. Решение о выдаче ипотеки принимает банк. Прогноз в чате — ориентировочный, результат индивидуален.
+  <a href="#pdn" rel="noopener">Политика ПДн</a> · <a href="#pdn" rel="noopener">Согласие 152-ФЗ</a>. © <span id="year"></span> ЯСНО.
+</p>
+
+<script>
+/* ===================== ЯСНО · чат-движок (vanilla). Пламбинг из донора vki_s1_ipoteka. ===================== */
+(function(){
+  "use strict";
+  var METRIKA_ID = "{{METRIKA_ID}}";
+  // TODO: dev/бэкенд — входящий вебхук Bitrix24 crm.lead.add (токен на бэке, НЕ в этом JS).
+  var BITRIX_WEBHOOK = "__BITRIX_WEBHOOK_URL__";
+  var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* ---------- track() — из донора ---------- */
+  function track(goal, params){
+    var p={}; if(params){ for(var k in params){ if(Object.prototype.hasOwnProperty.call(params,k)) p[k]=params[k]; } }
+    try{ if(typeof window.ym==='function'){ window.ym(METRIKA_ID,'reachGoal',goal,p); } }catch(e){}
+    try{ if(typeof window.gtag==='function'){ window.gtag('event',goal,p); } }catch(e){}
+  }
+
+  /* ---------- атрибуция utm/yclid/cep → hidden + localStorage — из донора ---------- */
+  function attribution(){
+    var p=new URLSearchParams(location.search), keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid','cep'], store={};
+    try{ store=JSON.parse(localStorage.getItem('yasno_attr')||'{}'); }catch(e){}
+    keys.forEach(function(k){ if(p.get(k)) store[k]=p.get(k); });
+    try{ localStorage.setItem('yasno_attr', JSON.stringify(store)); }catch(e){}
+    keys.forEach(function(k){ var el=document.getElementById('hf-'+k); if(el&&store[k]) el.value=store[k]; });
+  }
+  attribution();
+  var tss=document.getElementById('ts_start'); if(tss) tss.value=String(Date.now());
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  /* ---------- DOM helpers ---------- */
+  var feed=document.getElementById('feed'), dock=document.getElementById('dock'), chips=document.getElementById('chips'),
+      hint=document.querySelector('.dock-hint'), form=document.getElementById('qcontact');
+  function nowTime(){ var d=new Date(); return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2); }
+  function scrollDown(){ feed.scrollTop=feed.scrollHeight; }
+  function addBubble(side, html, cardClass){
+    var m=document.createElement('div'); m.className='msg msg--'+side;
+    var b=document.createElement('div'); b.className='bubble'+(cardClass?' '+cardClass:''); b.innerHTML=html;
+    var t=document.createElement('div'); t.className='time'; t.textContent=nowTime();
+    m.appendChild(b); m.appendChild(t); feed.appendChild(m); scrollDown(); return b;
+  }
+  var typingEl=null;
+  function showTyping(){ if(typingEl) return; typingEl=document.createElement('div'); typingEl.className='typing';
+    typingEl.setAttribute('aria-label','Помощник печатает'); typingEl.innerHTML='<span></span><span></span><span></span>';
+    feed.appendChild(typingEl); scrollDown(); }
+  function hideTyping(){ if(typingEl){ feed.removeChild(typingEl); typingEl=null; } }
+  function botSay(html, cb, card){
+    showTyping();
+    var delay = reduce?0:Math.min(1400, 480 + String(html).replace(/<[^>]+>/g,'').length*11);
+    setTimeout(function(){ hideTyping(); addBubble('bot', html, card); if(cb) cb(); }, delay);
+  }
+  function sayList(arr, done){
+    var i=0; (function nx(){ if(i>=arr.length){ done&&done(); return; } botSay(arr[i++], nx); })();
+  }
+  function renderChips(opts, onPick){
+    chips.innerHTML=''; hint.style.display='';
+    opts.forEach(function(o){
+      var b=document.createElement('button'); b.type='button'; b.className='chip'+(o[2]?' '+o[2]:'');
+      b.textContent=o[1]; b.setAttribute('data-val',o[0]);
+      b.addEventListener('click', function(){ onPick(o); }, {once:false});
+      chips.appendChild(b);
+    });
+  }
+  function clearChips(){ chips.innerHTML=''; hint.style.display='none'; }
+
+  /* ---------- диалоговый сценарий ---------- */
+  var ans={}, started=false, step=0;
+  var LEGAL='Коротко: <b>да, законно.</b> Мы ничего не «стираем» в бюро — это как раз незаконно. Наоборот: законными инструментами помогаем сформировать вовремя закрытые обязательства, банк штатно передаёт их в БКИ — и рейтинг растёт. Никакого вмешательства в бюро.';
+  var script=[
+    {t:'ask', id:'intro',
+      q:'Здравствуйте! 👋 Я <b>ЯСНО</b> — автоматический помощник по кредитной реабилитации. Просрочку закрыли, а в ипотеке отказывают? За 4 вопроса ориентировочно прикину, реально ли поднять ваш рейтинг под ипотеку. Начнём?',
+      opts:[['go','Да, начнём','chip--go'],['legal','Сначала: это законно?']]},
+    {t:'ask', id:'q1', q:'Хорошо. Просрочки по кредитам сейчас <b>закрыты</b> — или есть активная?',
+      opts:[['closed','Закрыты'],['active','Есть активная'],['unknown','Не знаю точно']]},
+    {t:'ask', id:'q2', q:'Как давно была последняя просрочка?',
+      opts:[['lt1y','Меньше года'],['1_3y','1–3 года назад'],['gt3y','Больше 3 лет']]},
+    {t:'ask', id:'q3', q:'Сколько отказов по кредиту или ипотеке за последний год?',
+      opts:[['0','Не было'],['1_2','1–2'],['3plus','3 и больше']]},
+    {t:'ask', id:'q4', q:'И главное — ваша цель на ближайшие 6–12 месяцев?',
+      opts:[['mortgage','Ипотека'],['refin','Рефинансирование'],['bigloan','Крупный кредит'],['restore','Восстановить историю']]},
+    {t:'forecast'},
+    {t:'say', arr:['И сразу отвечу на частый вопрос: <b>деньги на руки вы не получаете</b> — вы не берёте новый долг на себя. Растёт не сумма в кармане, а доверие банка к вашей истории. Поэтому это и законно.']},
+    {t:'price'},
+    {t:'cta'},
+    {t:'contact'}
+  ];
+
+  function run(){
+    var n=script[step]; if(!n) return;
+    if(n.t==='ask'){ askNode(n); }
+    else if(n.t==='say'){ clearChips(); sayList(n.arr, function(){ step++; run(); }); }
+    else if(n.t==='forecast'){ forecastNode(); }
+    else if(n.t==='price'){ priceNode(); }
+    else if(n.t==='cta'){ ctaNode(); }
+    else if(n.t==='contact'){ contactNode(); }
+  }
+
+  function askNode(n){
+    clearChips();
+    botSay(n.q, function(){
+      renderChips(n.opts, function(o){
+        if(!started){ started=true; track('quiz_start'); } // первый ответ в чате
+        clearChips();
+        addBubble('user', o[1]);
+        if(n.id==='intro' && o[0]==='legal'){
+          botSay(LEGAL, function(){ step++; run(); }); // объяснили — идём к q1
+          return;
+        }
+        ans[n.id]=o[0];
+        step++; run();
+      });
+    });
+  }
+
+  /* band-логика — из донора */
+  function computeBand(){
+    var q1=ans.q1,q2=ans.q2,q3=ans.q3,q4=ans.q4;
+    if(q1==='active') return 'not_now';
+    if(q1==='closed'&&q2==='gt3y'&&q3==='0'&&q4==='restore') return 'self_serve';
+    if(q1==='closed'&&(q3==='1_2'||q3==='3plus')) return 'target_hot';
+    if(q1==='closed'&&q3==='0'&&(q4==='mortgage'||q4==='refin'||q4==='bigloan')) return 'target_warm';
+    return 'target_warm';
+  }
+  var BANDS={
+    target_hot:{range:'+150–400 баллов',frac:.82,bridge:'В вашей ситуации рост рейтинга реалистичен. Отказы при закрытой просрочке — это почти всегда про рейтинг, а не про вас.'},
+    target_warm:{range:'+100–300 баллов',frac:.68,bridge:'Рост возможен. Подготовить историю под ипотеку заранее — правильная стратегия: подойдёте к заявке с рейтингом, который банк читает иначе.'},
+    not_now:{range:'Сначала — закрыть активную просрочку',frac:.28,bridge:'Пока просрочка активна, формировать положительную историю рано. На разборе честно подскажем, что сделать самому и когда вернуться.'},
+    self_serve:{range:'Возможно, платная услуга не нужна',frac:.6,bridge:'Похоже, история уже восстанавливается сама. На разборе покажем, как это проверить, и не станем предлагать лишнего.'}
+  };
+  function forecastNode(){
+    clearChips();
+    var band=computeBand(), c=BANDS[band];
+    document.getElementById('hf-band').value=band;
+    botSay('Секунду, смотрю по вашим ответам…', function(){
+      var html='<p class="fc-lead">Ваш ориентировочный прогноз</p>'
+        +'<p class="fc-range">'+c.range+' за 6–9 месяцев</p>'
+        +'<div class="fc-meter" aria-hidden="true"><i data-fill></i></div>'
+        +'<p style="margin:.2rem 0 .3rem">'+c.bridge+'</p>'
+        +'<p class="fc-disc">Прогноз ориентировочный, результат индивидуален и зависит от вашей кредитной истории и выполнения рекомендаций. Это не гарантия одобрения кредита — <b>решение по ипотеке принимает банк</b>.</p>';
+      var b=addBubble('bot', html, 'card-forecast');
+      var fill=b.querySelector('[data-fill]');
+      if(fill){ if(reduce){ fill.style.width=(c.frac*100)+'%'; } else { requestAnimationFrame(function(){ setTimeout(function(){ fill.style.width=(c.frac*100)+'%'; },60); }); } }
+      track('quiz_complete',{band:band,segment:'S1_ipotechnik'}); // показ прогноза
+      step++; run();
+    }, 'card-forecast');
+  }
+
+  function priceNode(){
+    clearChips();
+    var html='<p style="margin:0 0 .35rem"><b>Сколько это стоит.</b> Флагманская программа — комплексное восстановление истории.</p>'
+      +'<p style="margin:0 0 .35rem"><span class="pa-price">от 59 900 ₽</span> — это <span class="pa-mo">рассрочка от 9 983 ₽/мес</span> на 6 месяцев. Оплата по этапам, по мере того как рейтинг растёт.</p>'
+      +'<p class="pa-note">Сравните с переплатой банку: из-за низкого рейтинга ипотеку одобряют под повышенную ставку — за срок кредита это заметная сумма. Точный набор работ и цену назовём после разбора; цена — «от», финальная по договору.</p>';
+    botSay(html, function(){ step++; run(); }, 'card-price');
+  }
+
+  function ctaNode(){
+    clearChips();
+    botSay('Готов собрать для вас <b>персональный разбор</b> по данным БКИ — с планом на 6–9 месяцев. Он ни к чему не обязывает. Оставите контакт?', function(){
+      renderChips([['contact','Оставить контакт для разбора','chip--go']], function(){
+        clearChips(); addBubble('user','Да, оставлю контакт'); step++; run();
+      });
+    });
+  }
+
+  function contactNode(){
+    clearChips();
+    botSay('Отлично. Заполните форму ниже — и я передам разбор специалисту. 👇', function(){
+      var m=document.createElement('div'); m.className='msg msg--bot contact-card'; m.style.maxWidth='94%';
+      var b=document.createElement('div'); b.className='bubble'; b.style.width='100%';
+      form.classList.remove('hidden'); b.appendChild(form); m.appendChild(b); feed.appendChild(m);
+      onChannel(); scrollDown();
+    });
+  }
+
+  /* ---------- динамическое поле контакта по каналу — из донора ---------- */
+  var wrap=document.getElementById('contact-field-wrap'), cinput=document.getElementById('contact-input'),
+      clabel=document.getElementById('contact-label'), cnote=document.getElementById('chan-note');
+  var CH={
+    'Чат':{field:false,note:'Ответим прямо здесь, в чате — контакт вводить не нужно.'},
+    'MAX':{field:true,label:'Номер телефона (аккаунт MAX)',ph:'+7 ___ ___-__-__',mode:'tel',note:'Пришлём разбор в MAX — госмессенджер, работает стабильно.'},
+    'Telegram':{field:true,label:'@username или телефон',ph:'@username или +7…',mode:'text',note:'Telegram в РФ работает не у всех — если недоступен, выберите другой канал.'},
+    'WhatsApp':{field:true,label:'Номер телефона',ph:'+7 ___ ___-__-__',mode:'tel',note:'WhatsApp в РФ работает не у всех — если недоступен, выберите другой канал.'},
+    'Звонок':{field:true,label:'Номер телефона',ph:'+7 ___ ___-__-__',mode:'tel',note:'Перезвоним по вашему запросу. Звонок не обязателен — можем и написать.'}
+  };
+  function onChannel(){
+    var v=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат', c=CH[v];
+    cnote.textContent=c.note;
+    if(c.field){ wrap.classList.remove('hidden'); clabel.textContent=c.label; cinput.placeholder=c.ph; cinput.setAttribute('inputmode',c.mode); }
+    else { wrap.classList.add('hidden'); cinput.value=''; }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="channel"]'), function(r){ r.addEventListener('change', onChannel); });
+
+  /* ---------- отправка — из донора ---------- */
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var err=document.getElementById('form-err'); err.textContent='';
+    if(document.getElementById('hp-field').value){ return; } // honeypot
+    if(Date.now()-Number(document.getElementById('ts_start').value||0) < 2500){ // time-trap
+      err.textContent='Секунду — проверьте ответы и отправьте ещё раз.'; return;
+    }
+    var ch=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат';
+    if(CH[ch].field && !cinput.value.trim()){ err.textContent='Укажите контакт для выбранного канала.'; cinput.focus(); return; }
+    if(!document.getElementById('c1').checked || !document.getElementById('c2').checked){
+      err.textContent='Отметьте обязательные согласия (152-ФЗ), чтобы мы могли прислать разбор.'; return;
+    }
+    var btn=document.getElementById('submit-btn'); btn.disabled=true; var old=btn.textContent; btn.textContent='Отправляем…';
+    finishSubmit(collect(ch), ch, btn, old, err);
+  });
+  function collect(ch){
+    function v(id){ var e=document.getElementById(id); return e?e.value:''; }
+    return {
+      channel:ch, name:v('name-input'), contact:document.getElementById('contact-input').value,
+      forecast_band:v('hf-band'), segment:v('hf-segment'),
+      consent_contact:document.getElementById('c1').checked, consent_review:document.getElementById('c2').checked,
+      consent_info:document.getElementById('c3').checked, consent_ts:new Date().toISOString(), ts_start:v('ts_start'),
+      utm_source:v('hf-utm_source'),utm_medium:v('hf-utm_medium'),utm_campaign:v('hf-utm_campaign'),
+      utm_content:v('hf-utm_content'),utm_term:v('hf-utm_term'),yclid:v('hf-yclid'),cep:v('hf-cep')
+    };
+  }
+  function done(ch, band){
+    track('submit_application',{band:band,channel:ch,segment:'S1_ipotechnik'}); // МАКРО
+    var m=form.closest('.msg'); if(m) m.parentNode.removeChild(m);
+    addBubble('user','Отправил(а) заявку ✓');
+    var txt=(ch==='Чат')
+      ? '<b>Заявка принята.</b> Напишите нам прямо здесь — разбор уже будет с вашими ответами. Специалист на связи в течение рабочего дня.'
+      : '<b>Заявка принята.</b> Напишем вам в «'+ch+'» в течение рабочего дня. Разбор ни к чему не обязывает.';
+    botSay(txt, function(){ botSay('🛡 По договору · 🔒 152-ФЗ · 💳 Деньги не идут вам на руки', null, 'card-price'); });
+  }
+  function finishSubmit(payload, ch, btn, old, err){
+    var band=payload.forecast_band;
+    if(/^https?:/.test(BITRIX_WEBHOOK)){
+      fetch(BITRIX_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+        .then(function(r){ if(!r.ok) throw 0; return r; })
+        .then(function(){ done(ch,band); })
+        .catch(function(){ btn.disabled=false; btn.textContent=old; err.textContent='Не удалось отправить. Попробуйте ещё раз.'; });
+    } else {
+      setTimeout(function(){ done(ch,band); }, 350); // плейсхолдер вебхука: лид не уходит
+    }
+  }
+
+  /* ---------- вовлечённость ---------- */
+  setTimeout(function(){ track('time_on_page_60'); }, 60000);
+
+  /* старт диалога */
+  setTimeout(run, reduce?0:400);
+})();
+</script>
+
+<!-- Яндекс.Метрика (guard: с плейсхолдером не грузится) — из донора -->
+<script>
+(function(){ var MID="{{METRIKA_ID}}"; if(!/^\d+$/.test(MID)) return;
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+  ym(MID,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+})();
+</script>
+<script>
+(function(){ var GID="{{GA4_ID}}"; if(!/^G-/.test(GID)) return;
+  var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id="+GID;document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+  gtag("js",new Date());gtag("config",GID);
+})();
+</script>
+<noscript><div style="max-width:460px;margin:2rem auto;padding:1.5rem;font-family:sans-serif;color:#0F172A">
+  <p style="font-size:1.3rem;font-weight:700">ЯСНО — рост кредитного рейтинга под ипотеку</p>
+  <p>Помощник работает в интерактивном чате — включите JavaScript. Мы законно помогаем поднять кредитный рейтинг на 150–400 баллов за 6–9 месяцев по договору или вернём 100% стоимости при выполнении рекомендаций. Решение по ипотеке принимает банк.</p>
+  <img src="https://mc.yandex.ru/watch/{{METRIKA_ID}}" style="position:absolute;left:-9999px" alt=""/>
+</div></noscript>
+
+</body>
+</html>
