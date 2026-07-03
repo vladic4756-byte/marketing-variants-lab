@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- banner:vki-02-forecast · 240x400 (vertical) · БАЛЛ+ · угол «узнай свой балл». Самодостаточный HTML/SVG мокап. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>БАЛЛ+ 240×400</title>
+<style>
+  html,body{margin:0}
+  .ad{width:240px;height:400px;position:relative;overflow:hidden;border-radius:16px;
+    font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#08251B;
+    background:linear-gradient(180deg,#ECFDF5 0%,#E2F6EC 60%,#D6F5E6 100%);border:1px solid #CFE9DC}
+  .ad *{box-sizing:border-box}
+  .brand{position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:6px;font-weight:800;font-size:16px;color:#064E3B;letter-spacing:-.02em}
+  .mark{width:26px;height:24px;border-radius:6px;background:#064E3B;color:#34D399;display:grid;place-items:center;font-size:13px;font-weight:800}
+  .h{position:absolute;top:52px;left:16px;right:16px;font-size:22px;font-weight:800;line-height:1.14;letter-spacing:-.02em}
+  .h b{color:#059669}
+  .gauge{position:absolute;left:36px;right:36px;top:150px}
+  .badge{position:absolute;left:16px;right:16px;top:262px;background:#fff;border:1px solid #bfe8d5;border-radius:10px;
+    padding:9px 11px;font-size:12px;line-height:1.35;color:#284A3E;text-align:center}
+  .badge b{color:#059669}
+  .cta{position:absolute;left:16px;right:16px;bottom:40px;height:46px;border-radius:11px;background:#059669;color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;box-shadow:0 8px 18px -6px rgba(5,150,105,.5)}
+  .fine{position:absolute;left:16px;right:16px;bottom:14px;font-size:9px;color:#5b7268;text-align:center}
+</style>
+</head>
+<body>
+<div class="ad" role="img" aria-label="БАЛЛ+ — узнайте свой кредитный балл и прогноз роста под ипотеку">
+  <div class="brand"><span class="mark">Б+</span>БАЛЛ+</div>
+  <div class="h">Узнайте свой <b>балл</b> под ипотеку</div>
+  <svg class="gauge" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DC2626"/><stop offset=".4" stop-color="#F59E0B"/>
+      <stop offset=".7" stop-color="#22C55E"/><stop offset="1" stop-color="#059669"/>
+    </linearGradient></defs>
+    <path d="M25 175 A135 135 0 0 1 295 175" fill="none" stroke="#CFE9DC" stroke-width="24" stroke-linecap="round"/>
+    <path d="M25 175 A135 135 0 0 1 260 100" fill="none" stroke="url(#g2)" stroke-width="24" stroke-linecap="round"/>
+    <text x="160" y="150" text-anchor="middle" font-size="54" font-weight="800" fill="#08251B" font-family="Segoe UI,Arial">+300</text>
+    <text x="160" y="178" text-anchor="middle" font-size="18" fill="#5b7268" font-family="Segoe UI,Arial">баллов прогноз</text>
+  </svg>
+  <div class="badge"><b>+150–400 баллов за 6–9 мес</b><br>или возврат стоимости</div>
+  <div class="cta">Открыть калькулятор →</div>
+  <div class="fine">Законно, по договору. Решение по ипотеке — за банком</div>
+</div>
+</body>
+</html>

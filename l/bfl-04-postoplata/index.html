@@ -1,0 +1,830 @@
+<!doctype html>
+<!-- build:bfl-04-postoplata-landing-v1 · ЛЕГЧЕ · БФЛ сегмент «Закредитованный, боится платить вперёд». Угол: банкротство с постоплатой (платите после подачи заявления). Техника-каркас из landings/vki_s1_ipoteka. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Банкротство с постоплатой — платите после подачи — ЛЕГЧЕ</title>
+<meta name="description" content="Боитесь платить за банкротство вперёд? Начните с 10% при подаче заявления, остальные 90% — рассрочкой на 8 месяцев. Работаем по договору. Разбор без звонка."/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="theme-color" content="#134E48"/>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134E48'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='%23F0A05A' text-anchor='middle'%3E%D0%9B%3C/text%3E%3C/svg%3E"/>
+
+<!-- TODO: production domain — заменить https://TODO-PROD-DOMAIN.example/ на реальный (кандидат legche.ru / dolgu-net.ru — решает заказчик) во всех canonical/og:url ниже -->
+<link rel="canonical" href="https://TODO-PROD-DOMAIN.example/"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<meta property="og:site_name" content="ЛЕГЧЕ"/>
+<meta property="og:title" content="Банкротство с постоплатой — платите после подачи — ЛЕГЧЕ"/>
+<meta property="og:description" content="Не нужно платить всю сумму вперёд. 10% при подаче заявления, 90% — рассрочкой на 8 месяцев. По договору, разбор без звонка."/>
+<!-- TODO: production domain -->
+<meta property="og:url" content="https://TODO-PROD-DOMAIN.example/"/>
+<!-- TODO: заменить og-обложку на реальный файл 1200×630 после утверждения домена -->
+<meta property="og:image" content="https://TODO-PROD-DOMAIN.example/og-cover.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Банкротство с постоплатой — платите после подачи — ЛЕГЧЕ"/>
+<meta name="twitter:description" content="10% при подаче заявления, остальное — рассрочкой на 8 месяцев. По договору. Разбор без звонка."/>
+<meta name="twitter:image" content="https://TODO-PROD-DOMAIN.example/og-cover.png"/>
+
+<!-- Верификация поисковиков (подставляются отдельно) -->
+<meta name="yandex-verification" content="{{YANDEX_VERIFICATION}}"/>
+<meta name="google-site-verification" content="{{GOOGLE_VERIFICATION}}"/>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ЛЕГЧЕ","url":"https://TODO-PROD-DOMAIN.example/","description":"Сопровождение процедуры банкротства физических лиц с постоплатой: старт с 10% при подаче заявления, остаток рассрочкой. Работа по договору.","areaServed":"RU"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"Сопровождение процедуры банкротства физических лиц","provider":{"@type":"Organization","name":"ЛЕГЧЕ"},"areaServed":"RU","description":"Банкротство физлиц с постоплатой: 10% при подаче заявления, 90% рассрочкой на 8 месяцев. Процедура регулируется ФЗ-127; освобождение от обязательств наступает не во всех случаях.","offers":{"@type":"Offer","priceCurrency":"RUB","price":"99900","description":"Тариф Минимальный (долг до 500 000 ₽): 10% (10 000 ₽) при подаче заявления, остаток 90 000 ₽ рассрочкой на 8 месяцев. Цена «от», финальная — по договору."}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Правда, что можно не платить всю сумму вперёд?","acceptedAnswer":{"@type":"Answer","text":"Да. Вы вносите 10% при подаче заявления в арбитражный суд, а оставшиеся 90% — рассрочкой на 8 месяцев по графику в договоре. Это снимает риск заплатить крупную сумму до того, как процедура вообще началась."}},
+{"@type":"Question","name":"Что будет, если я перестану платить по рассрочке?","acceptedAnswer":{"@type":"Answer","text":"Условие честное: если вы нарушаете график платежей по договору, мы вправе отозвать поданное заявление и прекратить сопровождение. Поэтому график подбираем под ваш реальный доход, чтобы он был посильным."}},
+{"@type":"Question","name":"Спишут ли мои долги?","acceptedAnswer":{"@type":"Answer","text":"Освобождение от обязательств решает арбитражный суд по итогам процедуры (ст. 213.28 ФЗ-127). Оно наступает не во всех случаях и не по всем видам обязательств. Мы сопровождаем процедуру и готовим документы, но гарантировать решение суда не может никто."}},
+{"@type":"Question","name":"Сколько это стоит?","acceptedAnswer":{"@type":"Answer","text":"Зависит от суммы долга. Базовый тариф Минимальный (долг до 500 000 ₽) — от 99 900 ₽: 10 000 ₽ при подаче и остаток 90 000 ₽ на 8 месяцев (≈ 11 250 ₽/мес). Точную сумму назовём после разбора вашей ситуации."}}
+]}
+</script>
+
+<style>
+@font-face{font-family:'Lexend';font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/lexend@latest/cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Lexend';font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/lexend@latest/latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+
+:root{
+  /* Low-risk trust: мягкий тёплый teal + песочный фон, тёплый CTA */
+  --brand-900:#134E48; --primary:#1B6B60; --primary-600:#15544B; --sky:#2A8C7D;
+  --accent:#DE8A46; --accent-warm:#F0A05A; --accent-600:#C4762F;
+  --bg:#FBF8F3; --surface:#FFFFFF; --surface-alt:#F0F4F1;
+  --ink:#153A35; --body:#3A4A46; --muted:#6E7C77; --border:#E0E7E1;
+  --success:#2E9E6B; --danger:#B4552B;
+  --font-head:'Lexend','Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --font-body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  --radius:16px; --radius-lg:22px; --container:70rem;
+  --shadow:0 18px 44px -18px rgb(19 78 72 / .20), 0 4px 12px -6px rgb(19 78 72 / .08);
+  --shadow-cta:0 8px 22px -6px rgb(222 138 70 / .42);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--font-body);background:var(--bg);color:var(--body);
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-variant-numeric:tabular-nums}
+a{color:var(--sky);text-decoration:none} a:hover{text-decoration:underline}
+main a:not(.btn){text-decoration:underline}
+.footer a{text-decoration:underline}
+.consent a{text-decoration:underline}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--font-head);color:var(--ink);margin:0;line-height:1.14;letter-spacing:-.02em;font-weight:700}
+p{margin:0 0 1rem}
+strong{color:var(--ink);font-weight:600}
+.container{max-width:var(--container);margin:0 auto;padding:0 1.25rem}
+.section{padding:4rem 0;position:relative}
+.section--alt{background:var(--surface-alt)}
+.section--dark{background:var(--brand-900);color:#cfe0dc}
+.section--dark h2,.section--dark h1{color:#fff}
+.eyebrow{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--primary);margin:0 0 .6rem}
+.h-sec{font-size:clamp(1.5rem,4vw,2.35rem);margin-bottom:.5rem;text-wrap:balance}
+.lead{font-size:1.125rem;color:var(--body);max-width:46rem}
+.section--dark .lead{color:#c6ded9}
+.muted{color:var(--muted);font-size:.8125rem;line-height:1.45}
+
+/* Кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1.6rem;border-radius:999px;
+  font-family:var(--font-body);font-weight:600;font-size:1.0625rem;border:1px solid transparent;cursor:pointer;text-align:center;transition:transform .12s ease,box-shadow .12s ease,background .12s ease}
+.btn:hover{text-decoration:none}
+.btn--primary{background:var(--accent-warm);color:#2c1600;box-shadow:var(--shadow-cta)}
+.btn--primary:hover{background:var(--accent);transform:translateY(-1px)}
+.btn--ghost{background:transparent;border-color:var(--border);color:var(--ink)}
+.btn--ghost:hover{border-color:var(--sky);color:var(--sky)}
+.btn--block{display:flex;width:100%}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* Шапка */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-head);font-weight:700;font-size:1.2rem;color:var(--brand-900)}
+.section--dark .brand{color:#fff}
+.brand__mark{width:34px;height:34px;border-radius:10px;background:var(--brand-900);color:var(--accent-warm);display:grid;place-items:center;font-weight:700;font-size:1.1rem}
+.brand__sub{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* Hero */
+.hero{padding:2.5rem 0 3.25rem;background:linear-gradient(180deg,var(--brand-900) 0%,#155a52 60%,#1a655b 100%);color:#e6f1ee}
+.hero h1{font-size:clamp(1.85rem,5.6vw,3.15rem);color:#fff;margin-bottom:1rem;text-wrap:balance}
+.hero__grid{display:grid;gap:2rem;align-items:center}
+@media(min-width:860px){.hero__grid{grid-template-columns:1.1fr .9fr}}
+.hero__sub{font-size:1.15rem;color:#cbe2dd;margin-bottom:1.1rem;max-width:34rem}
+.hero__bridge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:.85rem 1rem;font-size:.98rem;color:#dcece8;margin:0 0 1.4rem;max-width:34rem}
+.hero__bridge a{color:var(--accent-warm);font-weight:600}
+.hero__trust{margin:1.15rem 0 0;font-size:.85rem;color:#a4c4bd;display:flex;flex-wrap:wrap;gap:.35rem .8rem}
+.hero__caveat{font-size:.82rem;color:#9dbeb7;margin:.7rem 0 0;max-width:34rem}
+.hero__card{background:var(--surface);border-radius:var(--radius-lg);padding:1.5rem 1.35rem;box-shadow:var(--shadow);color:var(--body)}
+.hero__card-title{font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--ink);margin:0 0 .9rem;text-align:center}
+.paycard{display:grid;gap:.65rem}
+.paycard__row{display:flex;align-items:center;gap:.8rem;padding:.85rem 1rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+.paycard__row--now{background:#f0faf5;border-color:#bfe6d3}
+.paycard__pct{flex:0 0 auto;width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font-family:var(--font-head);font-weight:700;font-size:1.1rem;color:#fff;background:var(--primary)}
+.paycard__row--now .paycard__pct{background:var(--success)}
+.paycard__t{font-family:var(--font-head);font-weight:700;color:var(--ink);font-size:1.02rem;line-height:1.15}
+.paycard__d{font-size:.85rem;color:var(--muted);margin-top:.1rem}
+.paycard__note{font-size:.8rem;color:var(--muted);text-align:center;margin:.4rem 0 0}
+
+/* Карточки/сетки */
+.grid{display:grid;gap:1.1rem;margin-top:1.75rem}
+@media(min-width:760px){.grid--3{grid-template-columns:repeat(3,1fr)} .grid--2{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+.card h3{font-size:1.15rem;margin-bottom:.45rem}
+.card--situation{cursor:pointer;display:block;color:var(--body);text-decoration:none;transition:border-color .12s,transform .12s}
+.card--situation:hover{text-decoration:none;border-color:var(--sky);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.card--situation:hover{transform:none}}
+
+/* Сравнение */
+.compare{display:grid;gap:1rem;margin-top:1.75rem}
+@media(min-width:760px){.compare{grid-template-columns:1fr 1fr}}
+.compare__col{border-radius:var(--radius);padding:1.25rem;border:1px solid var(--border)}
+.compare__col--them{background:var(--surface-alt)}
+.compare__col--us{background:#f0faf5;border-color:#bfe6d3}
+.compare__col h3{font-size:1.05rem;margin-bottom:.8rem}
+.compare__row{display:flex;gap:.55rem;align-items:flex-start;padding:.5rem 0;border-top:1px dashed var(--border);font-size:.96rem}
+.compare__row:first-of-type{border-top:none}
+.compare__ic{flex:0 0 auto;margin-top:.15rem;font-weight:700}
+.compare__col--them .compare__ic{color:var(--muted)}
+.compare__col--us .compare__ic{color:var(--success)}
+
+/* Шаги/механика */
+.steps{counter-reset:st;margin-top:1.6rem;display:grid;gap:.9rem}
+.step{display:flex;gap:.9rem;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem}
+.step__n{counter-increment:st;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:700;font-family:var(--font-head)}
+.step__n::before{content:counter(st)}
+.step h3{font-size:1.02rem;margin-bottom:.15rem}
+.flowline{background:var(--surface-alt);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem;margin-top:1.2rem;font-size:.98rem;color:var(--ink)}
+.badge-trust{display:inline-flex;gap:.5rem;align-items:center;background:#e9f6f1;border:1px solid #c6e6d9;color:var(--primary);border-radius:999px;padding:.5rem .95rem;font-size:.88rem;font-weight:600;margin-top:1.15rem}
+
+/* Гарантия/цена */
+.guarantee{background:linear-gradient(180deg,#f0faf5,#ffffff);border:1px solid #bfe6d3;border-radius:var(--radius-lg);padding:1.6rem;text-align:center;box-shadow:var(--shadow)}
+.guarantee__big{font-family:var(--font-head);font-weight:700;font-size:clamp(1.4rem,4.2vw,2rem);color:var(--success);line-height:1.14;margin-bottom:.4rem}
+.price-anchor{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.4rem;margin-top:1.25rem}
+.price-anchor .pa-price{font-family:var(--font-head);font-weight:700;color:var(--ink);font-size:1.3rem}
+.price-anchor .pa-mo{color:var(--primary);font-weight:600}
+.pricetable{width:100%;border-collapse:collapse;margin-top:1.1rem;font-size:.94rem}
+.pricetable th,.pricetable td{padding:.6rem .7rem;text-align:left;border-bottom:1px solid var(--border)}
+.pricetable th{font-family:var(--font-head);color:var(--ink);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+.pricetable td:first-child{font-weight:600;color:var(--ink)}
+.pricetable .pt-now{color:var(--success);font-weight:600}
+.pricewrap{overflow-x:auto}
+
+/* FAQ */
+.faq details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.2rem 1.1rem;margin-bottom:.7rem}
+.faq summary{font-weight:600;color:var(--ink);cursor:pointer;padding:.95rem 0;list-style:none;position:relative;padding-right:1.8rem;font-family:var(--font-head);font-size:1.02rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:.2rem;top:.8rem;font-size:1.4rem;color:var(--sky);font-weight:400;line-height:1}
+.faq details[open] summary::after{content:'–'}
+.faq details p{margin:0 0 1rem;color:var(--body)}
+
+/* Дожим */
+.dojim{background:#fbf1ea;border:1px solid #f0d3c1;border-left:4px solid var(--danger);border-radius:var(--radius);padding:1.5rem;color:var(--ink)}
+.dojim h2{color:var(--ink)}
+
+/* Честные условия */
+.honest{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:var(--radius);padding:1.4rem 1.5rem;margin-top:1.4rem}
+.honest h3{font-size:1.08rem;margin-bottom:.5rem}
+
+/* КВИЗ */
+.quiz-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:1.5rem;max-width:40rem;margin:1.75rem auto 0}
+.quiz-progress{height:8px;background:var(--surface-alt);border-radius:999px;overflow:hidden;margin-bottom:1.4rem}
+.quiz-progress__bar{height:100%;width:20%;background:linear-gradient(90deg,var(--sky),var(--primary));border-radius:999px;transition:width .35s ease}
+.quiz-step-label{font-size:.8rem;color:var(--muted);font-weight:600;margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.08em}
+.quiz-q{font-family:var(--font-head);font-weight:700;font-size:1.25rem;color:var(--ink);margin-bottom:1.1rem;line-height:1.2}
+.quiz-options{display:grid;gap:.65rem}
+.quiz-opt{display:block;width:100%;text-align:left;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem;font-size:1rem;font-family:var(--font-body);color:var(--ink);cursor:pointer;min-height:56px;transition:border-color .1s,background .1s}
+.quiz-opt:hover,.quiz-opt:focus-visible{border-color:var(--sky);background:#f2faf7;outline:none}
+.quiz-back{background:none;border:none;color:var(--muted);font-size:.9rem;cursor:pointer;margin-top:1rem;padding:.3rem 0;font-family:var(--font-body)}
+.quiz-back:hover{color:var(--sky)}
+
+/* Экран предв. оценки (ПИК) */
+.forecast{text-align:center}
+.forecast__eyebrow{font-size:.85rem;color:var(--muted);font-weight:600;margin-bottom:.3rem}
+.forecast__tariff{font-family:var(--font-head);font-weight:700;font-size:clamp(1.3rem,4.5vw,1.9rem);color:var(--ink);line-height:1.14;margin:.2rem 0 .8rem}
+.forecast__split{display:grid;gap:.7rem;max-width:24rem;margin:0 auto 1rem}
+@media(min-width:520px){.forecast__split{grid-template-columns:1fr 1fr}}
+.fc-box{border:1px solid var(--border);border-radius:var(--radius);padding:.95rem;background:var(--surface)}
+.fc-box--now{background:#f0faf5;border-color:#bfe6d3}
+.fc-box__lbl{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.fc-box__num{font-family:var(--font-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-top:.15rem}
+.fc-box--now .fc-box__num{color:var(--success)}
+.forecast__disc{font-size:.8rem;color:var(--muted);max-width:32rem;margin:.4rem auto 1rem;line-height:1.4}
+.forecast__bridge{font-size:1rem;color:var(--body);max-width:32rem;margin:0 auto 1.3rem}
+
+/* Контактный шаг + доверие у формы */
+.contact__reassure{background:var(--surface-alt);border-radius:var(--radius);padding:.9rem 1.05rem;font-size:.92rem;color:var(--ink);margin-bottom:1.1rem;display:flex;gap:.6rem;align-items:flex-start}
+.contact__reassure b{color:var(--ink)}
+.trust-badges{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin:.2rem 0 1.1rem;font-size:.82rem;color:var(--muted)}
+.trust-badges span{display:inline-flex;gap:.35rem;align-items:center}
+.field-label{display:block;font-weight:600;color:var(--ink);font-size:.92rem;margin:.9rem 0 .5rem}
+.channels{display:flex;flex-wrap:wrap;gap:.5rem}
+.channel-pill{position:relative}
+.channel-pill input{position:absolute;opacity:0;width:0;height:0}
+.channel-pill label{display:inline-flex;align-items:center;justify-content:center;padding:.6rem 1rem;border:1.5px solid var(--border);border-radius:999px;font-size:.95rem;cursor:pointer;min-height:44px;color:var(--ink);background:var(--surface)}
+.channel-pill input:checked+label{border-color:var(--primary);background:#eaf6f1;color:var(--primary);font-weight:600}
+.channel-pill input:focus-visible+label{outline:2px solid var(--sky);outline-offset:2px}
+.channel-note{font-size:.8rem;color:var(--muted);margin:.5rem 0 0}
+.inp{width:100%;padding:.85rem 1rem;border:1.5px solid var(--border);border-radius:var(--radius);font-size:16px;font-family:var(--font-body);color:var(--ink);background:var(--surface);min-height:52px}
+.inp:focus{outline:none;border-color:var(--sky)}
+.consents{margin:1.1rem 0 .4rem;display:grid;gap:.7rem}
+.consent{display:flex;gap:.6rem;align-items:flex-start;font-size:.82rem;color:var(--muted);line-height:1.4}
+.consent input{margin-top:.15rem;width:20px;height:20px;flex:0 0 auto;accent-color:var(--primary)}
+.consent a{color:var(--sky)}
+.form-err{color:var(--danger);font-size:.85rem;margin:.6rem 0 0;min-height:1.1rem}
+.guarantee-mini{border:1px solid #bfe6d3;background:#f0faf5;border-radius:var(--radius);padding:.8rem 1rem;font-size:.9rem;color:var(--ink);margin:1.1rem 0}
+.guarantee-mini b{color:var(--success)}
+
+/* Экран-успех (КОНЕЦ) */
+.success{text-align:center;padding:1rem 0}
+.success__check{width:72px;height:72px;margin:0 auto 1rem}
+.success h2{margin-bottom:.5rem}
+
+/* Липкая кнопка мобайл */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surface);border-top:1px solid var(--border);
+  box-shadow:0 -6px 20px -8px rgb(19 78 72 / .18);padding:.6rem .9rem;padding-bottom:calc(.6rem + env(safe-area-inset-bottom));
+  transform:translateY(120%);transition:transform .25s ease}
+.sticky-cta.show{transform:translateY(0)}
+@media (min-width:860px){.sticky-cta{display:none}}
+
+/* Footer / юр-подвал */
+.footer{background:var(--brand-900);color:#a4c4bd;padding:2.75rem 0 2rem;font-size:.9rem}
+.footer a{color:#c6ded9}
+.footer__legal{font-size:.8rem;color:#88a8a1;line-height:1.55;margin-top:1rem;border-top:1px solid rgba(255,255,255,.12);padding-top:1.1rem}
+.footer__disclaimer{font-size:.8rem;color:#9fbdb7;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:.9rem 1.05rem;margin:.8rem 0;line-height:1.5}
+.footer__chan{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin:.8rem 0}
+.footer__chan a{color:#fff;font-weight:600}
+.hidden{display:none}
+:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="container">
+  <div class="topbar">
+    <a href="#hero" class="brand" aria-label="ЛЕГЧЕ — на главную">
+      <span class="brand__mark" aria-hidden="true">Л</span>
+      <span>ЛЕГЧЕ<br><span class="brand__sub">банкротство физлиц</span></span>
+    </a>
+    <a href="#quiz" class="btn btn--primary" data-goal="header_cta_click" data-scroll="quiz" style="padding:.65rem 1.1rem;font-size:.95rem">Узнать условия</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- [0] HERO — угол «постоплата, платите после подачи» -->
+  <section id="hero" class="hero">
+    <div class="container hero__grid">
+      <div>
+        <h1>Банкротство без оплаты вперёд — платите после подачи заявления</h1>
+        <p class="hero__sub">Не нужно отдавать всю сумму до старта. Вносите <strong style="color:#fff">10% при подаче заявления в суд</strong>, остальные 90% — рассрочкой на 8 месяцев по договору.</p>
+        <p class="hero__bridge">Понимаем страх «заплачу — и ничего не начнётся». Поэтому крупную часть вы платите уже <strong style="color:#fff">после того, как заявление подано и принято судом</strong>. <a href="#kak-postoplata" data-scroll="kak-postoplata">Как это устроено →</a></p>
+        <a href="#quiz" class="btn btn--primary btn--block" data-goal="hero_cta_click" data-scroll="quiz" style="max-width:24rem">Рассчитать мои условия за 5 вопросов</a>
+        <p class="hero__caveat">Условия рассрочки и график — в договоре. Освобождение от долгов решает суд (ст. 213.28 ФЗ-127) и наступает не во всех случаях.</p>
+        <p class="hero__trust">
+          <span>По договору</span><span>· старт с 10%</span><span>· рассрочка на 8 мес</span><span>· разбор без звонка</span>
+        </p>
+      </div>
+      <div class="hero__card">
+        <p class="hero__card-title">Как вы платите</p>
+        <div class="paycard">
+          <div class="paycard__row paycard__row--now">
+            <span class="paycard__pct" aria-hidden="true">10%</span>
+            <span><span class="paycard__t">При подаче заявления</span><span class="paycard__d">напр. 10 000 ₽ по тарифу Минимальный</span></span>
+          </div>
+          <div class="paycard__row">
+            <span class="paycard__pct" aria-hidden="true">90%</span>
+            <span><span class="paycard__t">Рассрочкой на 8 месяцев</span><span class="paycard__d">напр. 90 000 ₽ → ≈ 11 250 ₽/мес</span></span>
+          </div>
+        </div>
+        <p class="paycard__note">Пример по тарифу Минимальный (долг до 500 000 ₽). Точная сумма — по вашей ситуации.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- [1] «Боитесь платить вперёд?» — эмпатия/отстройка -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Почему это по-другому</p>
+      <h2 class="h-sec">«Заплачу большие деньги — а вдруг ничего не сделают?»</h2>
+      <p class="lead">Это нормальный страх, особенно когда денег и так нет. Многие фирмы просят всю сумму вперёд — за обещание. Мы построили оплату наоборот: вы платите основную часть, когда дело уже в работе и заявление подано в суд.</p>
+      <div class="compare">
+        <div class="compare__col compare__col--them">
+          <h3>Как часто бывает</h3>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Просят всю сумму вперёд — до подачи</span></div>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Платишь за обещание, а не за поданное дело</span></div>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Нет денег на входе — нет и старта</span></div>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Непонятно, за что и когда платишь</span></div>
+        </div>
+        <div class="compare__col compare__col--us">
+          <h3>Как у нас, по договору</h3>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>Старт с 10% — при подаче заявления в суд</span></div>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>90% — рассрочкой на 8 месяцев</span></div>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>Платите после подачи — когда дело уже в работе</span></div>
+          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>График платежей прописан в договоре</span></div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:.8rem">Постоплата — это не «бесплатно» и не отсрочка «навсегда»: это график, который начинается после подачи заявления и рассчитан под ваш доход.</p>
+    </div>
+  </section>
+
+  <!-- [2] «Как работает постоплата» — механика -->
+  <section id="kak-postoplata" class="section section--alt">
+    <div class="container">
+      <p class="eyebrow">Как устроена постоплата</p>
+      <h2 class="h-sec">Крупную часть вы платите уже после подачи заявления</h2>
+      <p class="lead">Логика простая: сначала мы разбираем вашу ситуацию и готовим документы, потом подаём заявление о банкротстве в арбитражный суд — и только затем начинается основная часть оплаты, рассрочкой.</p>
+      <div class="steps">
+        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Разбор ситуации и договор</h3><p style="margin:0">Смотрим долги, кредиторов, имущество. Фиксируем тариф и график в договоре.</p></div></div>
+        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Готовим и подаём заявление</h3><p style="margin:0">Собираем документы, подаём заявление о банкротстве в арбитражный суд.</p></div></div>
+        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Вносите 10% при подаче</h3><p style="margin:0">Первый платёж — когда заявление подано и принято к производству.</p></div></div>
+        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Остаток — рассрочкой на 8 месяцев</h3><p style="margin:0">Платите по посильному графику, пока идёт процедура.</p></div></div>
+      </div>
+      <span class="badge-trust">По договору · старт с 10% при подаче заявления в суд</span>
+    </div>
+  </section>
+
+  <!-- [3] Честные условия постоплаты (комплаенс) -->
+  <section class="section">
+    <div class="container" style="max-width:48rem">
+      <p class="eyebrow">Честно об условиях</p>
+      <h2 class="h-sec">Что важно знать заранее — без мелкого шрифта</h2>
+      <p class="lead">Постоплата работает на доверии в обе стороны. Чтобы не было сюрпризов, говорим прямо:</p>
+      <div class="honest">
+        <h3>Если вы перестаёте платить по графику</h3>
+        <p style="margin:0">Оплата остатка по договору обязательна. Если платежи по рассрочке нарушены, мы вправе отозвать поданное заявление и прекратить сопровождение. Поэтому график мы подбираем под ваш реальный доход — чтобы он был посильным, а не «на бумаге».</p>
+      </div>
+      <div class="honest">
+        <h3>Списание долгов решает суд, а не мы</h3>
+        <p style="margin:0">Освобождение от обязательств наступает по итогам процедуры и не во всех случаях (ст. 213.28 ФЗ-127); отдельные долги не списываются. Мы сопровождаем процедуру и готовим документы качественно, но гарантировать решение суда не может никто.</p>
+      </div>
+      <p style="margin-top:1rem"><a href="#quiz" data-scroll="quiz" data-goal="hero_cta_click">Проверить свою ситуацию за 5 вопросов →</a></p>
+    </div>
+  </section>
+
+  <!-- [4] «Узнаёте свою ситуацию?» -->
+  <section class="section section--alt">
+    <div class="container">
+      <p class="eyebrow">Узнаёте себя?</p>
+      <h2 class="h-sec">Если хоть одно — про вас, разбор ниже подскажет</h2>
+      <div class="grid grid--3">
+        <a class="card card--situation" href="#quiz" data-scroll="quiz" data-goal="hero_cta_click">
+          <h3>Платежи больше дохода</h3><p style="margin:0">Кредиты и микрозаймы съедают всю зарплату, а на банкротство «нет денег вперёд».</p>
+        </a>
+        <a class="card card--situation" href="#quiz" data-scroll="quiz" data-goal="hero_cta_click">
+          <h3>Боюсь отдать всё сразу</h3><p style="margin:0">Готов(а) банкротиться, но страшно заплатить крупную сумму и не увидеть результата.</p>
+        </a>
+        <a class="card card--situation" href="#quiz" data-scroll="quiz" data-goal="hero_cta_click">
+          <h3>Звонят коллекторы</h3><p style="margin:0">Просрочки, давление, а свободных денег на старт процедуры нет.</p>
+        </a>
+      </div>
+      <p class="lead" style="margin-top:1.4rem">За 5 вопросов рассчитаем ваш тариф и покажем, сколько нужно внести при подаче и сколько — рассрочкой.</p>
+    </div>
+  </section>
+
+  <!-- [5] КВИЗ-ДИАГНОСТИКА — осевой узел -->
+  <section id="quiz" class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center">Расчёт за 5 вопросов</p>
+      <h2 class="h-sec" style="text-align:center">Узнайте свой тариф и сколько вносить при подаче</h2>
+      <p class="lead" style="text-align:center;margin:0 auto">Без звонка, за 2 минуты. Скажем честно — даже если в вашем случае банкротство не нужно или не подходит.</p>
+
+      <div class="quiz-wrap">
+        <div class="quiz-progress" aria-hidden="true"><div class="quiz-progress__bar" id="qbar"></div></div>
+
+        <!-- Шаги вопросов рендерятся JS в #qbody. data-goal — контракт целей: -->
+        <div id="qbody" data-goal="quiz_start" data-goal-note="quiz_start эмитится при клике 1-го варианта Q1"></div>
+
+        <!-- Экран предв. оценки (ПИК) -->
+        <div id="qforecast" class="forecast hidden" data-goal="quiz_complete" data-goal-note="quiz_complete эмитится при показе экрана оценки">
+          <p class="forecast__eyebrow">Ваша предварительная оценка</p>
+          <p class="forecast__tariff" id="fc-tariff">Тариф Минимальный</p>
+          <div class="forecast__split">
+            <div class="fc-box fc-box--now">
+              <span class="fc-box__lbl">При подаче (10%)</span>
+              <span class="fc-box__num" id="fc-now">10 000 ₽</span>
+            </div>
+            <div class="fc-box">
+              <span class="fc-box__lbl">Рассрочка 8 мес</span>
+              <span class="fc-box__num" id="fc-mo">≈ 11 250 ₽/мес</span>
+            </div>
+          </div>
+          <p class="forecast__disc">Оценка ориентировочная, по названной сумме долга. Точный тариф и график — после разбора документов. Освобождение от долгов решает суд и наступает не во всех случаях (ст. 213.28 ФЗ-127).</p>
+          <p class="forecast__bridge" id="fc-bridge"></p>
+          <button type="button" class="btn btn--primary btn--block" id="to-contact" style="max-width:24rem;margin:0 auto">Получить разбор в удобный канал</button>
+        </div>
+
+        <!-- Контактный шаг -->
+        <form id="qcontact" class="hidden" novalidate>
+          <div class="contact__reassure">
+            <span aria-hidden="true">🤝</span>
+            <span><b>Платите после подачи заявления</b> — 10% на старте, остальное рассрочкой. Разбор ни к чему не обязывает.</span>
+          </div>
+          <div class="trust-badges">
+            <span>🛡 Работаем по договору</span>
+            <span>🔒 Данные под 152-ФЗ</span>
+            <span>🏛 Официальное юрлицо</span>
+          </div>
+
+          <span class="field-label" id="lbl-channel">Куда прислать разбор?</span>
+          <div class="channels" role="radiogroup" aria-labelledby="lbl-channel">
+            <span class="channel-pill"><input type="radio" name="channel" id="ch-chat" value="Чат" checked><label for="ch-chat">Чат</label></span>
+            <span class="channel-pill"><input type="radio" name="channel" id="ch-max" value="MAX"><label for="ch-max">MAX</label></span>
+            <span class="channel-pill"><input type="radio" name="channel" id="ch-tg" value="Telegram"><label for="ch-tg">Telegram</label></span>
+            <span class="channel-pill"><input type="radio" name="channel" id="ch-wa" value="WhatsApp"><label for="ch-wa">WhatsApp</label></span>
+            <span class="channel-pill"><input type="radio" name="channel" id="ch-call" value="Звонок"><label for="ch-call">Звонок</label></span>
+          </div>
+          <p class="channel-note" id="channel-note">Чат откроется прямо здесь — контакт вводить не нужно. Telegram и WhatsApp работают не у всех: выберите удобный канал.</p>
+
+          <div id="contact-field-wrap" class="hidden">
+            <label class="field-label" for="contact-input" id="contact-label">Номер телефона</label>
+            <input class="inp" type="text" id="contact-input" name="contact" inputmode="tel" autocomplete="off" aria-describedby="channel-note">
+          </div>
+
+          <label class="field-label" for="name-input">Имя <span class="muted" style="font-weight:400">— по желанию</span></label>
+          <input class="inp" type="text" id="name-input" name="name" autocomplete="given-name">
+
+          <div class="guarantee-mini">
+            <b>Старт с 10% при подаче заявления, остаток — рассрочкой на 8 месяцев</b> по графику в договоре под ваш доход.
+          </div>
+
+          <fieldset class="consents" style="border:none;padding:0;margin:1.1rem 0 .4rem">
+            <legend class="field-label" style="margin:0 0 .5rem">Согласия (152-ФЗ)</legend>
+            <label class="consent"><input type="checkbox" id="c1" name="consent_contact"><span>Согласен(а) на обработку персональных данных для связи по моей заявке и разбора ситуации по банкротству. <a href="#pdn-policy" data-scroll="footer" rel="noopener">Политика обработки ПДн</a></span></label>
+            <label class="consent"><input type="checkbox" id="c2" name="consent_review"><span>Согласен(а) получить персональный разбор и приглашение на консультацию в выбранный канал.</span></label>
+            <label class="consent"><input type="checkbox" id="c3" name="consent_info"><span>Согласен(а) получать информационные материалы. Отписаться — в один клик. <span class="muted">(по желанию)</span></span></label>
+          </fieldset>
+
+          <!-- honeypot + time-trap + скрытые поля атрибуции -->
+          <input type="text" name="_hp" id="hp-field" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <input type="hidden" name="ts_start" id="ts_start">
+          <input type="hidden" name="forecast_band" id="hf-band">
+          <input type="hidden" name="segment" id="hf-segment" value="bfl_zakreditovanny_postoplata">
+          <input type="hidden" name="utm_source" id="hf-utm_source">
+          <input type="hidden" name="utm_medium" id="hf-utm_medium">
+          <input type="hidden" name="utm_campaign" id="hf-utm_campaign">
+          <input type="hidden" name="utm_content" id="hf-utm_content">
+          <input type="hidden" name="utm_term" id="hf-utm_term">
+          <input type="hidden" name="yclid" id="hf-yclid">
+          <input type="hidden" name="cep" id="hf-cep">
+
+          <p class="form-err" id="form-err" role="alert"></p>
+          <button type="submit" class="btn btn--primary btn--block" id="submit-btn" data-goal="submit_application">Получить расчёт и условия</button>
+          <p class="muted" style="margin-top:.7rem">Не звоним без вашего запроса · пишем только в выбранный канал · не передаём номер третьим лицам без отдельного согласия · отписаться — в один клик.</p>
+        </form>
+
+        <!-- Экран-успех (КОНЕЦ) -->
+        <div id="qsuccess" class="success hidden">
+          <svg class="success__check" viewBox="0 0 72 72" role="img" aria-label="Заявка принята">
+            <circle cx="36" cy="36" r="33" fill="none" stroke="#2E9E6B" stroke-width="4"/>
+            <path d="M22 37 l10 10 l19 -21" fill="none" stroke="#2E9E6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2 class="h-sec">Заявка принята</h2>
+          <p class="lead" id="success-text" style="margin:0 auto 1rem">Мы напишем вам в выбранный канал.</p>
+          <p class="muted" style="max-width:26rem;margin:0 auto">Специалист свяжется в течение рабочего дня. Разбор ни к чему вас не обязывает.</p>
+          <div class="trust-badges" style="justify-content:center;margin-top:1rem">
+            <span>🛡 По договору</span><span>🔒 152-ФЗ</span><span>🤝 Оплата после подачи</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [6] Цена + ценовой якорь + таблица тарифов (из pricing.md, блок 2.3) -->
+  <section class="section section--alt">
+    <div class="container" style="max-width:52rem">
+      <p class="eyebrow">Цена и постоплата</p>
+      <h2 class="h-sec">Платите после подачи заявления — не всю сумму на входе</h2>
+      <div class="guarantee">
+        <div class="guarantee__big">Старт с 10% при подаче<br>остаток — рассрочкой на 8 месяцев</div>
+        <p class="muted" style="margin:0">График платежей и условия зафиксированы в договоре и рассчитаны под ваш доход.</p>
+      </div>
+
+      <div class="price-anchor">
+        <p style="margin-top:0"><strong>Сначала сравните две цифры.</strong> Долги без банкротства не уменьшаются: проценты, пени и услуги коллекторов за год складываются в суммы, которые нередко превышают стоимость самой процедуры. А процедуру можно начать, внеся всего 10%.</p>
+        <p style="margin:0"><span class="pa-price">Тариф Минимальный — от 99 900 ₽</span>: <span class="pa-mo">10 000 ₽ при подаче + 90 000 ₽ рассрочкой ≈ 11 250 ₽/мес</span> на 8 месяцев. Точный тариф — по сумме вашего долга.</p>
+      </div>
+
+      <div class="pricewrap">
+        <table class="pricetable">
+          <thead><tr><th>Тариф (по сумме долга)</th><th>Всего, ₽</th><th>При подаче (10%)</th><th>Рассрочка 8 мес</th></tr></thead>
+          <tbody>
+            <tr><td>Минимальный · до 500 000 ₽</td><td>от 99 900</td><td class="pt-now">10 000 ₽</td><td>90 000 ₽ · ≈ 11 250 ₽/мес</td></tr>
+            <tr><td>Базовый · 500 000 – 1,5 млн ₽</td><td>от 139 900</td><td class="pt-now">14 000 ₽</td><td>126 000 ₽ · ≈ 15 750 ₽/мес</td></tr>
+            <tr><td>Стандарт · 1,5 – 3 млн ₽</td><td>от 179 900</td><td class="pt-now">18 000 ₽</td><td>162 000 ₽ · ≈ 20 250 ₽/мес</td></tr>
+            <tr><td>Стандарт+ · 3 – 10 млн ₽</td><td>от 239 900</td><td class="pt-now">24 000 ₽</td><td>216 000 ₽ · ≈ 27 000 ₽/мес</td></tr>
+            <tr><td>Универсальный · более 10 млн ₽</td><td>от 279 900</td><td class="pt-now">28 000 ₽</td><td>252 000 ₽ · ≈ 31 500 ₽/мес</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="margin-top:.8rem">Цены — «от»; финальная — по договору под вашу ситуацию. В стоимость не входят обязательные судебные расходы и вознаграждение финансового управляющего — их состав назовём на разборе.</p>
+      <p style="margin-top:1.2rem"><a href="#quiz" class="btn btn--ghost" data-goal="hero_cta_click" data-scroll="quiz">Рассчитать мой тариф</a></p>
+    </div>
+  </section>
+
+  <!-- [7] FAQ -->
+  <section class="section faq">
+    <div class="container" style="max-width:48rem">
+      <p class="eyebrow">Частые вопросы</p>
+      <h2 class="h-sec">На ваши сомнения — прямые ответы</h2>
+      <details><summary>Правда, что можно не платить всю сумму вперёд?</summary><p>Да. Вы вносите 10% при подаче заявления в арбитражный суд, а оставшиеся 90% — рассрочкой на 8 месяцев по графику в договоре. Крупную часть вы платите уже после того, как дело в работе.</p></details>
+      <details><summary>Что будет, если я перестану платить по рассрочке?</summary><p>Оплата остатка по договору обязательна. Если график платежей нарушен, мы вправе отозвать поданное заявление и прекратить сопровождение. Поэтому график подбираем под ваш реальный доход, чтобы он был посильным.</p></details>
+      <details><summary>Спишут ли мои долги?</summary><p>Освобождение от обязательств решает арбитражный суд по итогам процедуры (ст. 213.28 ФЗ-127). Оно наступает не во всех случаях, и отдельные долги (например, алименты, возмещение вреда) не списываются. Мы сопровождаем процедуру, но гарантировать решение суда не может никто.</p></details>
+      <details><summary>А если у меня есть имущество?</summary><p>Часть имущества защищена законом (например, единственное жильё, если оно не в ипотеке). Что именно попадает в процедуру, а что нет — разберём индивидуально по вашей ситуации.</p></details>
+      <details><summary>Сколько это реально стоит?</summary><p>Зависит от суммы долга. Базовый тариф Минимальный (долг до 500 000 ₽) — от 99 900 ₽: 10 000 ₽ при подаче и остаток 90 000 ₽ рассрочкой на 8 месяцев. Отдельно оплачиваются обязательные судебные расходы и работа финансового управляющего.</p></details>
+      <details><summary>Это точно законно?</summary><p>Да. Банкротство физлиц предусмотрено ФЗ-127 «О несостоятельности (банкротстве)». Мы сопровождаем законную судебную процедуру и работаем по договору.</p></details>
+    </div>
+  </section>
+
+  <!-- [8] Цена бездействия — дожим (мягко) -->
+  <section class="section">
+    <div class="container" style="max-width:48rem">
+      <div class="dojim">
+        <h2 class="h-sec">Пока вы ждёте «когда накоплю на процедуру» — долг растёт</h2>
+        <p style="margin:0 0 .6rem">Каждый месяц просрочки — это новые проценты, пени и звонки коллекторов. Именно поэтому мы и сделали постоплату: чтобы не нужно было сначала копить крупную сумму, а можно было начать с 10% при подаче.</p>
+        <p style="margin:0 0 1rem">Разбор ни к чему не обязывает — вы просто узнаете свой тариф и график, а решение остаётся за вами.</p>
+        <a href="#quiz" class="btn btn--primary" data-goal="hero_cta_click" data-scroll="quiz">Рассчитать мои условия</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- [9] Финал + мультиканал -->
+  <section class="section section--alt">
+    <div class="container" style="max-width:46rem;text-align:center">
+      <p class="eyebrow" style="text-align:center">Первый шаг</p>
+      <h2 class="h-sec">Узнайте свои условия, прежде чем платить хоть рубль</h2>
+      <p class="lead" style="margin:0 auto 1.3rem">Один разбор покажет ваш тариф, сумму при подаче и график рассрочки. Дальше решаете вы. Без звонка, без обязательств, любым удобным каналом.</p>
+      <a href="#quiz" class="btn btn--primary" data-goal="hero_cta_click" data-scroll="quiz" style="min-width:16rem">Пройти расчёт за 5 вопросов</a>
+      <p class="muted" style="margin-top:1rem">Как вам удобнее: чат на сайте · MAX · Telegram · WhatsApp · перезвоним по вашему запросу</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="brand" style="color:#fff">
+      <span class="brand__mark" aria-hidden="true">Л</span><span>ЛЕГЧЕ</span>
+    </div>
+    <div class="footer__chan">
+      <a href="#quiz" data-scroll="quiz" data-goal="chat_click">Чат на сайте</a>
+      <a href="#quiz" data-scroll="quiz" data-goal="max_click">MAX</a>
+      <a href="#quiz" data-scroll="quiz" data-goal="telegram_click">Telegram</a>
+      <a href="#quiz" data-scroll="quiz" data-goal="whatsapp_click">WhatsApp</a>
+      <a href="#quiz" data-scroll="quiz" data-goal="callback_click">Перезвонить</a>
+    </div>
+
+    <!-- Дисклеймер ФЗ-332 ст. 28.1 — обязателен для рекламы услуг банкротства -->
+    <p class="footer__disclaimer">
+      Реклама услуг по сопровождению процедуры банкротства граждан. Процедура банкротства регулируется Федеральным законом от 26.10.2002 № 127-ФЗ «О несостоятельности (банкротстве)» и влечёт правовые последствия, в том числе ограничения, предусмотренные ст. 213.30 ФЗ-127. Освобождение гражданина от обязательств наступает не во всех случаях и не по всем видам обязательств (ст. 213.28 ФЗ-127); процедура требует добросовестного поведения должника. Информация приведена в соответствии со ст. 28.1 Федерального закона «О рекламе».
+    </p>
+
+    <p class="footer__legal" id="pdn-policy">
+      <!-- TODO: заказчик — вставить реальные реквизиты: полное наименование юрлица + ОПФ + ИНН/ОГРН + юр. адрес -->
+      ООО «[наименование — реквизиты уточняются]» · ИНН [—] · ОГРН [—] · [юридический адрес].
+      Услуги оказываются по договору. Постоплата означает график платежей (10% при подаче заявления, остаток рассрочкой на 8 месяцев), а не бесплатность и не бессрочную отсрочку; при нарушении графика поданное заявление может быть отозвано. В стоимость услуг не входят обязательные судебные расходы и вознаграждение финансового управляющего.
+      Предварительная оценка на сайте ориентировочна; итоговые тариф и график — по договору. Решение об освобождении от обязательств принимает арбитражный суд.
+      <!-- TODO: заменить на реальные ссылки-документы -->
+      <a href="#pdn-policy" rel="noopener">Политика обработки персональных данных</a> · <a href="#pdn-policy" rel="noopener">Согласие на обработку ПДн (152-ФЗ)</a>.
+      © <span id="year"></span> ЛЕГЧЕ.
+    </p>
+  </div>
+</footer>
+
+<!-- Липкая кнопка (мобайл) -->
+<div class="sticky-cta" id="sticky">
+  <a href="#quiz" class="btn btn--primary btn--block" data-goal="hero_cta_click" data-scroll="quiz">Рассчитать мои условия</a>
+</div>
+
+<script>
+/* ===================== ЛЕГЧЕ · логика лендинга (vanilla, инлайн) ===================== */
+(function(){
+  "use strict";
+  var METRIKA_ID = "{{METRIKA_ID}}"; // подставляется отдельно; ym определён только при реальном ID
+  // TODO: dev/бэкенд — входящий вебхук Bitrix24 crm.lead.add (токен на бэке, НЕ в этом JS).
+  //       Пока плейсхолдер — отправка эмулируется, submit_application эмитится, лид не уходит.
+  var BITRIX_WEBHOOK = "__BITRIX_WEBHOOK_URL__";
+
+  function track(goal, params){
+    var p={};
+    if(params){ for(var k in params){ if(Object.prototype.hasOwnProperty.call(params,k)) p[k]=params[k]; } }
+    try{ if(typeof window.ym==='function'){ window.ym(METRIKA_ID,'reachGoal',goal,p); } }catch(e){}
+    try{ if(typeof window.gtag==='function'){ window.gtag('event',goal,p); } }catch(e){}
+  }
+
+  /* ---------- плавный скролл по data-scroll ---------- */
+  function scrollToId(id){ var el=document.getElementById(id); if(el) el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth', block:'start'}); }
+  document.addEventListener('click', function(e){
+    var t=e.target.closest('[data-scroll]'); if(!t) return;
+    e.preventDefault(); scrollToId(t.getAttribute('data-scroll'));
+  });
+  document.addEventListener('keydown', function(e){
+    if((e.key==='Enter'||e.key===' ') && e.target.matches('.card--situation')){ e.preventDefault(); scrollToId('quiz'); }
+  });
+
+  /* ---------- атрибуция: utm/yclid/cep из URL → hidden + localStorage ---------- */
+  function attribution(){
+    var p=new URLSearchParams(location.search), keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid','cep'], store={};
+    try{ store=JSON.parse(localStorage.getItem('legche_attr')||'{}'); }catch(e){}
+    keys.forEach(function(k){ if(p.get(k)) store[k]=p.get(k); });
+    try{ localStorage.setItem('legche_attr', JSON.stringify(store)); }catch(e){}
+    keys.forEach(function(k){ var el=document.getElementById('hf-'+k); if(el&&store[k]) el.value=store[k]; });
+  }
+  attribution();
+  var tss=document.getElementById('ts_start'); if(tss) tss.value=String(Date.now());
+
+  /* ---------- КВИЗ ---------- */
+  var QUESTIONS=[
+    {id:'q1',q:'Какая примерно общая сумма долга?',opts:[['d500','До 500 тыс ₽'],['d1_5','500 тыс – 1,5 млн ₽'],['d3','1,5 – 3 млн ₽'],['d10','3 – 10 млн ₽'],['d10p','Более 10 млн ₽']]},
+    {id:'q2',q:'Сколько у вас кредиторов (банки, МФО, займы)?',opts:[['c3','1–3'],['c10','4–10'],['c11','11 и больше']]},
+    {id:'q3',q:'Есть ли просрочки по платежам?',opts:[['p0','Пока нет, но тяжело'],['p3','До 3 месяцев'],['p6','3–6 месяцев'],['p6p','Более 6 месяцев']]},
+    {id:'q4',q:'Есть ли имущество кроме единственного жилья?',opts:[['none','Нет'],['other','Есть (авто, вклад и т.п.)'],['mortgage','Жильё в ипотеке']]},
+    {id:'q5',q:'В каком регионе оформляете?',opts:[['msk','Москва и область'],['spb','Санкт-Петербург'],['reg','Другой регион РФ']]}
+  ];
+  var ans={}, idx=0, started=false;
+  var qbody=document.getElementById('qbody'), qbar=document.getElementById('qbar'),
+      qforecast=document.getElementById('qforecast'), qcontact=document.getElementById('qcontact'),
+      qsuccess=document.getElementById('qsuccess');
+
+  function renderQ(){
+    var Q=QUESTIONS[idx];
+    qbar.style.width=((idx+1)/QUESTIONS.length*100)+'%';
+    var h='<p class="quiz-step-label">Вопрос '+(idx+1)+' из '+QUESTIONS.length+'</p>';
+    h+='<h2 class="quiz-q">'+Q.q+'</h2><div class="quiz-options">';
+    Q.opts.forEach(function(o){ h+='<button type="button" class="quiz-opt" data-val="'+o[0]+'">'+o[1]+'</button>'; });
+    h+='</div>';
+    if(idx>0) h+='<button type="button" class="quiz-back" id="qback">← Назад</button>';
+    qbody.innerHTML=h;
+  }
+  qbody.addEventListener('click', function(e){
+    var b=e.target.closest('.quiz-opt');
+    if(b){
+      if(!started){ started=true; track('quiz_start'); }
+      ans[QUESTIONS[idx].id]=b.getAttribute('data-val');
+      if(idx<QUESTIONS.length-1){ idx++; renderQ(); }
+      else showForecast();
+      return;
+    }
+    if(e.target.id==='qback'){ if(idx>0){ idx--; renderQ(); } }
+  });
+
+  /* Тариф определяется суммой долга (Q1) — соответствует блоку 2.3 pricing.md */
+  var TARIFFS={
+    d500 :{band:'minimalny',   name:'Тариф Минимальный',  now:'10 000 ₽', mo:'≈ 11 250 ₽/мес', total:'от 99 900 ₽'},
+    d1_5 :{band:'bazovy',      name:'Тариф Базовый',      now:'14 000 ₽', mo:'≈ 15 750 ₽/мес', total:'от 139 900 ₽'},
+    d3   :{band:'standart',    name:'Тариф Стандарт',     now:'18 000 ₽', mo:'≈ 20 250 ₽/мес', total:'от 179 900 ₽'},
+    d10  :{band:'standart_plus',name:'Тариф Стандарт+',   now:'24 000 ₽', mo:'≈ 27 000 ₽/мес', total:'от 239 900 ₽'},
+    d10p :{band:'universalny', name:'Тариф Универсальный', now:'28 000 ₽', mo:'≈ 31 500 ₽/мес', total:'от 279 900 ₽'}
+  };
+  function bridgeText(){
+    var p=ans.q3;
+    if(p==='p6p'||p==='p6') return 'Просрочки уже есть — тянуть не стоит: долг растёт за счёт пеней. По вашей ситуации банкротство с постоплатой выглядит подходящим вариантом. На разборе покажем точный график.';
+    if(p==='p0') return 'Хорошо, что смотрите заранее — можно спокойно всё рассчитать. Начать процедуру можно, внеся 10% при подаче, остальное рассрочкой. Точные условия дадим на разборе.';
+    return 'По вашей ситуации банкротство с постоплатой выглядит рабочим вариантом: старт с 10% при подаче, остаток рассрочкой. Точный график подберём на разборе под ваш доход.';
+  }
+  function showForecast(){
+    var t=TARIFFS[ans.q1]||TARIFFS.d500;
+    document.getElementById('hf-band').value=t.band;
+    document.getElementById('fc-tariff').textContent=t.name+' · '+t.total;
+    document.getElementById('fc-now').textContent=t.now;
+    document.getElementById('fc-mo').textContent=t.mo;
+    document.getElementById('fc-bridge').textContent=bridgeText();
+    qbody.classList.add('hidden');
+    qbar.parentNode.style.display='none';
+    qforecast.classList.remove('hidden');
+    qforecast.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
+    track('quiz_complete',{band:t.band,segment:'bfl_postoplata'});
+  }
+
+  document.getElementById('to-contact').addEventListener('click', function(){
+    qforecast.classList.add('hidden');
+    qcontact.classList.remove('hidden');
+    qcontact.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
+    track('form_start');
+  });
+
+  /* ---------- динамическое поле контакта по каналу ---------- */
+  var wrap=document.getElementById('contact-field-wrap'), cinput=document.getElementById('contact-input'),
+      clabel=document.getElementById('contact-label'), cnote=document.getElementById('channel-note');
+  var CH={
+    'Чат':{field:false,note:'Чат откроется прямо здесь — контакт вводить не нужно.'},
+    'MAX':{field:true,label:'Номер телефона (аккаунт MAX)',ph:'+7 ___ ___-__-__',mode:'tel',note:'Пришлём разбор в MAX — госмессенджер, работает стабильно.'},
+    'Telegram':{field:true,label:'@username или телефон',ph:'@username или +7…',mode:'text',note:'Telegram в РФ работает не у всех — если недоступен, выберите другой канал.'},
+    'WhatsApp':{field:true,label:'Номер телефона',ph:'+7 ___ ___-__-__',mode:'tel',note:'WhatsApp в РФ работает не у всех — если недоступен, выберите другой канал.'},
+    'Звонок':{field:true,label:'Номер телефона',ph:'+7 ___ ___-__-__',mode:'tel',note:'Перезвоним по вашему запросу. Звонок не обязателен — можем и написать.'}
+  };
+  function onChannel(){
+    var v=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат', c=CH[v];
+    cnote.textContent=c.note;
+    if(c.field){ wrap.classList.remove('hidden'); clabel.textContent=c.label; cinput.placeholder=c.ph; cinput.setAttribute('inputmode',c.mode); }
+    else { wrap.classList.add('hidden'); cinput.value=''; }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="channel"]'), function(r){ r.addEventListener('change', onChannel); });
+  onChannel();
+
+  /* ---------- отправка ---------- */
+  qcontact.addEventListener('submit', function(e){
+    e.preventDefault();
+    var err=document.getElementById('form-err'); err.textContent='';
+    if(document.getElementById('hp-field').value){ return; } // honeypot
+    // time-trap: заполнение быстрее 3 секунд — почти наверняка бот
+    var t0=parseInt(document.getElementById('ts_start').value,10)||0;
+    if(t0 && (Date.now()-t0)<3000){ return; }
+    var ch=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат';
+    var need=CH[ch].field;
+    if(need && !cinput.value.trim()){ err.textContent='Укажите контакт для выбранного канала.'; cinput.focus(); return; }
+    if(!document.getElementById('c1').checked || !document.getElementById('c2').checked){
+      err.textContent='Отметьте обязательные согласия (152-ФЗ), чтобы мы могли прислать разбор.'; return;
+    }
+    var btn=document.getElementById('submit-btn'); btn.disabled=true; var old=btn.textContent; btn.textContent='Отправляем…';
+
+    var payload=collect(ch);
+    finishSubmit(payload, ch, btn, old, err);
+  });
+
+  function collect(ch){
+    function v(id){ var e=document.getElementById(id); return e?e.value:''; }
+    return {
+      channel:ch, name:v('name-input'), contact:document.getElementById('contact-input').value,
+      forecast_band:v('hf-band'), segment:v('hf-segment'),
+      consent_contact:document.getElementById('c1').checked, consent_review:document.getElementById('c2').checked,
+      consent_info:document.getElementById('c3').checked, consent_ts:new Date().toISOString(),
+      ts_start:v('ts_start'),
+      utm_source:v('hf-utm_source'),utm_medium:v('hf-utm_medium'),utm_campaign:v('hf-utm_campaign'),
+      utm_content:v('hf-utm_content'),utm_term:v('hf-utm_term'),yclid:v('hf-yclid'),cep:v('hf-cep')
+    };
+  }
+
+  function done(ch, band){
+    track('submit_application',{band:band,channel:ch,segment:'bfl_postoplata'}); // МАКРО
+    document.getElementById('success-text').textContent = (ch==='Чат')
+      ? 'Открываем чат — напишите нам прямо здесь, разбор уже с вашими ответами.'
+      : 'Мы напишем вам в «'+ch+'».';
+    qcontact.classList.add('hidden');
+    qsuccess.classList.remove('hidden');
+    qsuccess.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
+  }
+
+  function finishSubmit(payload, ch, btn, old, err){
+    var band=payload.forecast_band;
+    if(/^https?:/.test(BITRIX_WEBHOOK)){
+      fetch(BITRIX_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+        .then(function(r){ if(!r.ok) throw 0; return r; })
+        .then(function(){ done(ch,band); })
+        .catch(function(){ btn.disabled=false; btn.textContent=old; err.textContent='Не удалось отправить. Попробуйте ещё раз или напишите в чат.'; });
+    } else {
+      // плейсхолдер вебхука: эмулируем успех для превью, лид не уходит
+      setTimeout(function(){ done(ch,band); }, 350);
+    }
+  }
+
+  /* ---------- липкая кнопка (мобайл) ---------- */
+  var sticky=document.getElementById('sticky'), hero=document.getElementById('hero'), quizSec=document.getElementById('quiz');
+  if('IntersectionObserver' in window && sticky){
+    var heroOut=false, quizIn=false;
+    new IntersectionObserver(function(en){ heroOut=!en[0].isIntersecting; upd(); },{threshold:0}).observe(hero);
+    new IntersectionObserver(function(en){ quizIn=en[0].isIntersecting; upd(); },{threshold:.15}).observe(quizSec);
+    function upd(){ if(heroOut && !quizIn) sticky.classList.add('show'); else sticky.classList.remove('show'); }
+  }
+
+  /* ---------- вовлечённость ---------- */
+  var s75=false; window.addEventListener('scroll', function(){
+    if(!s75 && (window.scrollY+window.innerHeight)/document.documentElement.scrollHeight>0.75){ s75=true; track('scroll_75'); }
+  }, {passive:true});
+  setTimeout(function(){ track('time_on_page_60'); }, 60000);
+
+  renderQ();
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+
+<!-- Яндекс.Метрика (guard: с плейсхолдером не грузится) -->
+<script>
+(function(){ var MID="{{METRIKA_ID}}"; if(!/^\d+$/.test(MID)) return;
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+  ym(MID,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+})();
+</script>
+<script>
+(function(){ var GID="{{GA4_ID}}"; if(!/^G-/.test(GID)) return;
+  var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id="+GID;document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+  gtag("js",new Date());gtag("config",GID);
+})();
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/{{METRIKA_ID}}" style="position:absolute;left:-9999px" alt=""/></div></noscript>
+
+</body>
+</html>

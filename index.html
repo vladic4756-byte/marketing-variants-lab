@@ -1,0 +1,322 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лаборатория вариантов — ВКИ × БФЛ · дашборд оценки</title>
+<style>
+:root{--bg:#0b1020;--card:#141a2e;--line:#26304d;--txt:#e8ecf7;--mut:#93a0c4;--vki:#3b82f6;--bfl:#22c55e;--acc:#8b5cf6}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#0b1020,#0e1428);color:var(--txt);font:16px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1280px;margin:0 auto;padding:28px 20px 60px}
+header h1{font-size:1.7rem;margin:.2rem 0}
+header p{color:var(--mut);margin:.2rem 0 1rem;max-width:70ch}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 1.4rem;position:sticky;top:0;background:#0b1020ee;backdrop-filter:blur(6px);padding:.6rem 0;z-index:5}
+.tab{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--txt);padding:.5rem .9rem;border-radius:99px;font-weight:600;font-size:.92rem}
+.tab.active{background:var(--acc);border-color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;display:block;aspect-ratio:1200/760;overflow:hidden;background:#0a0f1e;border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .4s}
+.thumb:hover img{transform:scale(1.03)}
+.badge{position:absolute;top:10px;left:10px;font-size:.72rem;font-weight:700;padding:.22rem .5rem;border-radius:6px;color:#fff}
+.badge--vki{background:var(--vki)} .badge--bfl{background:var(--bfl)}
+.code{position:absolute;top:10px;right:10px;font-size:.72rem;font-weight:700;padding:.22rem .5rem;border-radius:6px;background:#0009;color:#fff;letter-spacing:.03em}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.brandrow{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem}
+.brand{font-size:1.25rem;margin:0}
+.seg{font-size:.74rem;color:var(--mut);border:1px solid var(--line);padding:.15rem .45rem;border-radius:99px;white-space:nowrap}
+.angle{margin:0;font-weight:600;color:#cbd5f5}
+.h1q{margin:0;color:var(--mut);font-style:italic;font-size:.9rem}
+.offer{margin:.1rem 0;font-size:.82rem;color:#b9c4e6}
+.hyp{font-size:.8rem;color:var(--mut)} .hyp summary{cursor:pointer}
+.actions{display:flex;gap:.5rem;margin-top:auto;padding-top:.6rem;flex-wrap:wrap}
+.btn{cursor:pointer;border-radius:9px;padding:.55rem .8rem;font-weight:700;font-size:.85rem;text-decoration:none;border:1px solid var(--line)}
+.btn--go{background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;border:0}
+.btn--sec{background:transparent;color:var(--txt)}
+.drawer{border-top:1px solid var(--line);margin-top:.6rem;padding-top:.7rem}
+.drawer h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin:.6rem 0 .4rem}
+.ad{background:#0d1striped;border:1px solid var(--line);border-radius:8px;padding:.5rem .6rem;margin-bottom:.4rem;background:#0e1730}
+.ad-h{font-weight:700;color:#dbe4ff;font-size:.86rem}
+.ad-t{font-size:.8rem;color:var(--mut)}
+.bans{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.ban{margin:0;text-align:center}
+.ban-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;transform-origin:top left}
+.ban-frame iframe{border:0;display:block;transform:scale(var(--s,.62));transform-origin:top left;width:calc(var(--w)*1px);height:calc(var(--h)*1px)}
+.ban-frame{width:calc(var(--w)*1px*.62);height:calc(var(--h)*1px*.62)}
+.ban figcaption{font-size:.72rem;color:var(--mut);margin-top:.2rem}
+.muted{color:var(--mut);font-size:.78rem}
+code{background:#0e1730;padding:.05rem .3rem;border-radius:4px;font-size:.8em}
+footer{color:var(--mut);font-size:.8rem;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1rem}
+</style></head><body><div class="wrap">
+<header>
+  <h1>🧪 Лаборатория вариантов — ВКИ × БФЛ</h1>
+  <p>Дашборд для оценки 10 тестовых связок «лендинг + рекламная кампания». Открывайте лендинги, сравнивайте углы/офферы/дизайн, смотрите тексты объявлений и баннеры. Все сайты — превью с плейсхолдерами (реквизиты/счётчики/вебхук ещё не подставлены), реклама не запущена.</p>
+</header>
+<div class="tabs">
+  <button class="tab active" data-f="all">Все · 10</button>
+  <button class="tab" data-f="vki">ВКИ · 5</button>
+  <button class="tab" data-f="bfl">БФЛ · 5</button>
+</div>
+<div class="grid">
+  <article class="card" data-product="vki">
+    <a class="thumb" href="l/vki-01-ipoteka/" target="_blank" rel="noopener" title="Открыть лендинг vki-01-ipoteka">
+      <img loading="lazy" src="thumbs/vki-01-ipoteka.png" alt="Превью лендинга РЕЙТУМ">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">VKI-01</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">РЕЙТУМ</h2><span class="seg">S1 Ипотечник</span></div>
+      <p class="angle">Гарантия под одобрение ипотеки</p>
+      <p class="h1q">«Готовим ваш кредитный рейтинг под одобрение ипотеки»</p>
+      <p class="offer">Комплексное восстановление КИ — 59 900 ₽ (рассрочка 6 мес ≈ от 9 983 ₽/мес); +150–400 баллов за 6–9 мес. или возврат 100% стоимости при выполнении рекомендаций</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Лид с угла-гарантии/цели («готовим рейтинг под одобрение ипотеки, рост или возврат») даст выше CR лендинг→лид, чем контроль с угла-боли («просрочку закрыли, а в ипотеке отказывают?»): планирующий ипотеку сегмент реагирует на гарантию под цель сильнее, чем на референс боли-отказа.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-01-ipoteka/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Кредитный рейтинг под ипотеку — законно — Рост или возврат стоимости</div><div class="ad-t">+150–400 баллов за 6–9 мес. или вернём 100%. Решение по ипотеке — за банком</div></div><div class="ad"><div class="ad-h">Отказали в ипотеке из-за старой просрочки? — Поднимем рейтинг по договору</div><div class="ad-t">Готовим рейтинг под одобрение ипотеки. Оплата по этапам. Прогноз за 2 минуты</div></div><div class="ad"><div class="ad-h">Восстановление кредитной истории под ипотеку — Гарантия: рост или возврат</div><div class="ad-t">Законно, по договору, деньги не на руки. Узнайте прогноз по рейтингу онлайн</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/vki-01-ipoteka/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/vki-01-ipoteka/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/vki-01-ipoteka/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: quiz_start, quiz_complete, submit_application · кампания: <code>ads/vki-01-ipoteka/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="vki">
+    <a class="thumb" href="l/vki-02-forecast/" target="_blank" rel="noopener" title="Открыть лендинг vki-02-forecast">
+      <img loading="lazy" src="thumbs/vki-02-forecast.png" alt="Превью лендинга БАЛЛ+">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">VKI-02</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">БАЛЛ+</h2><span class="seg">S1 Ипотечник</span></div>
+      <p class="angle">Прогноз-калькулятор first — интерактивный расчёт «узнай свой балл и на сколько он вырастет» вынесен на первый экран как ядро оффера</p>
+      <p class="h1q">«Узнайте свой кредитный балл — и на сколько он вырастет под ипотеку»</p>
+      <p class="offer">Исправление ошибок в КИ — 49 900 ₽, рассрочка 5 мес (≈ от 9 980 ₽/мес)</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Вынос квиз-калькулятора на первый экран (вместо середины страницы, как в V1) поднимает вовлечённость (quiz_start/quiz_complete) и итоговый CR лендинг→лид (submit_application) за счёт интерактива в hero и месседж-мэтча с угла «узнай свой балл».</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-02-forecast/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Отказ в ипотеке из-за просрочки? — Узнайте свой балл за 2 мин</div><div class="ad-t">Калькулятор покажет прогноз роста рейтинга. +150–400 баллов за 6–9 мес или возврат.</div></div><div class="ad"><div class="ad-h">Просрочку закрыли, а в ипотеке отказ? — Прогноз по рейтингу онлайн</div><div class="ad-t">5 вопросов — и видите, на сколько вырастет балл. Законно, по договору, с гарантией.</div></div><div class="ad"><div class="ad-h">Узнайте свой кредитный балл — И прогноз роста под ипотеку</div><div class="ad-t">Калькулятор за 5 вопросов. Исправим ошибки в истории: рост балла или возврат.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/vki-02-forecast/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/vki-02-forecast/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/vki-02-forecast/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: optimization, intermediate, micro · кампания: <code>ads/vki-02-forecast/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="vki">
+    <a class="thumb" href="l/vki-03-bankrupt/" target="_blank" rel="noopener" title="Открыть лендинг vki-03-bankrupt">
+      <img loading="lazy" src="thumbs/vki-03-bankrupt.png" alt="Превью лендинга ЗАНОВО">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">VKI-03</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">ЗАНОВО</h2><span class="seg">S2 После банкротства</span></div>
+      <p class="angle">Чистый старт после банкротства — законно вернуться в кредитную систему</p>
+      <p class="h1q">«Банкротство позади, а банки видят только клеймо?»</p>
+      <p class="offer">Комплексное восстановление КИ — от 59 900 ₽ (рассрочка ≈ 9 983 ₽/мес × 6 мес): рост рейтинга на 150–400 баллов за 6–9 мес или возврат 100% стоимости при выполнении рекомендаций. Деньги не на руки; запись о банкротстве не удаляем — строим новую положительную историю.</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>S2 «После банкротства» верит не в мечту, а в отстройку: боль — «пожизненное клеймо / меня возьмут обратно в систему?», мотив — безопасность + дисциплина («делаю правильно»). Гипотеза: угол «чистый старт законно» + честное «запись о банкротстве не удаляем, строим новую историю рядом» + гарантия с возвратом снимут страх «снова обманут» и дадут CR лендинг→лид &gt; 2% (цель &gt; 5%) на тёплом поисковом трафике cep=bankrot.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-03-bankrupt/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Кредитная история после банкротства — Рост рейтинга или возврат</div><div class="ad-t">+150–400 баллов за 6–9 мес. или вернём 100%. Решение о кредите — за банком</div></div><div class="ad"><div class="ad-h">После банкротства отказывают в кредите? — Начните заново, законно</div><div class="ad-t">Законно поднимем рейтинг или вернём стоимость. Прогноз по рейтингу за 2 мин</div></div><div class="ad"><div class="ad-h">Восстановление кредитной истории — После банкротства, законно</div><div class="ad-t">Строим новую положительную историю. Деньги не на руки. Разбор без звонка</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/vki-03-bankrupt/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/vki-03-bankrupt/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/vki-03-bankrupt/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: quiz_start, quiz_complete, submit_application · кампания: <code>ads/vki-03-bankrupt/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="vki">
+    <a class="thumb" href="l/vki-04-young/" target="_blank" rel="noopener" title="Открыть лендинг vki-04-young">
+      <img loading="lazy" src="thumbs/vki-04-young.png" alt="Превью лендинга СТАРТ">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">VKI-04</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">СТАРТ</h2><span class="seg">S3 Молодой</span></div>
+      <p class="angle">Одна просрочка ≠ приговор — исправим быстро и законно</p>
+      <p class="h1q">«Одна просрочка — не приговор. Исправим быстро и законно»</p>
+      <p class="offer">Расширенный анализ КИ 14 900 ₽ → апселл «Исправление ошибок» 49 900 ₽ (рассрочка 5 мес)</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Молодой сегмент (21–30) с 1–2 просрочками по неопытности реагирует на низкий финансовый и эмоциональный порог входа: «одна ошибка молодости обратима», живой тон на «ты», мобайл-first и дешёвый вход (анализ 14 900 ₽ вместо флагмана 59 900 ₽) дают выше CR лендинг→лид, чем «тяжёлый» ипотечный оффер S1.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-04-young/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Отказ из-за одной просрочки? — Исправим законно</div><div class="ad-t">Одна ошибка — не приговор. Рост рейтинга или возврат. Разбор за 2 минуты.</div></div><div class="ad"><div class="ad-h">Не дают карту из-за КИ? — Одна просрочка — не всё</div><div class="ad-t">Поднимем рейтинг: +150–400 баллов за 6–9 мес при выполнении рекомендаций.</div></div><div class="ad"><div class="ad-h">Как поднять кредитный рейтинг — Законно и по договору</div><div class="ad-t">Испортил историю по молодости? Исправим законно. Разбор за 2 минуты.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/vki-04-young/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/vki-04-young/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/vki-04-young/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: optimization, retarget, assist · кампания: <code>ads/vki-04-young/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="vki">
+    <a class="thumb" href="l/vki-05-pristavy/" target="_blank" rel="noopener" title="Открыть лендинг vki-05-pristavy">
+      <img loading="lazy" src="thumbs/vki-05-pristavy.png" alt="Превью лендинга РЕЙТУМ">
+      <span class="badge badge--vki">ВКИ</span>
+      <span class="code">VKI-05</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">РЕЙТУМ</h2><span class="seg">Cross/приставы</span></div>
+      <p class="angle">Закрытие исполнительных производств по ст.47 + рост рейтинга</p>
+      <p class="h1q">«Исполнительные производства тянут рейтинг вниз — и банки отказывают»</p>
+      <p class="offer">Закрытие ИП по ст.47 от 9 900 ₽ (вход) → Комплексное восстановление от 59 900 ₽ (рассрочка от 9 983 ₽/мес)</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Cross-сегмент с открытыми/недавними исполнительными производствами конвертируется лучше на конкретном юридическом входе (закрытие ИП по ст.47 от 9 900 ₽) как малом шаге, чем на дорогом комплексе сразу; utilitarian direct-response с фактурными доказательствами и правовой справкой по ст.47 снимает недоверие и ведёт к апселлу на комплексное восстановление 59 900 ₽.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/vki-05-pristavy/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Долг приставам закрыли, рейтинг стоит? — Работаем по ст.47</div><div class="ad-t">Дело в основании окончания ИП. Рост рейтинга +150–400 за 6–9 мес по договору.</div></div><div class="ad"><div class="ad-h">Исполнительное производство в КИ? — Закрытие по ст.47</div><div class="ad-t">Работа с основанием окончания ИП по договору. Не стираем историю — законно.</div></div><div class="ad"><div class="ad-h">Закрытие производств по ст.47 — Юрист по договору — от 9 900 ₽</div><div class="ad-t">Юр. работа с основанием окончания ИП. Разбор материалов и план. Без звонка.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/vki-05-pristavy/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/vki-05-pristavy/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/vki-05-pristavy/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: macro, intermediate, warmup · кампания: <code>ads/vki-05-pristavy/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="bfl">
+    <a class="thumb" href="l/bfl-01-spisanie/" target="_blank" rel="noopener" title="Открыть лендинг bfl-01-spisanie">
+      <img loading="lazy" src="thumbs/bfl-01-spisanie.png" alt="Превью лендинга ЧИСТЫЙ ЛИСТ">
+      <span class="badge badge--bfl">БФЛ</span>
+      <span class="code">BFL-01</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">ЧИСТЫЙ ЛИСТ</h2><span class="seg">Закредитованный</span></div>
+      <p class="angle">Законное списание долгов по 127-ФЗ</p>
+      <p class="h1q">«Платежи больше, чем доход? Долги можно списать законно — по 127-ФЗ»</p>
+      <p class="offer">Тариф «Минимальный» (долг до 500 000 ₽) — от 99 900 ₽, рассрочка до 10 мес (от 11 990 ₽/мес). Госпошлина и вознаграждение финуправляющего — отдельно.</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Сегмент «Закредитованный» реагирует на прямой угол законного списания долгов по 127-ФЗ + честное раскрытие «что списывается / что нет» и последствий (снимает страх «обмана»), а спокойная navy-палитра и авторитетный тон повышают доверие к юридической услуге и конверсию в квиз-оценку сильнее, чем срочно-давящие креативы.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/bfl-01-spisanie/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Платить нечем? Спишем долги по 127-ФЗ — Банкротство под ключ</div><div class="ad-t">Долги по кредитам и МФО спишет суд. Рассрочка до 10 мес. Оценка без звонка.</div></div><div class="ad"><div class="ad-h">Звонят коллекторы? Законное списание долгов — По 127-ФЗ, по договору</div><div class="ad-t">Остановим рост пеней и звонки через процедуру банкротства. Рассрочка оплаты.</div></div><div class="ad"><div class="ad-h">Банкротство физических лиц под ключ — Спишем долги по закону</div><div class="ad-t">Ведём процедуру по 127-ФЗ от подачи до решения суда. Рассрочка до 10 месяцев.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/bfl-01-spisanie/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/bfl-01-spisanie/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/bfl-01-spisanie/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: optimization, intermediate, warmup · кампания: <code>ads/bfl-01-spisanie/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="bfl">
+    <a class="thumb" href="l/bfl-02-imushchestvo/" target="_blank" rel="noopener" title="Открыть лендинг bfl-02-imushchestvo">
+      <img loading="lazy" src="thumbs/bfl-02-imushchestvo.png" alt="Превью лендинга ЩИТ">
+      <span class="badge badge--bfl">БФЛ</span>
+      <span class="code">BFL-02</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">ЩИТ</h2><span class="seg">С имуществом</span></div>
+      <p class="angle">Банкротство + защита имущества/жилья</p>
+      <p class="h1q">«Боитесь потерять квартиру и имущество при банкротстве?»</p>
+      <p class="offer">Списание долгов по 127-ФЗ + защита имущества: единственное жильё под защитой закона (кроме ипотеки), реализуемое — защищаем заранее. Банкротство от 119 900 ₽ (рассрочка от 11 990 ₽/мес), досудебная защита имущества от 34 900 ₽, судебная от 69 900 ₽.</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Сегмент «закредитованный с имуществом» не идёт в банкротство из страха потерять нажитое. Явная связка «спишем долги И защитим имущество» + честный расклад (единственное жильё защищено законом, ипотека и реализуемое — особый случай) снимает главный барьер и даёт CPL ниже, чем у общих офферов «списание долгов». CEP=imushchestvo.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/bfl-02-imushchestvo/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Банкротство: заберут ли имущество? — Разбор без звонка</div><div class="ad-t">Единственное жильё защищает закон. Остальное защищаем заранее. Услуга платная.</div></div><div class="ad"><div class="ad-h">Списать долги, защитив имущество — Банкротство по закону</div><div class="ad-t">Единственное жильё под защитой закона. Разберём, что в риске. По договору.</div></div><div class="ad"><div class="ad-h">Защита имущества при банкротстве — Законно, по договору</div><div class="ad-t">Защита имущества до подачи заявления. Списание долгов по 127-ФЗ. Услуга платная.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/bfl-02-imushchestvo/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/bfl-02-imushchestvo/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/bfl-02-imushchestvo/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: macro, intermediate, warmup · кампания: <code>ads/bfl-02-imushchestvo/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="bfl">
+    <a class="thumb" href="l/bfl-03-pristavy/" target="_blank" rel="noopener" title="Открыть лендинг bfl-03-pristavy">
+      <img loading="lazy" src="thumbs/bfl-03-pristavy.png" alt="Превью лендинга СВОБОДА">
+      <span class="badge badge--bfl">БФЛ</span>
+      <span class="code">BFL-03</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">СВОБОДА</h2><span class="seg">После суда/приставов</span></div>
+      <p class="angle">Остановить аресты и удержания приставов — законно, через банкротство</p>
+      <p class="h1q">«Приставы арестовали счета и удерживают из зарплаты?»</p>
+      <p class="offer">Сопровождение банкротства физлиц — тариф под сумму долга: от 119 900 ₽ (рассрочка до 10 мес от 11 990 ₽/мес) или постоплата (10% при подаче + 90% рассрочка). С введением процедуры удержания прекращаются, аресты снимаются.</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Сегмент «после суда/приставов» с активными удержаниями/арестами реагирует на угол мгновенного облегчения («остановить списания законно») сильнее, чем на абстрактное «списание долгов»; тёплый urgent-relief дизайн + честный механизм остановки (ст. 213.11 ФЗ-127) снижает недоверие и даёт CR лендинг→лид &gt; 2% при CPL &lt; 3 000 ₽.</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/bfl-03-pristavy/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Приставы арестовали счёт и зарплату? — Остановить через банкротство</div><div class="ad-t">С введением процедуры удержания прекращаются, аресты снимаются. По договору. Услуги.</div></div><div class="ad"><div class="ad-h">Удерживают половину зарплаты? — Законно остановить удержания</div><div class="ad-t">Банкротство приостанавливает производства: удержания прекращаются. По договору.</div></div><div class="ad"><div class="ad-h">Списать долги, из-за которых давят приставы — Банкротство физлиц</div><div class="ad-t">Суд вводит процедуру — удержания стоп, долги списываются. Последствия обсудим честно.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/bfl-03-pristavy/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/bfl-03-pristavy/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/bfl-03-pristavy/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: macro, micro · кампания: <code>ads/bfl-03-pristavy/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="bfl">
+    <a class="thumb" href="l/bfl-04-postoplata/" target="_blank" rel="noopener" title="Открыть лендинг bfl-04-postoplata">
+      <img loading="lazy" src="thumbs/bfl-04-postoplata.png" alt="Превью лендинга ЛЕГЧЕ">
+      <span class="badge badge--bfl">БФЛ</span>
+      <span class="code">BFL-04</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">ЛЕГЧЕ</h2><span class="seg">Закредитованный/постоплата</span></div>
+      <p class="angle">Банкротство с постоплатой — платите после подачи заявления (снятие риска «плати вперёд»)</p>
+      <p class="h1q">«Банкротство без оплаты вперёд — платите после подачи заявления»</p>
+      <p class="offer">10% при подаче + 90% рассрочка на 8 мес (Минимальный: 10 000 ₽ + 90 000 ₽ / 8 мес ≈ 11 250 ₽/мес, от 99 900 ₽)</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Снятие барьера «нужно платить крупную сумму вперёд» через постоплату (10% при подаче) повышает CR лендинг→лид у закредитованного сегмента без свободных денег на входе, при сохранении юр-чистоты (ФЗ-332, без обещания списания).</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/bfl-04-postoplata/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Нет денег на банкротство? — Старт с 10% при подаче</div><div class="ad-t">Платите после подачи заявления: 10% на старте, остальное рассрочкой на 8 мес.</div></div><div class="ad"><div class="ad-h">Банкротство с постоплатой — Платите после подачи</div><div class="ad-t">10% при подаче заявления в суд, 90% — рассрочкой на 8 месяцев. По договору.</div></div><div class="ad"><div class="ad-h">Банкротство физлиц в рассрочку — Оплата после подачи</div><div class="ad-t">10% при подаче, остаток — рассрочкой на 8 мес по посильному графику. По договору.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/bfl-04-postoplata/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/bfl-04-postoplata/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/bfl-04-postoplata/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: macro, intermediate, warmup · кампания: <code>ads/bfl-04-postoplata/</code></p>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-product="bfl">
+    <a class="thumb" href="l/bfl-05-ipoteka/" target="_blank" rel="noopener" title="Открыть лендинг bfl-05-ipoteka">
+      <img loading="lazy" src="thumbs/bfl-05-ipoteka.png" alt="Превью лендинга ОСТ">
+      <span class="badge badge--bfl">БФЛ/Защита имущества</span>
+      <span class="code">BFL-05</span>
+    </a>
+    <div class="body">
+      <div class="brandrow"><h2 class="brand">ОСТ</h2><span class="seg">Ипотечный должник</span></div>
+      <p class="angle">Сохранить ипотечную квартиру через суд/мировое соглашение с банком</p>
+      <p class="h1q">«Долги растут, а банк грозит забрать ипотечную квартиру?»</p>
+      <p class="offer">Защита ипотеки через суд — 49 900–79 900 ₽ по остатку ипотеки, рассрочка до 10 мес</p>
+      <details class="hyp"><summary>Гипотеза теста</summary><p>Сегмент с ипотекой и долгами боится потерять единственное (залоговое) жильё; честный угол «сохранить квартиру через суд/мировое соглашение» без обещания 100% результата + квиз-оценка шанса и цена под остаток ипотеки конвертируют лучше generic-банкротства</p></details>
+      <div class="actions">
+        <a class="btn btn--go" href="l/bfl-05-ipoteka/" target="_blank" rel="noopener">Открыть лендинг ↗</a>
+        <button class="btn btn--sec" data-toggle>Реклама и баннеры ▾</button>
+      </div>
+      <div class="drawer" hidden>
+        <h3>Объявления Директа</h3>
+        <div class="ads"><div class="ad"><div class="ad-h">56 — 30</div><div class="ad-t">81</div></div><div class="ad"><div class="ad-h">Нечем платить ипотеку? Квартиру можно защитить — Через суд, по закону</div><div class="ad-t">Мировое соглашение с банком, утверждённое судом. Разбор ситуации без звонка.</div></div><div class="ad"><div class="ad-h">Банк подал в суд по ипотеке? — Защита жилья юристами</div><div class="ad-t">Возможно мировое соглашение вместо торгов. Оценим ваш шанс сохранить квартиру.</div></div><div class="ad"><div class="ad-h">Единственное жильё в ипотеке под угрозой? — Разберём вашу защиту</div><div class="ad-t">Залоговое жильё не защищено автоматически. Юристы выстроят защиту по закону.</div></div></div>
+        <h3>Баннеры (3)</h3>
+        <div class="bans"><figure class="ban"><div class="ban-frame" style="--w:240;--h:400"><iframe loading="lazy" src="l/bfl-05-ipoteka/banners/240x400.html" width="240" height="400" title="баннер 240x400"></iframe></div><figcaption>240x400</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:300;--h:250"><iframe loading="lazy" src="l/bfl-05-ipoteka/banners/300x250.html" width="300" height="250" title="баннер 300x250"></iframe></div><figcaption>300x250</figcaption></figure><figure class="ban"><div class="ban-frame" style="--w:728;--h:90"><iframe loading="lazy" src="l/bfl-05-ipoteka/banners/728x90.html" width="728" height="90" title="баннер 728x90"></iframe></div><figcaption>728x90</figcaption></figure></div>
+        <p class="muted">Цели: quiz_start, quiz_complete, submit_application · кампания: <code>ads/bfl-05-ipoteka/</code></p>
+      </div>
+    </div>
+  </article></div>
+<footer>Сгенерировано из <code>variants/*.json</code> + <code>ads/&lt;slug&gt;/</code>. Не является публичной офертой. БФЛ-варианты содержат дисклеймер ФЗ-332 ст.28.1; перед запуском — вычитка legal-compliance-checker и подстановка реквизитов.</footer>
+</div>
+<script>
+document.querySelectorAll('[data-toggle]').forEach(b=>b.addEventListener('click',()=>{
+  const d=b.closest('.body').querySelector('.drawer'); const open=d.hidden;
+  d.hidden=!open; b.textContent = open ? 'Скрыть рекламу ▴' : 'Реклама и баннеры ▾';
+}));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
+  const f=t.dataset.f;
+  document.querySelectorAll('.card').forEach(c=>{ c.style.display = (f==='all'||c.dataset.product===f)?'':'none'; });
+}));
+</script>
+</body></html>
