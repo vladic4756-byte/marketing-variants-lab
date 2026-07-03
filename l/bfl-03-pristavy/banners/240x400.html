@@ -1,33 +1,49 @@
 <!doctype html>
-<!-- banner:bfl-03-pristavy 240x400 · СВОБОДА · «остановить приставов законно» · РСЯ-мокап -->
-<html lang="ru"><head><meta charset="utf-8"/>
+<!-- banner:bfl-03-pristavy 240x400 · СВОБОДА · концепт «предупреждение-стоп → облегчение» -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>СВОБОДА 240x400</title>
 <style>
-  html,body{margin:0}
-  .ad{position:relative;width:240px;height:400px;overflow:hidden;box-sizing:border-box;
-    font-family:'Segoe UI',Arial,sans-serif;color:#fff;
-    background:linear-gradient(165deg,#123B36 0%,#155048 55%,#1C6154 100%);
-    padding:20px 18px 14px;display:flex;flex-direction:column}
-  .brand{font-weight:700;font-size:12px;letter-spacing:.14em;color:#F2994A;text-transform:uppercase}
-  .h{font-weight:800;font-size:26px;line-height:1.1;margin:12px 0 10px;letter-spacing:-.01em}
-  .h b{color:#F2994A}
-  .list{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:9px}
-  .list li{font-size:13px;line-height:1.25;color:#e4efeb;display:flex;gap:7px;align-items:flex-start}
-  .ic{flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#e5f4ec;color:#178A5A;
-    font-size:11px;font-weight:800;display:grid;place-items:center;margin-top:1px}
-  .cta{margin-top:auto;background:#F2994A;color:#2b1400;font-weight:700;font-size:15px;
-    text-align:center;border-radius:10px;padding:13px 8px}
-  .disc{font-size:8px;line-height:1.25;color:#9fbab3;margin:9px 0 0}
-</style></head>
+  html,body{margin:0;width:240px;height:400px;overflow:hidden}
+  *{box-sizing:border-box}
+  .ad{
+    position:relative;width:240px;height:400px;overflow:hidden;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:#fff;padding:18px 16px 16px;
+    background:
+      radial-gradient(120% 55% at 50% 118%, rgba(47,158,111,.22), rgba(47,158,111,0) 60%),
+      radial-gradient(120% 50% at 90% -12%, rgba(242,153,74,.42), rgba(242,153,74,0) 55%),
+      linear-gradient(165deg,#143f39,#0e2d29 65%,#0a2320);
+  }
+  .brand{display:flex;align-items:center;gap:.4rem;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#f7b267}
+  .brand b{width:18px;height:18px;border-radius:6px;background:linear-gradient(150deg,#f7b267,#F2994A);color:#5a2f0c;display:grid;place-items:center;font-size:11px}
+  .stop{margin-top:22px;display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#ffd9b0;background:rgba(242,153,74,.14);border:1px solid rgba(242,153,74,.4);padding:5px 9px;border-radius:999px}
+  .stop .o{width:9px;height:9px;border-radius:50%;background:#F2994A;box-shadow:0 0 0 4px rgba(242,153,74,.25)}
+  h1{font-size:23px;line-height:1.1;font-weight:800;margin:14px 0 0;letter-spacing:-.02em}
+  h1 .hl{color:#f7b267}
+  .sub{font-size:12.5px;line-height:1.4;color:#d6e6e1;margin:11px 0 0}
+  .sub b{color:#fff}
+  .rel{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:7px}
+  .rel li{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:#eaf3f0}
+  .rel .ic{width:16px;height:16px;flex:0 0 auto;border-radius:50%;background:rgba(47,158,111,.9);display:grid;place-items:center;font-size:9px;font-weight:900}
+  .cta{position:absolute;left:16px;right:16px;bottom:40px;background:linear-gradient(150deg,#f7b267,#F2994A);color:#3a1e05;font-weight:800;font-size:13px;text-align:center;border-radius:10px;padding:11px 6px}
+  .foot{position:absolute;left:16px;right:16px;bottom:10px;font-size:7px;line-height:1.3;color:#8fa9a2}
+</style>
+</head>
 <body>
-  <div class="ad" role="img" aria-label="СВОБОДА — остановить аресты и удержания приставов через банкротство">
-    <div class="brand">СВОБОДА · банкротство физлиц</div>
-    <div class="h">Остановить <b>приставов</b> — законно</div>
-    <ul class="list">
-      <li><span class="ic">✓</span><span>Удержания из зарплаты — прекращаются</span></li>
-      <li><span class="ic">✓</span><span>Аресты со счетов и карт — снимаются</span></li>
-      <li><span class="ic">✓</span><span>Долги по итогу — списываются судом</span></li>
-    </ul>
-    <div class="cta">Узнать про свою ситуацию →</div>
-    <p class="disc">Реклама услуг. Банкротство — процедура с последствиями (ФЗ-332, ст. 28.1). Приостановление удержаний/арестов — после введения процедуры судом (ст. 213.11 ФЗ-127, ст. 96 ФЗ-229), не мгновенно. Освобождение от долгов — право суда.</p>
-  </div>
-</body></html>
+<div class="ad">
+  <div class="brand"><b>С</b> СВОБОДА</div>
+  <div class="stop"><span class="o" aria-hidden="true"></span>Списывают с каждой зарплаты?</div>
+  <h1>Это можно <span class="hl">остановить</span> — законно</h1>
+  <p class="sub">С введением процедуры банкротства <b>удержания прекращаются</b>, а долги списываются судом.</p>
+  <ul class="rel">
+    <li><span class="ic" aria-hidden="true">✓</span>Удержания из зарплаты — стоп</li>
+    <li><span class="ic" aria-hidden="true">✓</span>Аресты со счетов — сняты</li>
+  </ul>
+  <div class="cta">Узнать по своей ситуации</div>
+  <div class="foot">Реклама услуг банкротства физлиц. Ст. 28.1 ФЗ «О рекламе». Прекращение удержаний — после введения процедуры судом (ст. 213.11 ФЗ-127), не мгновенно.</div>
+</div>
+</body>
+</html>

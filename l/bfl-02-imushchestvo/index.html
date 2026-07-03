@@ -1,427 +1,391 @@
 <!doctype html>
-<!-- build:bfl-02-imushchestvo-landing-v1 · ЩИТ · БФЛ сегмент «Закредитованный с имуществом». Техника скопирована из landings/vki_s1_ipoteka, переписано под банкротство + защита имущества. -->
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Банкротство с защитой имущества — ЩИТ</title>
-<meta name="description" content="Боитесь потерять имущество при банкротстве? Списываем долги по 127-ФЗ и заранее защищаем имущество. Единственное жильё защищает закон. Разбор без звонка."/>
-<meta name="robots" content="index, follow, max-image-preview:large"/>
-<meta name="theme-color" content="#0B3D2E"/>
-<meta name="format-detection" content="telephone=no"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B3D2E'/%3E%3Cpath d='M32 12 L50 19 V33 C50 44 42 50 32 53 C22 50 14 44 14 33 V19 Z' fill='none' stroke='%23E0A100' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E"/>
-
-<!-- TODO: production domain — заменить https://TODO-PROD-DOMAIN.example/ на реальный (кандидаты shchit-bfl.ru / щит-банкротство.рф — решает заказчик) во всех canonical/og:url ниже -->
-<link rel="canonical" href="https://TODO-PROD-DOMAIN.example/"/>
-
-<!-- Open Graph -->
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="ru_RU"/>
-<meta property="og:site_name" content="ЩИТ"/>
-<meta property="og:title" content="Банкротство с защитой имущества — ЩИТ"/>
-<meta property="og:description" content="Списываем долги по 127-ФЗ и заранее выстраиваем защиту имущества. Единственное жильё защищает закон, остальное — защищаем грамотно и вовремя. Разбор без звонка."/>
-<!-- TODO: production domain -->
-<meta property="og:url" content="https://TODO-PROD-DOMAIN.example/"/>
-<!-- TODO: заменить og-обложку на реальный файл 1200×630 после утверждения домена -->
-<meta property="og:image" content="https://TODO-PROD-DOMAIN.example/og-cover.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Банкротство с защитой имущества — ЩИТ"/>
-<meta name="twitter:description" content="Списываем долги по 127-ФЗ и заранее выстраиваем защиту имущества. Единственное жильё защищает закон. Разбор без звонка."/>
-<meta name="twitter:image" content="https://TODO-PROD-DOMAIN.example/og-cover.png"/>
-
-<!-- Верификация поисковиков (подставляются отдельно) -->
-<meta name="yandex-verification" content="{{YANDEX_VERIFICATION}}"/>
-<meta name="google-site-verification" content="{{GOOGLE_VERIFICATION}}"/>
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"ЩИТ","url":"https://TODO-PROD-DOMAIN.example/","description":"Сопровождение процедуры банкротства физических лиц по 127-ФЗ и защита имущества должника. Работа по договору.","areaServed":"RU"}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"Банкротство физических лиц и защита имущества","provider":{"@type":"Organization","name":"ЩИТ"},"areaServed":"RU","description":"Сопровождение процедуры банкротства физлица по 127-ФЗ с предварительной стратегией защиты имущества: досудебная и судебная защита имущества, защита ипотечного жилья. Результат зависит от обстоятельств дела; процедура банкротства влечёт последствия, предусмотренные 127-ФЗ.","offers":{"@type":"Offer","priceCurrency":"RUB","price":"119900","description":"Банкротство «под ключ», тариф Минимальный (долг до 500 000 ₽), рассрочка до 10 месяцев — от 11 990 ₽ в месяц. Цена «от», финальная — по договору. Услуга платная."}}
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ЩИТ — банкротство физлиц и защита имущества</title>
+<meta name="description" content="Списываем долги по 127-ФЗ и берём имущество под защиту. Единственное жильё защищает закон (кроме ипотечного залога). Разбор по вашей ситуации — без звонка.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://TODO-PROD-DOMAIN.example/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ЩИТ · защита имущества">
+<meta property="og:title" content="Банкротство и защита имущества — ЩИТ">
+<meta property="og:description" content="Спишем долги по 127-ФЗ и защитим имущество. Единственное жильё под защитой закона (кроме ипотеки). Разбор ситуации без звонка.">
+<meta property="og:url" content="https://TODO-PROD-DOMAIN.example/">
+<meta property="og:image" content="https://TODO-PROD-DOMAIN.example/og/shchit-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- build:bfl-02-imushchestvo-landing-v1 · архетип: Bento-grid SaaS · бренд ЩИТ · продукт БФЛ+защита имущества -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Заберут ли единственную квартиру при банкротстве?","acceptedAnswer":{"@type":"Answer","text":"По общему правилу единственное пригодное для проживания жильё защищено исполнительским иммунитетом и в конкурсную массу не включается. Исключение — если это жильё в ипотеке или ином залоге: залоговое имущество банкротство само по себе не сохраняет, для него нужна отдельная стратегия."}},
-{"@type":"Question","name":"А если у меня есть машина или второе жильё?","acceptedAnswer":{"@type":"Answer","text":"Не единственное жильё, автомобиль, доли и дорогое имущество относятся к реализуемому — их защиту выстраивают заранее, до подачи заявления, законными инструментами. После начала процедуры возможности защиты сужаются, поэтому важно разобрать ситуацию заблаговременно."}},
-{"@type":"Question","name":"Сколько стоит банкротство с защитой имущества?","acceptedAnswer":{"@type":"Answer","text":"Банкротство «под ключ»: тариф Минимальный (долг до 500 000 ₽) — от 119 900 ₽ (рассрочка до 10 месяцев, от 11 990 ₽/мес), Базовый (долг 500 000–1 500 000 ₽) — от 159 900 ₽. Досудебная защита имущества — от 34 900 ₽. Точную сумму назовём после разбора."}},
-{"@type":"Question","name":"Банкротство спишет мои долги полностью?","acceptedAnswer":{"@type":"Answer","text":"Процедура направлена на освобождение от долгов, но это не автоматическая гарантия: суд может не освободить от обязательств при недобросовестности должника, а часть долгов (алименты, вред жизни и здоровью и др.) не списывается. Банкротство влечёт последствия, предусмотренные 127-ФЗ. Итог зависит от обстоятельств дела."}}
+{"@type":"Question","name":"Заберут ли единственное жильё при банкротстве?","acceptedAnswer":{"@type":"Answer","text":"Единственное пригодное для проживания жильё защищает статья 446 ГПК РФ — его не включают в реализацию. Исключение — ипотечное или иное залоговое жильё: это особый случай, который разбирают отдельно и по которому выстраивают защиту через суд."}},
+{"@type":"Question","name":"Списываются ли все долги?","acceptedAnswer":{"@type":"Answer","text":"Списывается большинство кредитов, займов и долгов по распискам. Не списываются алименты, возмещение вреда жизни и здоровью, зарплата работникам, субсидиарная ответственность и некоторые другие. Освобождение от долгов зависит от добросовестности должника — это оценивает суд."}},
+{"@type":"Question","name":"Что будет с автомобилем и вторым жильём?","acceptedAnswer":{"@type":"Answer","text":"Реализуемое имущество (второе жильё, доля, автомобиль, дача) может попасть в конкурсную массу. Часть защищена по закону, часть можно защитить заранее законными досудебными и судебными способами. На разборе показываем, что именно в риске в вашей ситуации."}},
+{"@type":"Question","name":"Сколько стоит и есть ли рассрочка?","acceptedAnswer":{"@type":"Answer","text":"Полное сопровождение банкротства — от 119 900 ₽, рассрочка до 10 месяцев (от 11 990 ₽/мес). Есть вариант с постоплатой: 10% при подаче заявления, 90% в рассрочку на 8 месяцев. Досудебная защита имущества — от 34 900 ₽, судебная — от 69 900 ₽. Точную сумму называем после разбора."}},
+{"@type":"Question","name":"Какие последствия у банкротства?","acceptedAnswer":{"@type":"Answer","text":"По статье 213.30 ФЗ-127: 5 лет нужно указывать факт банкротства при оформлении кредитов, 3 года — ограничение на руководящие должности, повторное банкротство — не ранее чем через 5 лет. Услуги по сопровождению банкротства платные."}}
 ]}
 </script>
-
 <style>
-@font-face{font-family:'Lexend';font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/lexend@latest/cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-@font-face{font-family:'Lexend';font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/lexend@latest/latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
-
 :root{
-  --brand-900:#0B3D2E; --primary:#12664F; --primary-600:#0E5341; --sky:#0E8F6C;
-  --accent:#C6870C; --accent-warm:#E0A100; --accent-600:#A87400;
-  --bg:#F3F8F5; --surface:#FFFFFF; --surface-alt:#E7F1EB;
-  --ink:#0C2A20; --body:#33453D; --muted:#5b6f66; --border:#D3E4DA;
-  --success:#0E9E6E; --danger:#B42318;
-  --font-head:'Lexend','Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-  --font-body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  --radius:14px; --radius-lg:20px; --container:70rem;
-  --shadow:0 18px 44px -16px rgb(11 61 46 / .22), 0 4px 12px -6px rgb(11 61 46 / .10);
-  --shadow-cta:0 8px 22px -6px rgb(224 161 0 / .45);
+  --bg:#e9efec; --card:#ffffff; --ink:#0f1c18; --muted:#5a6a63; --line:#dde5e1;
+  --grn:#0e9f6e; --grn-d:#065f46; --grn-dk:#0b382b; --grn-soft:#e7f5ee;
+  --amb:#b45309; --amb-soft:#fdf1e3;
+  --radius:20px; --shadow:0 1px 2px rgba(16,40,32,.04),0 8px 24px rgba(16,40,32,.06);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;font-family:var(--font-body);background:var(--bg);color:var(--body);
-  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-variant-numeric:tabular-nums}
-a{color:var(--sky);text-decoration:none} a:hover{text-decoration:underline}
-main a:not(.btn){text-decoration:underline}
-.footer a{text-decoration:underline}
-.consent a{text-decoration:underline}
-img,svg{display:block;max-width:100%}
-h1,h2,h3{font-family:var(--font-head);color:var(--ink);margin:0;line-height:1.12;letter-spacing:-.02em;font-weight:700}
-p{margin:0 0 1rem}
-strong{color:var(--ink);font-weight:600}
-.container{max-width:var(--container);margin:0 auto;padding:0 1.25rem}
-.section{padding:4.25rem 0;position:relative}
-.section--alt{background:var(--surface-alt)}
-.section--dark{background:var(--brand-900);color:#cfe3da}
-.section--dark h2,.section--dark h1{color:#fff}
-.eyebrow{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--primary);margin:0 0 .6rem}
-.h-sec{font-size:clamp(1.5rem,4vw,2.4rem);margin-bottom:.5rem;text-wrap:balance}
-.lead{font-size:1.125rem;color:var(--body);max-width:46rem}
-.section--dark .lead{color:#bcd6cb}
-.muted{color:var(--muted);font-size:.8125rem;line-height:1.45}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+.muted{color:var(--muted)}
 
-/* Кнопки */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1.6rem;border-radius:var(--radius);
-  font-family:var(--font-body);font-weight:600;font-size:1.0625rem;border:1px solid transparent;cursor:pointer;text-align:center;transition:transform .12s ease,box-shadow .12s ease,background .12s ease}
-.btn:hover{text-decoration:none}
-.btn--primary{background:var(--accent-warm);color:#231a00;box-shadow:var(--shadow-cta)}
-.btn--primary:hover{background:var(--accent);transform:translateY(-1px)}
-.btn--ghost{background:transparent;border-color:var(--border);color:var(--ink)}
-.btn--ghost:hover{border-color:var(--sky);color:var(--sky)}
-.btn--block{display:flex;width:100%}
-@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(233,239,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top__in{max-width:1140px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.02em;font-size:1.05rem;text-decoration:none}
+.logo__m{width:26px;height:30px;flex:0 0 auto}
+.logo small{display:block;font-weight:500;font-size:.66rem;letter-spacing:.13em;color:var(--muted);text-transform:uppercase;margin-top:1px}
+.top__sp{flex:1}
+.top__disc{font-size:.66rem;color:var(--muted);max-width:280px;line-height:1.35;display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:inherit;font-weight:700;
+  border:0;border-radius:12px;padding:.72rem 1.15rem;cursor:pointer;text-decoration:none;transition:transform .08s ease,box-shadow .15s ease;line-height:1.1}
+.btn:active{transform:translateY(1px)}
+.btn--pri{background:var(--grn);color:#fff;box-shadow:0 6px 16px rgba(14,159,110,.28)}
+.btn--pri:hover{background:#0c8c61}
+.btn--ghost{background:#fff;color:var(--grn-d);border:1.5px solid var(--line)}
+.btn--block{width:100%}
+.btn--sm{padding:.55rem .9rem;font-size:.9rem;border-radius:10px}
 
-/* Шапка */
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1rem}
-.brand{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-head);font-weight:700;font-size:1.2rem;color:var(--brand-900)}
-.section--dark .brand{color:#fff}
-.brand__mark{width:34px;height:34px;border-radius:9px;background:var(--brand-900);display:grid;place-items:center}
-.brand__mark svg{width:20px;height:20px}
-.brand__sub{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;padding:20px 0 40px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);
+  min-width:0;position:relative;overflow:hidden}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}.s6{grid-column:span 6}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:.28rem .6rem;border-radius:999px;background:var(--grn-soft);color:var(--grn-d)}
+.tag--amb{background:var(--amb-soft);color:var(--amb)}
+.tile h2{font-size:1.28rem;line-height:1.2;letter-spacing:-.01em;margin:.55rem 0 .5rem}
+.tile h3{font-size:1.02rem;margin:.2rem 0}
+.tile p{color:var(--muted);font-size:.95rem}
 
-/* Hero */
-.hero{padding:2.5rem 0 3.25rem;background:linear-gradient(180deg,var(--brand-900) 0%,#0F5240 62%,#12664F 100%);color:#e6f2ec}
-.hero h1{font-size:clamp(1.9rem,6vw,3.35rem);color:#fff;margin-bottom:1rem;text-wrap:balance}
-.hero__grid{display:grid;gap:2rem;align-items:center}
-@media(min-width:860px){.hero__grid{grid-template-columns:1.15fr .85fr}}
-.hero__sub{font-size:1.15rem;color:#c7ded4;margin-bottom:1.1rem;max-width:34rem}
-.hero__bridge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:.85rem 1rem;font-size:.98rem;color:#d7e8e0;margin:0 0 1.4rem;max-width:34rem}
-.hero__bridge a{color:var(--accent-warm);font-weight:600}
-.hero__trust{margin:1.15rem 0 0;font-size:.85rem;color:#9dbcb0;display:flex;flex-wrap:wrap;gap:.35rem .8rem}
-.hero__caveat{font-size:.82rem;color:#93b3a6;margin:.7rem 0 0;max-width:34rem}
-.hero__card{background:var(--surface);border-radius:var(--radius-lg);padding:1.4rem 1.25rem;box-shadow:var(--shadow);color:var(--body)}
-.hero__card-title{font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--ink);margin:0 0 .1rem;display:flex;align-items:center;gap:.5rem}
-.hero__card-title svg{width:22px;height:22px;flex:0 0 auto}
-.shield-list{margin:.9rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
-.shield-list li{display:flex;gap:.55rem;align-items:flex-start;font-size:.95rem;color:var(--ink)}
-.shield-list .ic{flex:0 0 auto;font-weight:700;margin-top:.05rem}
-.shield-list .ic--ok{color:var(--success)}
-.shield-list .ic--risk{color:var(--accent-600)}
-.shield-div{border-top:1px dashed var(--border);margin:.85rem 0 .6rem;padding-top:.6rem;font-size:.8rem;color:var(--muted)}
+/* hero tile */
+.hero{background:linear-gradient(155deg,#0b382b 0%,#0e5540 55%,#0f7a5a 100%);color:#eafaf3;border-color:#0b382b;
+  display:flex;flex-direction:column;gap:14px;min-height:340px}
+.hero .kick{color:#8fe6c2;font-weight:700;font-size:.82rem;letter-spacing:.02em}
+.hero h1{font-size:2.05rem;line-height:1.1;letter-spacing:-.02em;color:#fff;font-weight:800}
+.hero p.sub{color:#cdeee0;font-size:1.02rem;line-height:1.45}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:2px}
+.hero .btn--ghost{background:rgba(255,255,255,.08);color:#eafaf3;border-color:rgba(255,255,255,.22)}
+.hero .btn--ghost:hover{background:rgba(255,255,255,.15)}
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:#dff5ec;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:.34rem .7rem}
+.hero .fz{font-size:.68rem;line-height:1.4;color:#9fd7c3;border-top:1px solid rgba(255,255,255,.14);padding-top:10px}
 
-/* Карточки/сетки */
-.grid{display:grid;gap:1.1rem;margin-top:1.75rem}
-@media(min-width:760px){.grid--3{grid-template-columns:repeat(3,1fr)} .grid--2{grid-template-columns:repeat(2,1fr)}}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
-.card h3{font-size:1.15rem;margin-bottom:.45rem}
-.card--situation{cursor:pointer;display:block;color:var(--body);text-decoration:none;transition:border-color .12s,transform .12s}
-.card--situation:hover{text-decoration:none}
-.card--situation:hover{border-color:var(--sky);transform:translateY(-2px)}
-@media (prefers-reduced-motion:reduce){.card--situation:hover{transform:none}}
+/* stat tile */
+.stat{background:linear-gradient(160deg,#0e9f6e,#0c8560);color:#fff;border-color:#0c8560;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.stat .big{font-size:2.7rem;font-weight:800;line-height:1;letter-spacing:-.02em}
+.stat .lbl{font-size:.95rem;font-weight:600;color:#e6fff5}
+.stat .sm{font-size:.78rem;color:#c8f2e2;line-height:1.4}
 
-/* Сравнение */
-.compare{display:grid;gap:1rem;margin-top:1.75rem}
-@media(min-width:760px){.compare{grid-template-columns:1fr 1fr}}
-.compare__col{border-radius:var(--radius);padding:1.25rem;border:1px solid var(--border)}
-.compare__col--them{background:var(--surface-alt)}
-.compare__col--us{background:#effaf3;border-color:#b9e6cc}
-.compare__col h3{font-size:1.05rem;margin-bottom:.8rem}
-.compare__row{display:flex;gap:.55rem;align-items:flex-start;padding:.5rem 0;border-top:1px dashed var(--border);font-size:.96rem}
-.compare__row:first-of-type{border-top:none}
-.compare__ic{flex:0 0 auto;margin-top:.15rem;font-weight:700}
-.compare__col--them .compare__ic{color:var(--muted)}
-.compare__col--us .compare__ic{color:var(--success)}
+/* lists protected/risk */
+.mklist{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:12px}
+.mklist li{display:flex;gap:10px;font-size:.92rem;line-height:1.4;color:#28352f}
+.mklist .ic{flex:0 0 auto;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;margin-top:1px;font-weight:800;font-size:.8rem}
+.ok .ic{background:var(--grn-soft);color:var(--grn-d)}
+.risk .ic{background:var(--amb-soft);color:var(--amb)}
+.mklist small{display:block;color:var(--muted);font-size:.78rem;margin-top:1px}
 
-/* Шаги/механика */
-.steps{counter-reset:st;margin-top:1.6rem;display:grid;gap:.9rem}
-.step{display:flex;gap:.9rem;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem}
-.step__n{counter-increment:st;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:700;font-family:var(--font-head)}
-.step__n::before{content:counter(st)}
-.step h3{font-size:1.02rem;margin-bottom:.15rem}
-.flowline{background:var(--surface-alt);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem;margin-top:1.2rem;font-size:.98rem;color:var(--ink)}
-.badge-trust{display:inline-flex;gap:.5rem;align-items:center;background:#e8f5ee;border:1px solid #c2e6d2;color:var(--primary);border-radius:999px;padding:.5rem .95rem;font-size:.88rem;font-weight:600;margin-top:1.15rem}
+/* steps */
+.steps{display:flex;flex-direction:column;gap:14px;margin-top:12px;counter-reset:st}
+.step{display:flex;gap:12px}
+.step .n{counter-increment:st;flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:var(--grn-dk);color:#fff;
+  font-weight:800;display:grid;place-items:center;font-size:.95rem}
+.step .n::before{content:counter(st)}
+.step b{font-size:.95rem;display:block}
+.step span{color:var(--muted);font-size:.84rem}
 
-/* Гарантия/цена */
-.guarantee{background:linear-gradient(180deg,#effaf3,#ffffff);border:1px solid #b9e6cc;border-radius:var(--radius-lg);padding:1.6rem;text-align:center;box-shadow:var(--shadow)}
-.guarantee__big{font-family:var(--font-head);font-weight:700;font-size:clamp(1.4rem,4.2vw,2.05rem);color:var(--primary);line-height:1.15;margin-bottom:.4rem}
-.price-anchor{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.4rem;margin-top:1.25rem}
-.price-anchor .pa-price{font-family:var(--font-head);font-weight:700;color:var(--ink);font-size:1.25rem}
-.price-anchor .pa-mo{color:var(--primary);font-weight:600}
-.price-grid{display:grid;gap:.75rem;margin-top:1rem}
-@media(min-width:640px){.price-grid{grid-template-columns:1fr 1fr}}
-.price-item{border:1px solid var(--border);border-radius:var(--radius);padding:.95rem 1.1rem;background:var(--surface)}
-.price-item b{font-family:var(--font-head);color:var(--ink);display:block;font-size:1.05rem}
-.price-item span{font-size:.88rem;color:var(--muted)}
+/* sroki */
+.sroki .row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line);gap:10px}
+.sroki .row:last-of-type{border-bottom:0}
+.sroki .row b{font-size:.9rem}
+.sroki .row .v{color:var(--grn-d);font-weight:800;white-space:nowrap}
 
-/* Дисклеймер ФЗ-332 */
-.fz332{background:#fbf7ee;border:1px solid #e8d9b6;border-left:4px solid var(--accent-600);border-radius:var(--radius);padding:1rem 1.15rem;font-size:.82rem;color:#4a4132;line-height:1.5;margin-top:1.2rem}
-.fz332 b{color:#3a3327}
+/* price */
+.price{display:flex;flex-direction:column;gap:12px}
+.price .anchor{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .from{font-size:.8rem;color:var(--muted)}
+.price .num{font-size:2.2rem;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.price .permo{background:var(--grn-soft);color:var(--grn-d);font-weight:700;font-size:.82rem;border-radius:999px;padding:.3rem .7rem}
+.plist{display:grid;grid-template-columns:1fr;gap:8px}
+.plist .pr{display:flex;justify-content:space-between;gap:12px;font-size:.9rem;padding:9px 12px;background:#f5f8f6;border:1px solid var(--line);border-radius:12px}
+.plist .pr b{white-space:nowrap;color:var(--grn-d)}
 
-/* FAQ */
-.faq details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.2rem 1.1rem;margin-bottom:.7rem}
-.faq summary{font-weight:600;color:var(--ink);cursor:pointer;padding:.95rem 0;list-style:none;position:relative;padding-right:1.8rem;font-family:var(--font-head);font-size:1.02rem}
+/* honesty */
+.honesty{background:#0f1c18;color:#dfe9e4;border-color:#0f1c18}
+.honesty h2{color:#fff}
+.honesty ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.honesty li{font-size:.85rem;color:#c4d2cc;padding-left:18px;position:relative;line-height:1.4}
+.honesty li::before{content:"•";position:absolute;left:2px;color:var(--grn)}
+
+/* checker widget */
+.check .chips{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.achip{font:inherit;font-size:.88rem;font-weight:600;border:1.5px solid var(--line);background:#fff;color:#28352f;
+  border-radius:999px;padding:.5rem .9rem;cursor:pointer;transition:all .12s ease}
+.achip[aria-pressed="true"]{background:var(--grn-dk);color:#fff;border-color:var(--grn-dk)}
+.check__result{margin-top:14px;display:none}
+.check__result.show{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.rescols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.rescol{border-radius:14px;padding:13px;min-width:0}
+.rescol.ok{background:var(--grn-soft)}
+.rescol.risk{background:var(--amb-soft)}
+.rescol h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+.rescol.ok h4{color:var(--grn-d)}
+.rescol.risk h4{color:var(--amb)}
+.rescol ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:6px}
+.rescol li{font-size:.86rem;line-height:1.35}
+.res-bridge{margin-top:12px;font-size:.9rem;color:#28352f;background:#f5f8f6;border:1px solid var(--line);border-radius:12px;padding:12px;line-height:1.45}
+
+/* cases */
+.case{display:flex;flex-direction:column;gap:10px}
+.case .quote{font-size:.98rem;line-height:1.45;color:#28352f}
+.case .who{display:flex;align-items:center;gap:10px;margin-top:auto}
+.case .av{width:38px;height:38px;flex:0 0 auto;border-radius:50%;background:var(--grn-soft);color:var(--grn-d);display:grid;place-items:center;font-weight:800}
+.case .who b{font-size:.86rem;display:block}
+.case .who span{font-size:.76rem;color:var(--muted)}
+.case .res{display:inline-flex;align-self:flex-start;gap:6px;font-size:.78rem;font-weight:700;color:var(--grn-d);background:var(--grn-soft);border-radius:999px;padding:.3rem .7rem}
+.ph-note{font-size:.68rem;color:var(--muted);font-style:italic}
+
+/* form tile */
+.form{background:linear-gradient(165deg,#f4f8f6,#fff)}
+.form .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+.field-label{display:block;font-weight:700;font-size:.85rem;margin:.9rem 0 .35rem}
+.inp{width:100%;font:inherit;padding:.75rem .85rem;border:1.5px solid var(--line);border-radius:12px;background:#fff}
+.inp:focus{outline:none;border-color:var(--grn)}
+.channels{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.channel-pill input{position:absolute;opacity:0;pointer-events:none}
+.channel-pill label{display:inline-block;font-size:.85rem;font-weight:600;border:1.5px solid var(--line);border-radius:999px;padding:.45rem .8rem;cursor:pointer}
+.channel-pill input:checked+label{background:var(--grn-dk);color:#fff;border-color:var(--grn-dk)}
+.channel-note{font-size:.78rem;color:var(--muted);margin-top:8px;line-height:1.4}
+.consents{border:none;padding:0;margin:1rem 0 .4rem}
+.consent{display:flex;gap:9px;align-items:flex-start;font-size:.8rem;color:#3a4a43;margin-bottom:.5rem;line-height:1.4}
+.consent input{margin-top:3px;flex:0 0 auto;width:16px;height:16px;accent-color:var(--grn)}
+.consent a{color:var(--grn-d);text-decoration:underline}
+.guar-mini{background:var(--grn-soft);border:1px solid #cdeadd;border-radius:12px;padding:11px 13px;font-size:.84rem;color:var(--grn-d);line-height:1.4;margin-top:6px}
+.form-err{color:#c0392b;font-size:.84rem;min-height:1em;margin:.4rem 0}
+.hidden{display:none!important}
+.success{text-align:center;padding:18px 6px}
+.success svg{width:64px;height:64px;margin:0 auto 10px;display:block}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:2px 0}
+.faq details:last-of-type{border-bottom:0}
+.faq summary{list-style:none;cursor:pointer;padding:13px 30px 13px 0;font-weight:600;font-size:.98rem;position:relative}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:'+';position:absolute;right:.2rem;top:.8rem;font-size:1.4rem;color:var(--sky);font-weight:400;line-height:1}
-.faq details[open] summary::after{content:'–'}
-.faq details p{margin:0 0 1rem;color:var(--body)}
+.faq summary::after{content:"+";position:absolute;right:4px;top:11px;font-size:1.35rem;color:var(--grn);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;font-size:.9rem;line-height:1.5;color:var(--muted)}
 
-/* Дожим */
-.dojim{background:#fbf1ef;border:1px solid #f0cec8;border-left:4px solid var(--danger);border-radius:var(--radius);padding:1.5rem;color:var(--ink)}
-.dojim h2{color:var(--ink)}
+/* footer */
+.foot{background:#0f1c18;color:#9fb0a8;padding:34px 0 40px;margin-top:8px}
+.foot .wrap{display:flex;flex-direction:column;gap:16px}
+.foot__disc{font-size:.74rem;line-height:1.55;color:#869890;border:1px solid #24352d;border-radius:14px;padding:14px 16px;background:#132520}
+.foot__row{display:flex;flex-wrap:wrap;gap:20px;font-size:.82rem}
+.foot__row a{color:#bcd0c8;text-decoration:none}
+.foot small{color:#6f817a;font-size:.74rem;line-height:1.5;display:block}
 
-/* КВИЗ */
-.quiz-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:1.5rem;max-width:40rem;margin:1.75rem auto 0}
-.quiz-progress{height:8px;background:var(--surface-alt);border-radius:999px;overflow:hidden;margin-bottom:1.4rem}
-.quiz-progress__bar{height:100%;width:20%;background:linear-gradient(90deg,var(--sky),var(--primary));border-radius:999px;transition:width .35s ease}
-.quiz-step-label{font-size:.8rem;color:var(--muted);font-weight:600;margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.08em}
-.quiz-q{font-family:var(--font-head);font-weight:700;font-size:1.25rem;color:var(--ink);margin-bottom:1.1rem;line-height:1.2}
-.quiz-options{display:grid;gap:.65rem}
-.quiz-opt{display:block;width:100%;text-align:left;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem;font-size:1rem;font-family:var(--font-body);color:var(--ink);cursor:pointer;min-height:56px;transition:border-color .1s,background .1s}
-.quiz-opt:hover,.quiz-opt:focus-visible{border-color:var(--sky);background:#f0f9f4;outline:none}
-.quiz-back{background:none;border:none;color:var(--muted);font-size:.9rem;cursor:pointer;margin-top:1rem;padding:.3rem 0;font-family:var(--font-body)}
-.quiz-back:hover{color:var(--sky)}
+/* sticky mobile cta */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(233,239,236,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(120%);transition:transform .25s ease}
+.sticky.show{transform:none}
 
-/* Экран-вердикт (ПИК) */
-.forecast{text-align:center}
-.forecast__eyebrow{font-size:.85rem;color:var(--muted);font-weight:600;margin-bottom:.3rem}
-.verdict-shield{width:76px;height:76px;margin:.2rem auto .6rem}
-.forecast__range{font-family:var(--font-head);font-weight:700;font-size:clamp(1.4rem,5vw,2rem);color:var(--primary);line-height:1.15;margin:.2rem auto .4rem;max-width:26rem;text-wrap:balance}
-.forecast__disc{font-size:.8rem;color:var(--muted);max-width:31rem;margin:.4rem auto 1rem;line-height:1.4}
-.forecast__bridge{font-size:1rem;color:var(--body);max-width:33rem;margin:0 auto 1.3rem}
-
-/* Контактный шаг */
-.contact__reassure{background:var(--surface-alt);border-radius:var(--radius);padding:.9rem 1.05rem;font-size:.92rem;color:var(--ink);margin-bottom:1.1rem;display:flex;gap:.6rem;align-items:flex-start}
-.contact__reassure b{color:var(--ink)}
-.trust-badges{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin:.2rem 0 1.1rem;font-size:.82rem;color:var(--muted)}
-.trust-badges span{display:inline-flex;gap:.35rem;align-items:center}
-.field-label{display:block;font-weight:600;color:var(--ink);font-size:.92rem;margin:.9rem 0 .5rem}
-.channels{display:flex;flex-wrap:wrap;gap:.5rem}
-.channel-pill{position:relative}
-.channel-pill input{position:absolute;opacity:0;width:0;height:0}
-.channel-pill label{display:inline-flex;align-items:center;justify-content:center;padding:.6rem 1rem;border:1.5px solid var(--border);border-radius:999px;font-size:.95rem;cursor:pointer;min-height:44px;color:var(--ink);background:var(--surface)}
-.channel-pill input:checked+label{border-color:var(--primary);background:#e8f5ee;color:var(--primary);font-weight:600}
-.channel-pill input:focus-visible+label{outline:2px solid var(--sky);outline-offset:2px}
-.channel-note{font-size:.8rem;color:var(--muted);margin:.5rem 0 0}
-.inp{width:100%;padding:.85rem 1rem;border:1.5px solid var(--border);border-radius:var(--radius);font-size:16px;font-family:var(--font-body);color:var(--ink);background:var(--surface);min-height:52px}
-.inp:focus{outline:none;border-color:var(--sky)}
-.consents{margin:1.1rem 0 .4rem;display:grid;gap:.7rem}
-.consent{display:flex;gap:.6rem;align-items:flex-start;font-size:.82rem;color:var(--muted);line-height:1.4}
-.consent input{margin-top:.15rem;width:20px;height:20px;flex:0 0 auto;accent-color:var(--primary)}
-.consent a{color:var(--sky)}
-.form-err{color:var(--danger);font-size:.85rem;margin:.6rem 0 0;min-height:1.1rem}
-.guarantee-mini{border:1px solid #b9e6cc;background:#effaf3;border-radius:var(--radius);padding:.8rem 1rem;font-size:.9rem;color:var(--ink);margin:1.1rem 0}
-.guarantee-mini b{color:var(--primary)}
-
-/* Экран-успех */
-.success{text-align:center;padding:1rem 0}
-.success__check{width:72px;height:72px;margin:0 auto 1rem}
-.success h2{margin-bottom:.5rem}
-
-/* Липкая кнопка мобайл */
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surface);border-top:1px solid var(--border);
-  box-shadow:0 -6px 20px -8px rgb(11 61 46 / .18);padding:.6rem .9rem;padding-bottom:calc(.6rem + env(safe-area-inset-bottom));
-  transform:translateY(120%);transition:transform .25s ease}
-.sticky-cta.show{transform:translateY(0)}
-@media (min-width:860px){.sticky-cta{display:none}}
-
-/* Footer */
-.footer{background:var(--brand-900);color:#9dbcb0;padding:2.75rem 0 2rem;font-size:.9rem}
-.footer a{color:#c7ded4}
-.footer__legal{font-size:.8rem;color:#7fa093;line-height:1.55;margin-top:1rem;border-top:1px solid rgba(255,255,255,.12);padding-top:1.1rem}
-.footer__chan{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin:.8rem 0}
-.footer__chan a{color:#fff;font-weight:600}
-.hidden{display:none}
-:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+@media(min-width:900px){ .top__disc{display:block} }
+@media(max-width:860px){
+  .bento{grid-template-columns:1fr;gap:14px;padding:14px 0 30px}
+  .s2,.s3,.s4,.s6{grid-column:span 1}
+  .hero h1{font-size:1.72rem}
+  .form .grid{grid-template-columns:1fr}
+  .rescols{grid-template-columns:1fr}
+}
+@media(min-width:861px){ .sticky{display:none} }
 </style>
 </head>
 <body>
 
-<header class="container">
-  <div class="topbar">
-    <a href="#hero" class="brand" aria-label="ЩИТ — на главную">
-      <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 8 L54 17 V34 C54 47 44 55 32 59 C20 55 10 47 10 34 V17 Z" fill="none" stroke="#E0A100" stroke-width="5" stroke-linejoin="round"/></svg></span>
-      <span>ЩИТ<br><span class="brand__sub">банкротство · защита имущества</span></span>
+<header class="top">
+  <div class="top__in">
+    <a class="logo" href="#hero" data-scroll="hero" aria-label="ЩИТ — банкротство и защита имущества">
+      <svg class="logo__m" viewBox="0 0 26 30" fill="none" aria-hidden="true"><path d="M13 1 24 5v9c0 8-5.4 12.6-11 15C7.4 26.6 2 22 2 14V5L13 1Z" fill="#0e9f6e"/><path d="M8 15.2l3.4 3.4L18.5 11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>ЩИТ<small>Защита имущества</small></span>
     </a>
-    <a href="#quiz" class="btn btn--primary" data-goal="header_cta_click" data-scroll="quiz" style="padding:.65rem 1.1rem;font-size:.95rem">Пройти диагностику</a>
+    <span class="top__sp"></span>
+    <span class="top__disc">Реклама. Услуги по банкротству — платные. Банкротство влечёт последствия по 127-ФЗ.</span>
+    <a href="#zayavka" class="btn btn--pri btn--sm" data-scroll="zayavka" data-goal="header_cta_click">Разобрать ситуацию</a>
   </div>
 </header>
 
-<main>
+<main class="wrap">
+  <div class="bento">
 
-  <!-- [0] HERO -->
-  <section id="hero" class="hero">
-    <div class="container hero__grid">
-      <div>
-        <h1>Боитесь потерять квартиру и имущество при банкротстве?</h1>
-        <p class="hero__sub">Списываем долги по закону <strong style="color:#fff">127-ФЗ</strong> и заранее выстраиваем защиту имущества. Единственное жильё защищает закон — остальное защищаем грамотно и вовремя.</p>
-        <p class="hero__bridge">Главная ошибка — идти в банкротство, не подготовив имущество. Разберём вашу ситуацию: что уже под защитой закона, а что нужно защищать отдельно. <a href="#chto-zashishaet-zakon" data-scroll="chto-zashishaet-zakon">Что защищает закон →</a></p>
-        <a href="#quiz" class="btn btn--primary btn--block" data-goal="hero_cta_click" data-scroll="quiz" style="max-width:22rem">Узнать, что защищено</a>
-        <p class="hero__caveat">Услуга платная. Банкротство влечёт последствия по 127-ФЗ. Результат зависит от обстоятельств дела и добросовестности должника.</p>
-        <p class="hero__trust">
-          <span>Официально, по договору</span><span>· рассрочка оплаты</span><span>· без звонка и без обязательств</span>
-        </p>
+    <!-- HERO -->
+    <section class="tile hero s4" id="hero">
+      <span class="kick">Боитесь потерять квартиру и имущество при банкротстве?</span>
+      <h1>Списываем долги по 127-ФЗ — а имущество берём под защиту</h1>
+      <p class="sub">Единственное жильё защищает закон. Что в зоне риска — разбираем заранее и защищаем законными способами. Честный расклад по вашей ситуации, без обещаний «сохраним всё».</p>
+      <div class="cta-row">
+        <a href="#check" class="btn btn--pri" data-scroll="check" data-goal="hero_cta_click">Проверить, что под защитой</a>
+        <a href="#price" class="btn btn--ghost" data-scroll="price" data-goal="hero_price_click">Цена и рассрочка</a>
       </div>
-      <div class="hero__card">
-        <p class="hero__card-title">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 15 V33 C54 46 44 54 32 58 C20 54 10 46 10 33 V15 Z" fill="none" stroke="#12664F" stroke-width="4.5" stroke-linejoin="round"/><path d="M24 33 l6 6 l11 -13" fill="none" stroke="#0E9E6E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Что и как защищается
-        </p>
-        <p class="muted" style="margin:.1rem 0 0">Ориентир по типичной ситуации — точный расклад на разборе</p>
-        <ul class="shield-list">
-          <li><span class="ic ic--ok" aria-hidden="true">✓</span><span><strong>Единственное жильё</strong> — как правило, под защитой закона (кроме жилья в ипотеке/залоге)</span></li>
-          <li><span class="ic ic--ok" aria-hidden="true">✓</span><span>Вещи личного пользования и доход в пределах прожиточного минимума</span></li>
-        </ul>
-        <div class="shield-div">В зоне риска — реализуемое имущество:</div>
-        <ul class="shield-list">
-          <li><span class="ic ic--risk" aria-hidden="true">!</span><span>Не единственное жильё, автомобиль, доли, дорогая техника</span></li>
-          <li><span class="ic ic--risk" aria-hidden="true">!</span><span>Ипотечное и залоговое имущество — требует отдельной стратегии</span></li>
-        </ul>
-        <p class="muted" style="margin:.85rem 0 0">Защиту второго списка выстраивают <strong>заранее</strong>, до подачи заявления.</p>
+      <div class="trust">
+        <span class="chip">Сопровождение по договору</span>
+        <span class="chip">Рассрочка до 10 мес</span>
+        <span class="chip">Разбор без звонка</span>
       </div>
-    </div>
-  </section>
+      <p class="fz">Реклама услуг по сопровождению процедуры банкротства физических лиц. Услуги платные. Банкротство влечёт правовые последствия по ст. 213.30 ФЗ-127. Списание распространяется не на все виды долгов.</p>
+    </section>
 
-  <!-- [1] Отстройка от страха «заберут всё» -->
-  <section class="section">
-    <div class="container">
-      <p class="eyebrow">Почему страх преувеличен — но расслабляться нельзя</p>
-      <h2 class="h-sec">«Если объявлю себя банкротом — заберут всё, что нажил»</h2>
-      <p class="lead">Это самый частый страх — и он наполовину миф, наполовину правда. Закон прямо защищает часть вашего имущества. Но другую часть действительно можно потерять, если войти в процедуру без подготовки. Разница между «сохранил» и «потерял» — в том, что и когда вы сделали.</p>
-      <div class="compare">
-        <div class="compare__col compare__col--them">
-          <h3>Если идти в банкротство вслепую</h3>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Не единственное жильё и авто уходят в конкурсную массу</span></div>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Сделки за последние 3 года могут оспорить</span></div>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Финансовый управляющий сам решает, что реализовать</span></div>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">•</span><span>Упущено время, когда имущество ещё можно было защитить</span></div>
+    <!-- STAT -->
+    <section class="tile stat s2">
+      <div class="big">446 ГПК</div>
+      <div class="lbl">Единственное жильё под защитой закона</div>
+      <div class="sm">Не включается в реализацию — кроме ипотечного и иного залогового жилья (особый случай).</div>
+    </section>
+
+    <!-- ЧТО ЗАЩИЩЕНО -->
+    <section class="tile s3" id="zashchita">
+      <span class="tag">Что защищает закон</span>
+      <h2>Останется с вами</h2>
+      <ul class="mklist ok">
+        <li><span class="ic">✓</span><div><b>Единственное пригодное жильё</b><small>ст. 446 ГПК РФ — не реализуется (кроме ипотечного залога)</small></div></li>
+        <li><span class="ic">✓</span><div><b>Предметы обихода, мебель, техника</b><small>вещи личного и домашнего пользования</small></div></li>
+        <li><span class="ic">✓</span><div><b>Инструменты для профессии</b><small>то, чем вы зарабатываете, в пределах лимита</small></div></li>
+        <li><span class="ic">✓</span><div><b>Прожиточный минимум с дохода</b><small>сохраняется на вас и иждивенцев ежемесячно</small></div></li>
+      </ul>
+    </section>
+
+    <!-- ЧТО В РИСКЕ -->
+    <section class="tile s3">
+      <span class="tag tag--amb">Зона риска — защищаем заранее</span>
+      <h2>Требует стратегии</h2>
+      <ul class="mklist risk">
+        <li><span class="ic">!</span><div><b>Ипотечная / залоговая квартира</b><small>залог банка — особый случай, защита через суд</small></div></li>
+        <li><span class="ic">!</span><div><b>Второе жильё, доля, дача</b><small>попадает в конкурсную массу — работаем заранее</small></div></li>
+        <li><span class="ic">!</span><div><b>Автомобиль</b><small>могут включить в массу; есть законные исключения</small></div></li>
+        <li><span class="ic">!</span><div><b>Сделки за 3 года до банкротства</b><small>финуправляющий вправе оспорить — разбираем риски</small></div></li>
+      </ul>
+    </section>
+
+    <!-- ИНТЕРАКТИВ: ПРОВЕРКА ИМУЩЕСТВА -->
+    <section class="tile check s4" id="check">
+      <span class="tag">Проверка за 20 секунд</span>
+      <h2>Отметьте, что у вас есть — покажем, что под защитой</h2>
+      <p>Ориентировочно, по общим правилам 127-ФЗ и ГПК. Точную картину дадим на разборе по вашим документам.</p>
+      <div class="chips" id="asset-chips" role="group" aria-label="Ваше имущество"></div>
+      <button type="button" class="btn btn--pri" id="check-run" data-goal="checker_run" disabled>Показать результат</button>
+      <div class="check__result" id="check-res">
+        <div class="rescols">
+          <div class="rescol ok"><h4>Под защитой закона</h4><ul id="res-ok"></ul></div>
+          <div class="rescol risk"><h4>Требует защиты заранее</h4><ul id="res-risk"></ul></div>
         </div>
-        <div class="compare__col compare__col--us">
-          <h3>Если подготовиться заранее, по договору</h3>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>Единственное жильё остаётся у вас по закону*</span></div>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>Досудебная или судебная защита имущества — до подачи заявления</span></div>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>Понятный расклад: что защищено, что в риске, что делаем</span></div>
-          <div class="compare__row"><span class="compare__ic" aria-hidden="true">✓</span><span>Долги списываются, а имущество — под грамотной защитой</span></div>
-        </div>
+        <div class="res-bridge" id="res-bridge"></div>
+        <a href="#zayavka" class="btn btn--pri btn--block" data-scroll="zayavka" data-goal="checker_to_form" style="margin-top:12px">Разобрать мою ситуацию</a>
       </div>
-      <p class="muted" style="margin-top:.8rem">* Единственное пригодное для проживания жильё защищено исполнительским иммунитетом, кроме случаев, когда оно в ипотеке или ином залоге. Мы не обещаем сохранить любое имущество — честный расклад по вашей ситуации даём на разборе.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- [2] Что защищает закон — механика -->
-  <section id="chto-zashishaet-zakon" class="section section--alt">
-    <div class="container">
-      <p class="eyebrow">Как это устроено по закону</p>
-      <h2 class="h-sec">Что защищает закон, а что нужно защищать отдельно</h2>
-      <p class="lead">Мы не «прячем» имущество — это как раз то, что оспаривается и приводит к отказу в списании долгов. Мы работаем законными инструментами: используем защиту, которую даёт сам закон, и заранее выстраиваем стратегию для того имущества, что в зоне риска.</p>
+    <!-- СРОКИ -->
+    <section class="tile sroki s2">
+      <span class="tag">Сроки</span>
+      <h2>Как по времени</h2>
+      <div class="row"><b>Подготовка и подача</b><span class="v">2–4 нед</span></div>
+      <div class="row"><b>Судебная процедура</b><span class="v">6–12 мес</span></div>
+      <div class="row"><b>Взыскание приостановят</b><span class="v">с 1-го заседания</span></div>
+      <p class="muted" style="margin-top:10px;font-size:.8rem">Сроки ориентировочные, зависят от суда и обстоятельств дела.</p>
+    </section>
+
+    <!-- КАК ПРОХОДИТ -->
+    <section class="tile s3" id="kak">
+      <span class="tag">Как проходит</span>
+      <h2>4 шага под ключ</h2>
       <div class="steps">
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Инвентаризация имущества</h3><p style="margin:0">Смотрим, что у вас есть и в каком статусе: единственное жильё, залоги, авто, доли, сделки за 3 года.</p></div></div>
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Разделяем: защищено законом / в зоне риска</h3><p style="margin:0">Единственное жильё и минимально необходимое — под иммунитетом. Остальное требует отдельной работы.</p></div></div>
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Выстраиваем защиту заранее</h3><p style="margin:0">Досудебная или судебная защита имущества — законными способами, до подачи заявления о банкротстве.</p></div></div>
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Ведём процедуру банкротства</h3><p style="margin:0">Сопровождаем списание долгов по 127-ФЗ — с уже подготовленной позицией по имуществу.</p></div></div>
+        <div class="step"><span class="n"></span><div><b>Разбор ситуации</b><span>считаем долги, смотрим имущество и сделки, оцениваем риски</span></div></div>
+        <div class="step"><span class="n"></span><div><b>Защита имущества</b><span>досудебно или через суд — до подачи заявления о банкротстве</span></div></div>
+        <div class="step"><span class="n"></span><div><b>Подача и процедура</b><span>заявление в суд, финуправляющий, взыскание приостанавливается</span></div></div>
+        <div class="step"><span class="n"></span><div><b>Списание долгов</b><span>определение суда об освобождении от обязательств</span></div></div>
       </div>
-      <span class="badge-trust">Официально, по договору · только законные инструменты защиты имущества</span>
-    </div>
-  </section>
+    </section>
 
-  <!-- [3] Ключевой вопрос -->
-  <section class="section">
-    <div class="container" style="max-width:48rem">
-      <p class="eyebrow">Ключевой вопрос</p>
-      <h2 class="h-sec">«Заберут ли мою единственную квартиру?» — честный ответ</h2>
-      <p class="lead">По общему правилу — нет. Единственное пригодное для проживания жильё защищено исполнительским иммунитетом и не включается в конкурсную массу. Но есть важное исключение: если квартира в <strong>ипотеке или ином залоге</strong>, банкротство само по себе её не сохраняет — залоговое имущество кредитор вправе реализовать. Для такого случая нужна отдельная стратегия защиты ипотечного жилья. Поэтому первое, что мы делаем, — определяем статус вашего жилья, а не даём общих обещаний.</p>
-      <p style="margin-top:.4rem"><a href="#chto-zashishaet-zakon" data-scroll="chto-zashishaet-zakon">Как разделяется защищённое и рисковое имущество — выше →</a></p>
-    </div>
-  </section>
-
-  <!-- [4] Узнаёте себя -->
-  <section class="section section--alt">
-    <div class="container">
-      <p class="eyebrow">Узнаёте себя?</p>
-      <h2 class="h-sec">Если хоть одно — про вас, разбор ниже даст ответ</h2>
-      <div class="grid grid--3">
-        <a class="card card--situation" href="#quiz" data-scroll="quiz" data-goal="hero_cta_click">
-          <h3>Долги растут</h3><p style="margin:0">Платежи по кредитам уже больше дохода, но боюсь банкротства — вдруг заберут квартиру и машину.</p>
-        </a>
-        <a class="card card--situation" href="#quiz" data-scroll="quiz" data-goal="hero_cta_click">
-          <h3>Есть что терять</h3><p style="margin:0">Квартира, авто, доли — хочу списать долги, но не понимаю, что из этого под защитой, а что нет.</p>
-        </a>
-        <a class="card card--situation" href="#quiz" data-scroll="quiz" data-goal="hero_cta_click">
-          <h3>Уже приставы</h3><p style="margin:0">Пошли аресты и удержания — тяну с решением и боюсь, что имущество опишут раньше, чем разберусь.</p>
-        </a>
+    <!-- ЦЕНА -->
+    <section class="tile price s4" id="price">
+      <span class="tag">Цена и рассрочка</span>
+      <div class="anchor">
+        <div>
+          <span class="from">Банкротство «под ключ» — от</span>
+          <div class="num">119 900 ₽</div>
+        </div>
+        <span class="permo">рассрочка до 10 мес · от 11 990 ₽/мес</span>
       </div>
-      <p class="lead" style="margin-top:1.4rem">Не будем гадать. За 5 вопросов покажем, что в вашем случае защищено, а что нужно защищать — и подходит ли вам банкротство.</p>
-    </div>
-  </section>
+      <div class="plist">
+        <div class="pr"><span>Банкротство под ключ (сопровождение)</span><b>119 900–299 900 ₽</b></div>
+        <div class="pr"><span>Постоплата: 10% при подаче + 90% на 8 мес</span><b>от 99 900 ₽</b></div>
+        <div class="pr"><span>Досудебная защита имущества</span><b>от 34 900 ₽</b></div>
+        <div class="pr"><span>Судебная защита имущества (СОЮ)</span><b>от 69 900 ₽</b></div>
+        <div class="pr"><span>Защита ипотеки через суд</span><b>49 900–79 900 ₽</b></div>
+      </div>
+      <p class="muted" style="font-size:.8rem">Цены «от», зависят от суммы долга, числа кредиторов и стоимости имущества. Точную сумму фиксируем в договоре после разбора.</p>
+    </section>
 
-  <!-- [5] КВИЗ-ДИАГНОСТИКА -->
-  <section id="quiz" class="section">
-    <div class="container">
-      <p class="eyebrow" style="text-align:center">Диагностика за 5 вопросов</p>
-      <h2 class="h-sec" style="text-align:center">Узнайте, что защищаем в вашем случае — и подходит ли вам банкротство</h2>
-      <p class="lead" style="text-align:center;margin:0 auto">Без звонка, за 2 минуты. Скажем честно — даже если в вашей ситуации банкротство сейчас не лучший вариант.</p>
+    <!-- ЧЕСТНО О ПОСЛЕДСТВИЯХ -->
+    <section class="tile honesty s2">
+      <span class="tag" style="background:rgba(14,159,110,.18);color:#8fe6c2">Честно</span>
+      <h2>Что важно знать</h2>
+      <ul>
+        <li>Списываются не все долги: алименты, вред жизни/здоровью, зарплата работникам, субсидиарка — остаются</li>
+        <li>5 лет — указывать банкротство при кредитах; 3 года — ограничение на руководящие должности</li>
+        <li>Освобождение от долгов зависит от добросовестности должника — решает суд</li>
+        <li>Мы не обещаем «сохранить любое имущество» — даём законную стратегию и честный прогноз</li>
+      </ul>
+    </section>
 
-      <div class="quiz-wrap">
-        <div class="quiz-progress" aria-hidden="true"><div class="quiz-progress__bar" id="qbar"></div></div>
+    <!-- КЕЙС 1 -->
+    <section class="tile case s3" id="cases">
+      <span class="res">Долг 1,4 млн ₽ списан</span>
+      <p class="quote">«Больше всего боялась за квартиру — она единственная. Объяснили, что её не тронут, и показали, что делать со старой машиной. Прошли банкротство, долги закрыли.»</p>
+      <div class="who"><span class="av">М</span><div><b>Марина, 41 год</b><span>единственное жильё + автомобиль</span></div></div>
+      <p class="ph-note">Пример-плейсхолдер. Реальные кейсы и отзывы подставляются перед запуском.</p>
+    </section>
 
-        <div id="qbody" data-goal="quiz_start" data-goal-note="quiz_start эмитится при клике 1-го варианта Q1"></div>
+    <!-- КЕЙС 2 -->
+    <section class="tile case s3">
+      <span class="res">Ипотеку удалось сохранить</span>
+      <p class="quote">«У нас была ипотека и вторая комната в доле. Заранее выстроили защиту, по ипотеке шли через суд. Итог — с жильём разобрались, долги по картам и займам списали.»</p>
+      <div class="who"><span class="av">А</span><div><b>Алексей, 37 лет</b><span>ипотека + доля в недвижимости</span></div></div>
+      <p class="ph-note">Пример-плейсхолдер. Результат по ипотеке зависит от условий залога и решения суда.</p>
+    </section>
 
-        <!-- Экран-вердикт (ПИК) -->
-        <div id="qforecast" class="forecast hidden" data-goal="quiz_complete" data-goal-note="quiz_complete эмитится при показе экрана-вердикта">
-          <p class="forecast__eyebrow">Ваш предварительный расклад</p>
-          <svg class="verdict-shield" viewBox="0 0 64 64" role="img" aria-label="Предварительная оценка защиты имущества">
-            <path d="M32 5 L55 14 V33 C55 47 44 56 32 60 C20 56 9 47 9 33 V14 Z" fill="none" stroke="#12664F" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M23 33 l6 6 l12 -14" fill="none" stroke="#0E9E6E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <p class="forecast__range" id="fc-range">Единственное жильё — под защитой закона</p>
-          <p class="forecast__disc">Оценка предварительная и ориентировочная. Точный расклад по имуществу и применимость банкротства зависят от документов и обстоятельств дела. Это не гарантия сохранения конкретного имущества и не гарантия списания долгов.</p>
-          <p class="forecast__bridge" id="fc-bridge"></p>
-          <button type="button" class="btn btn--primary btn--block" id="to-contact" style="max-width:24rem;margin:0 auto">Получить персональный разбор в удобный канал</button>
+    <!-- ФОРМА -->
+    <section class="tile form s6" id="zayavka">
+      <div class="grid">
+        <div>
+          <span class="tag">Разбор ситуации</span>
+          <h2>Узнайте, что защищено именно у вас</h2>
+          <p style="margin:.5rem 0 0">На разборе посчитаем долги, оценим имущество и сделки, назовём стратегию защиты и сумму по договору. Пишем в удобный вам канал — без звонка, если не просите.</p>
+          <div class="guar-mini"><b>Работаем по договору с фиксированной суммой и рассрочкой.</b> Что защищено законом, а что требует стратегии — скажем честно, без обещаний «сохраним всё».</div>
+          <ul class="mklist ok" style="margin-top:14px">
+            <li><span class="ic">✓</span><div><b>Разбор по вашим документам</b></div></li>
+            <li><span class="ic">✓</span><div><b>Не передаём данные третьим лицам без согласия</b></div></li>
+          </ul>
         </div>
 
-        <!-- Контактный шаг -->
-        <form id="qcontact" class="hidden" novalidate>
-          <div class="contact__reassure">
-            <span aria-hidden="true">🛡</span>
-            <span><b>Сначала разбор — потом решения.</b> Покажем, что защищено законом, а что нужно защищать отдельно, и подходит ли вам процедура. Разбор ни к чему не обязывает.</span>
-          </div>
-          <div class="trust-badges">
-            <span>🛡 Работаем по договору</span>
-            <span>🔒 Данные под 152-ФЗ</span>
-            <span>🏛 Официальное юрлицо</span>
-          </div>
-
-          <span class="field-label" id="lbl-channel">Куда прислать персональный разбор?</span>
-          <div class="channels" role="radiogroup" aria-labelledby="lbl-channel">
-            <span class="channel-pill"><input type="radio" name="channel" id="ch-chat" value="Чат" checked><label for="ch-chat">Чат</label></span>
+        <form id="lead-form" novalidate>
+          <span class="field-label" style="margin-top:0">Куда прислать разбор?</span>
+          <div class="channels">
+            <span class="channel-pill"><input type="radio" name="channel" id="ch-chat" value="Чат" checked><label for="ch-chat">Чат на сайте</label></span>
             <span class="channel-pill"><input type="radio" name="channel" id="ch-max" value="MAX"><label for="ch-max">MAX</label></span>
             <span class="channel-pill"><input type="radio" name="channel" id="ch-tg" value="Telegram"><label for="ch-tg">Telegram</label></span>
             <span class="channel-pill"><input type="radio" name="channel" id="ch-wa" value="WhatsApp"><label for="ch-wa">WhatsApp</label></span>
-            <span class="channel-pill"><input type="radio" name="channel" id="ch-call" value="Звонок"><label for="ch-call">Звонок</label></span>
+            <span class="channel-pill"><input type="radio" name="channel" id="ch-call" value="Звонок"><label for="ch-call">Перезвонить</label></span>
           </div>
           <p class="channel-note" id="channel-note">Чат откроется прямо здесь — контакт вводить не нужно. Telegram и WhatsApp работают не у всех: выберите удобный канал.</p>
 
@@ -433,22 +397,17 @@ strong{color:var(--ink);font-weight:600}
           <label class="field-label" for="name-input">Имя <span class="muted" style="font-weight:400">— по желанию</span></label>
           <input class="inp" type="text" id="name-input" name="name" autocomplete="given-name">
 
-          <div class="guarantee-mini">
-            <b>На разборе — конкретно по вашему имуществу:</b> что защищено законом, что в зоне риска и как это защитить. Работаем по договору.
-          </div>
-
-          <fieldset class="consents" style="border:none;padding:0;margin:1.1rem 0 .4rem">
+          <fieldset class="consents">
             <legend class="field-label" style="margin:0 0 .5rem">Согласия (152-ФЗ)</legend>
-            <label class="consent"><input type="checkbox" id="c1" name="consent_contact"><span>Согласен(а) на обработку персональных данных для связи по моей заявке и разбора моей ситуации по банкротству и имуществу. <a href="#pdn-policy" data-scroll="footer" rel="noopener">Политика обработки ПДн</a></span></label>
+            <label class="consent"><input type="checkbox" id="c1" name="consent_contact"><span>Согласен(а) на обработку персональных данных для связи по моей заявке и разбора ситуации по долгам и имуществу. <a href="#pdn" data-scroll="foot" rel="noopener">Политика обработки ПДн</a></span></label>
             <label class="consent"><input type="checkbox" id="c2" name="consent_review"><span>Согласен(а) получить персональный разбор и приглашение на консультацию в выбранный канал.</span></label>
             <label class="consent"><input type="checkbox" id="c3" name="consent_info"><span>Согласен(а) получать информационные материалы. Отписаться — в один клик. <span class="muted">(по желанию)</span></span></label>
           </fieldset>
 
-          <!-- honeypot + time-trap + скрытые поля атрибуции -->
           <input type="text" name="_hp" id="hp-field" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
           <input type="hidden" name="ts_start" id="ts_start">
-          <input type="hidden" name="forecast_band" id="hf-band">
           <input type="hidden" name="segment" id="hf-segment" value="bfl_imushchestvo">
+          <input type="hidden" name="assets" id="hf-assets">
           <input type="hidden" name="utm_source" id="hf-utm_source">
           <input type="hidden" name="utm_medium" id="hf-utm_medium">
           <input type="hidden" name="utm_campaign" id="hf-utm_campaign">
@@ -458,187 +417,72 @@ strong{color:var(--ink);font-weight:600}
           <input type="hidden" name="cep" id="hf-cep">
 
           <p class="form-err" id="form-err" role="alert"></p>
-          <button type="submit" class="btn btn--primary btn--block" id="submit-btn" data-goal="submit_application">Получить разбор по имуществу</button>
-          <p class="muted" style="margin-top:.7rem">Не звоним без вашего запроса · пишем только в выбранный канал · не передаём номер третьим лицам без отдельного согласия · отписаться — в один клик.</p>
+          <button type="submit" class="btn btn--pri btn--block" id="submit-btn" data-goal="submit_application">Получить разбор по моей ситуации</button>
+          <p class="muted" style="margin-top:.7rem;font-size:.78rem">Не звоним без вашего запроса · пишем только в выбранный канал · не передаём контакт третьим лицам без отдельного согласия.</p>
         </form>
 
-        <!-- Экран-успех -->
-        <div id="qsuccess" class="success hidden">
-          <svg class="success__check" viewBox="0 0 72 72" role="img" aria-label="Заявка принята">
-            <circle cx="36" cy="36" r="33" fill="none" stroke="#0E9E6E" stroke-width="4"/>
-            <path d="M22 37 l10 10 l19 -21" fill="none" stroke="#0E9E6E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <h2 class="h-sec">Заявка принята</h2>
-          <p class="lead" id="success-text" style="margin:0 auto 1rem">Мы напишем вам в выбранный канал.</p>
-          <p class="muted" style="max-width:26rem;margin:0 auto">Специалист свяжется в течение рабочего дня. Разбор ни к чему вас не обязывает.</p>
-          <div class="trust-badges" style="justify-content:center;margin-top:1rem">
-            <span>🛡 По договору</span><span>🔒 152-ФЗ</span><span>🏛 Официальное юрлицо</span>
-          </div>
+        <div id="form-success" class="success hidden" style="grid-column:1/-1">
+          <svg viewBox="0 0 72 72" role="img" aria-label="Заявка принята"><circle cx="36" cy="36" r="33" fill="none" stroke="#0e9f6e" stroke-width="4"/><path d="M22 37 l10 10 l19 -21" fill="none" stroke="#0e9f6e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h2>Заявка принята</h2>
+          <p id="success-text" style="margin-top:6px">Мы свяжемся с вами в выбранном канале.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- [6] План: банкротство + защита имущества -->
-  <section class="section section--alt">
-    <div class="container">
-      <p class="eyebrow">Как проходит работа</p>
-      <h2 class="h-sec">Сначала защищаем имущество — потом списываем долги</h2>
-      <div class="steps">
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Разбор ситуации и имущества</h3><p style="margin:0">Долги, кредиторы, статус жилья, залоги, авто, сделки. Определяем, подходит ли банкротство.</p></div></div>
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Стратегия защиты имущества</h3><p style="margin:0">Досудебная или судебная защита — законными способами, до подачи заявления.</p></div></div>
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Подготовка и подача заявления</h3><p style="margin:0">Собираем документы, подаём заявление о банкротстве в арбитражный суд.</p></div></div>
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Сопровождение процедуры</h3><p style="margin:0">Работа с финансовым управляющим и кредиторами, защита вашей позиции по имуществу.</p></div></div>
-        <div class="step"><span class="step__n" aria-hidden="true"></span><div><h3>Списание долгов</h3><p style="margin:0">Завершение процедуры и освобождение от долгов — при добросовестном поведении должника.</p></div></div>
-      </div>
-      <p class="flowline">На каждом этапе вы понимаете, что происходит с вашим имуществом. Никаких «серых схем» — только законные инструменты.</p>
-    </div>
-  </section>
+    <!-- FAQ -->
+    <section class="tile faq s6">
+      <span class="tag">Частые вопросы</span>
+      <h2 style="margin-bottom:8px">Коротко и по делу</h2>
+      <details><summary>Заберут ли единственное жильё?</summary><p>Единственное пригодное для проживания жильё защищает ст. 446 ГПК РФ — его не включают в реализацию. Исключение — ипотечное или иное залоговое жильё: это особый случай, по которому выстраивают защиту через суд.</p></details>
+      <details><summary>Списываются ли все долги?</summary><p>Списывается большинство кредитов, займов и долгов по распискам. Не списываются алименты, возмещение вреда жизни и здоровью, зарплата работникам, субсидиарная ответственность. Освобождение зависит от добросовестности должника — оценивает суд.</p></details>
+      <details><summary>Что с автомобилем и вторым жильём?</summary><p>Реализуемое имущество может попасть в конкурсную массу. Часть защищена законом, часть можно защитить заранее законными способами. На разборе показываем, что именно в риске в вашей ситуации, — без обещаний «сохраним всё».</p></details>
+      <details><summary>Сколько стоит и есть ли рассрочка?</summary><p>Банкротство под ключ — от 119 900 ₽, рассрочка до 10 месяцев (от 11 990 ₽/мес). Есть вариант с постоплатой: 10% при подаче, 90% на 8 месяцев. Досудебная защита имущества — от 34 900 ₽, судебная — от 69 900 ₽. Точную сумму называем после разбора.</p></details>
+      <details><summary>А если я недавно продал или подарил имущество?</summary><p>Сделки за 3 года до банкротства финуправляющий вправе оспорить. Поэтому разбор начинаем именно с этого: оцениваем риски по вашим сделкам и выстраиваем стратегию заранее.</p></details>
+    </section>
 
-  <!-- [7] Цена и рассрочка + ЦЕНОВОЙ ЯКОРЬ -->
-  <section class="section">
-    <div class="container" style="max-width:52rem">
-      <p class="eyebrow">Сколько стоит и как платить</p>
-      <h2 class="h-sec">Платите в рассрочку — не всю сумму сразу</h2>
-      <div class="guarantee">
-        <div class="guarantee__big">Списание долгов + защита имущества<br>по договору и в рассрочку</div>
-        <p class="muted" style="margin:0">Услуга платная. Итог процедуры зависит от обстоятельств дела; банкротство влечёт последствия по 127-ФЗ.</p>
-      </div>
-
-      <div class="price-anchor">
-        <p style="margin-top:0"><strong>Сравните две цифры.</strong> Долг никуда не денется сам: проценты, пени и требования кредиторов растут каждый месяц, а имущество под угрозой описи. Стоимость сопровождения — фиксированная, в рассрочку, и обычно меньше того, что вы переплатите по долгам за год ожидания.</p>
-        <div class="price-grid">
-          <div class="price-item"><b>Банкротство «под ключ» — от 119 900 ₽</b><span>Тариф Минимальный (долг до 500 000 ₽). Рассрочка до 10 мес — <span class="pa-mo">от 11 990 ₽/мес</span>.</span></div>
-          <div class="price-item"><b>Банкротство, Базовый — от 159 900 ₽</b><span>Долг 500 000–1 500 000 ₽. Рассрочка до 10 мес — от 15 900 ₽/мес.</span></div>
-          <div class="price-item"><b>Досудебная защита имущества — от 34 900 ₽</b><span>В зависимости от стоимости актива. Рассрочка по договору.</span></div>
-          <div class="price-item"><b>Защита имущества через суд — от 69 900 ₽</b><span>Судебная защита (СОЮ), рассрочка до 7 мес. Защита ипотеки через суд — от 49 900 ₽.</span></div>
-        </div>
-        <p style="margin:1rem 0 0"><span class="pa-price">Итог: банкротство + защита имущества — по договору, в рассрочку.</span> Точный тариф зависит от суммы долга, числа кредиторов и вашего имущества — назовём после разбора.</p>
-      </div>
-      <p class="muted" style="margin-top:.8rem">
-        <!-- Числа из docs/knowledge/pricing.md (БФЛ Минимальный/Базовый + Защита имущества). Цены «от»; финальная — по договору. -->
-        Цены — «от»; финальная — по договору под вашу ситуацию. Услуга платная, «бесплатного банкротства» мы не предлагаем.
-      </p>
-
-      <div class="fz332">
-        <b>Реклама услуг по банкротству.</b> Услуги по сопровождению процедуры банкротства физических лиц оказываются на возмездной основе (платно). Процедура банкротства влечёт последствия, предусмотренные Федеральным законом от 26.10.2002 № 127-ФЗ «О несостоятельности (банкротстве)», в том числе: в течение 5 лет — обязанность сообщать о факте банкротства при обращении за кредитами и займами и ограничение на повторное банкротство; в течение 3 лет — запрет занимать должности в органах управления юридического лица. Часть обязательств (алименты, возмещение вреда жизни и здоровью и др.) не подлежит списанию. Освобождение от долгов не является безусловным и зависит от добросовестности должника. Информация приведена в соответствии со ст. 28.1 Федерального закона «О рекламе» (введена ФЗ-332 от 04.08.2023).
-      </div>
-
-      <p style="margin-top:1.2rem"><a href="#quiz" class="btn btn--ghost" data-goal="hero_cta_click" data-scroll="quiz">Узнать свой расклад по имуществу</a></p>
-    </div>
-  </section>
-
-  <!-- [8] Кейсы — ЗАГЛУШКИ -->
-  <!-- TODO: заменить на документально подтверждённые кейсы + письменное согласие клиентов на публикацию. Тексты ниже — иллюстративные заглушки. -->
-  <section class="section section--alt">
-    <div class="container">
-      <p class="eyebrow">Истории клиентов</p>
-      <h2 class="h-sec">Так это переживают те, кто прошёл путь</h2>
-      <div class="grid grid--3">
-        <div class="card"><p style="margin:0">«Боялась, что заберут квартиру — оказалось, единственное жильё под защитой закона. Долги списали, из дома никто не выгнал».</p></div>
-        <div class="card"><p style="margin:0">«У меня была вторая квартира и машина. Разобрали заранее, что и как защитить — вошёл в процедуру подготовленным, а не вслепую».</p></div>
-        <div class="card"><p style="margin:0">«Уже шли аресты от приставов. Начали процедуру — взыскание остановилось, а имущество разобрали по закону».</p></div>
-      </div>
-      <p class="muted" style="margin-top:1rem">Результат индивидуален и зависит от обстоятельств дела, состава имущества и добросовестности должника. Истории приводятся с согласия клиентов.</p>
-    </div>
-  </section>
-
-  <!-- [9] FAQ -->
-  <section class="section faq">
-    <div class="container" style="max-width:48rem">
-      <p class="eyebrow">Частые вопросы</p>
-      <h2 class="h-sec">На ваши страхи — прямые ответы</h2>
-      <details><summary>Заберут ли единственную квартиру?</summary><p>По общему правилу — нет: единственное пригодное для проживания жильё защищено исполнительским иммунитетом и не включается в конкурсную массу. Исключение — если жильё в ипотеке или ином залоге: залоговое имущество банкротство само по себе не сохраняет, для него нужна отдельная стратегия защиты.</p></details>
-      <details><summary>А что с машиной, вторым жильём, долями?</summary><p>Это реализуемое имущество. Его защиту выстраивают заранее, до подачи заявления, законными инструментами (досудебная или судебная защита имущества). После начала процедуры возможности сужаются — поэтому важно разобрать ситуацию заблаговременно. Мы не обещаем сохранить любое имущество: даём честный расклад по вашей ситуации.</p></details>
-      <details><summary>Банкротство точно спишет все долги?</summary><p>Процедура направлена на освобождение от долгов, но это не автоматическая гарантия. Суд может не освободить от обязательств при недобросовестности должника, а часть долгов (алименты, вред жизни и здоровью и др.) не списывается. Итог зависит от обстоятельств дела.</p></details>
-      <details><summary>Сколько это стоит и можно ли в рассрочку?</summary><p>Банкротство «под ключ»: Минимальный (долг до 500 000 ₽) — от 119 900 ₽ (рассрочка до 10 мес, от 11 990 ₽/мес), Базовый (долг 500 000–1 500 000 ₽) — от 159 900 ₽. Досудебная защита имущества — от 34 900 ₽, судебная — от 69 900 ₽. Точную сумму назовём после разбора.</p></details>
-      <details><summary>Не поздно ли, если уже приставы и аресты?</summary><p>Как правило, нет. Возбуждение процедуры банкротства приостанавливает исполнительные производства и начисление неустоек. Но чем раньше начать, тем больше вариантов защиты имущества — разбор покажет, что можно сделать в вашем случае.</p></details>
-      <details><summary>Это законно — «защищать имущество» перед банкротством?</summary><p>Мы используем только законные инструменты: защиту, которую даёт сам закон, и предусмотренные им процедуры. Мы не «прячем» имущество и не оформляем фиктивные сделки — именно это оспаривается и приводит к отказу в списании долгов.</p></details>
-    </div>
-  </section>
-
-  <!-- [10] Цена бездействия — дожим -->
-  <section class="section">
-    <div class="container" style="max-width:48rem">
-      <div class="dojim">
-        <h2 class="h-sec">Пока вы тянете — долг растёт, а имущество ближе к описи</h2>
-        <p style="margin:0 0 .6rem">Каждый месяц ожидания — это новые проценты и пени, звонки кредиторов и риск, что приставы опишут имущество раньше, чем вы разберётесь. А главное — упускается время, когда имущество ещё можно защитить законными способами.</p>
-        <p style="margin:0 0 1rem">Начать можно с разбора: он ни к чему не обязывает и показывает, что в вашем случае защищено, а что под угрозой. Дальше решение — за вами.</p>
-        <a href="#quiz" class="btn btn--primary" data-goal="hero_cta_click" data-scroll="quiz">Узнать, что защищено</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- [11] Финал + мультиканал -->
-  <section class="section section--alt">
-    <div class="container" style="max-width:46rem;text-align:center">
-      <p class="eyebrow" style="text-align:center">Первый шаг</p>
-      <h2 class="h-sec">Разберитесь со своим имуществом, прежде чем что-то решать</h2>
-      <p class="lead" style="margin:0 auto 1.3rem">Один разбор покажет, что защищено законом, что в зоне риска и подходит ли вам банкротство. Без звонка, без обязательств, любым удобным каналом.</p>
-      <a href="#quiz" class="btn btn--primary" data-goal="hero_cta_click" data-scroll="quiz" style="min-width:16rem">Пройти разбор за 5 вопросов</a>
-      <p class="muted" style="margin-top:1rem">Как вам удобнее: чат на сайте · MAX · Telegram · WhatsApp · перезвоним по вашему запросу</p>
-    </div>
-  </section>
-
+  </div>
 </main>
 
-<footer class="footer" id="footer">
-  <div class="container">
-    <div class="brand" style="color:#fff">
-      <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 8 L54 17 V34 C54 47 44 55 32 59 C20 55 10 47 10 34 V17 Z" fill="none" stroke="#E0A100" stroke-width="5" stroke-linejoin="round"/></svg></span><span>ЩИТ</span>
+<footer class="foot" id="foot">
+  <div class="wrap">
+    <div class="foot__disc" id="pdn">
+      <strong>Реклама.</strong> Услуги по сопровождению процедуры банкротства физических лиц оказываются на платной основе. Банкротство гражданина влечёт правовые последствия, предусмотренные ст. 213.30 Федерального закона от 26.10.2002 № 127-ФЗ «О несостоятельности (банкротстве)»: в течение 5 лет — обязанность указывать факт банкротства при обращении за кредитами и займами, в течение 3 лет — ограничение на занятие руководящих должностей, повторное банкротство — не ранее чем через 5 лет. Освобождение от обязательств применяется не ко всем видам долгов и зависит от добросовестности должника, определяемой судом. Материалы не являются публичной офертой и гарантией конкретного результата.
     </div>
-    <div class="footer__chan">
-      <a href="#quiz" data-scroll="quiz" data-goal="chat_click">Чат на сайте</a>
-      <a href="#quiz" data-scroll="quiz" data-goal="max_click">MAX</a>
-      <a href="#quiz" data-scroll="quiz" data-goal="telegram_click">Telegram</a>
-      <a href="#quiz" data-scroll="quiz" data-goal="whatsapp_click">WhatsApp</a>
-      <a href="#quiz" data-scroll="quiz" data-goal="callback_click">Перезвонить</a>
+    <div class="foot__row">
+      <a href="#zashchita" data-scroll="zashchita">Что защищает закон</a>
+      <a href="#price" data-scroll="price">Цена</a>
+      <a href="#kak" data-scroll="kak">Как проходит</a>
+      <a href="#zayavka" data-scroll="zayavka">Разбор ситуации</a>
     </div>
-    <p class="footer__legal" id="pdn-policy">
-      <!-- TODO: заказчик — вставить реальные реквизиты: полное наименование юрлица + ОПФ + ИНН/ОГРН + юр. адрес -->
-      ООО «[наименование — реквизиты уточняются]» · ИНН [—] · ОГРН [—] · [юридический адрес].
-      Реклама услуг по банкротству. Услуги оказываются по договору на возмездной (платной) основе.
-      Процедура банкротства физического лица влечёт последствия, предусмотренные Федеральным законом от 26.10.2002 № 127-ФЗ «О несостоятельности (банкротстве)» (в т.ч. ст. 213.30): в течение 5 лет — обязанность сообщать о банкротстве при получении кредитов/займов и ограничение повторного банкротства; в течение 3 лет — запрет занимать должности в органах управления юрлица. Часть обязательств не подлежит списанию. Освобождение от долгов зависит от добросовестности должника и обстоятельств дела и не гарантируется.
-      Единственное пригодное для проживания жильё, как правило, защищено исполнительским иммунитетом, кроме случаев, когда оно находится в ипотеке или ином залоге. Мы не обещаем сохранение любого имущества; расклад по конкретной ситуации определяется на разборе. Информация приведена в соответствии со ст. 28.1 ФЗ «О рекламе» (введена ФЗ-332 от 04.08.2023).
-      <!-- TODO: заменить на реальные ссылки-документы -->
-      <a href="#pdn-policy" rel="noopener">Политика обработки персональных данных</a> · <a href="#pdn-policy" rel="noopener">Согласие на обработку ПДн (152-ФЗ)</a>.
-      © <span id="year"></span> ЩИТ.
-    </p>
+    <small>ООО «Наименование», ОГРН __________, ИНН __________, адрес __________. Политика обработки персональных данных — по 152-ФЗ. © <span id="year">2026</span> ЩИТ. Плейсхолдеры реквизитов заполняются перед запуском.</small>
   </div>
 </footer>
 
-<!-- Липкая кнопка (мобайл) -->
-<div class="sticky-cta" id="sticky">
-  <a href="#quiz" class="btn btn--primary btn--block" data-goal="hero_cta_click" data-scroll="quiz">Узнать, что защищено</a>
+<div class="sticky" id="sticky">
+  <a href="#zayavka" class="btn btn--pri btn--block" data-scroll="zayavka" data-goal="sticky_cta_click">Разобрать мою ситуацию</a>
 </div>
 
 <script>
-/* ===================== ЩИТ · логика лендинга (vanilla, инлайн) ===================== */
 (function(){
   "use strict";
   var METRIKA_ID = "{{METRIKA_ID}}"; // подставляется отдельно; ym определён только при реальном ID
   // TODO: dev/бэкенд — входящий вебхук Bitrix24 crm.lead.add (токен на бэке, НЕ в этом JS).
-  //       Пока плейсхолдер — отправка эмулируется, submit_application эмитится, лид не уходит.
   var BITRIX_WEBHOOK = "__BITRIX_WEBHOOK_URL__";
 
   function track(goal, params){
-    var p={};
-    if(params){ for(var k in params){ if(Object.prototype.hasOwnProperty.call(params,k)) p[k]=params[k]; } }
+    var p={}; if(params){ for(var k in params){ if(Object.prototype.hasOwnProperty.call(params,k)) p[k]=params[k]; } }
     try{ if(typeof window.ym==='function'){ window.ym(METRIKA_ID,'reachGoal',goal,p); } }catch(e){}
     try{ if(typeof window.gtag==='function'){ window.gtag('event',goal,p); } }catch(e){}
   }
 
-  /* ---------- плавный скролл по data-scroll ---------- */
+  /* плавный скролл по data-scroll */
   function scrollToId(id){ var el=document.getElementById(id); if(el) el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth', block:'start'}); }
   document.addEventListener('click', function(e){
     var t=e.target.closest('[data-scroll]'); if(!t) return;
     e.preventDefault(); scrollToId(t.getAttribute('data-scroll'));
   });
-  document.addEventListener('keydown', function(e){
-    if((e.key==='Enter'||e.key===' ') && e.target.matches('.card--situation')){ e.preventDefault(); scrollToId('quiz'); }
-  });
 
-  /* ---------- атрибуция: utm/yclid/cep из URL → hidden + localStorage ---------- */
+  /* атрибуция: utm/yclid/cep из URL → hidden + localStorage */
   function attribution(){
     var p=new URLSearchParams(location.search), keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid','cep'], store={};
     try{ store=JSON.parse(localStorage.getItem('shchit_attr')||'{}'); }catch(e){}
@@ -649,71 +493,50 @@ strong{color:var(--ink);font-weight:600}
   attribution();
   var tss=document.getElementById('ts_start'); if(tss) tss.value=String(Date.now());
 
-  /* ---------- КВИЗ ---------- */
-  var QUESTIONS=[
-    {id:'q1',q:'Какая примерно сумма ваших долгов?',opts:[['lt500','До 500 000 ₽'],['d500_1500','500 тыс — 1,5 млн ₽'],['d1500_3000','1,5–3 млн ₽'],['gt3000','Более 3 млн ₽']]},
-    {id:'q2',q:'Какое имущество у вас есть? (главное)',opts:[['single','Только единственное жильё'],['multi','Не единственное жильё (2+ объекта)'],['auto','Автомобиль'],['shares','Доли, дом/дача, несколько объектов']]},
-    {id:'q3',q:'Есть ли ипотека или залог на имущество?',opts:[['mortgage','Да, квартира в ипотеке'],['pledge','Да, авто/имущество в залоге'],['none','Нет залогов и ипотеки']]},
-    {id:'q4',q:'На какой вы стадии по долгам?',opts:[['paying','Пока плачу, просрочки нет'],['lt3','Просрочка до 3 месяцев'],['gt3','Просрочка 3+ месяцев'],['pristavy','Уже приставы / аресты']]},
-    {id:'q5',q:'Ваш регион?',opts:[['msk','Москва / область'],['city','Крупный город'],['other','Другой регион']]}
+  /* ---------- ИНТЕРАКТИВ: проверка имущества (quiz_start / quiz_complete) ---------- */
+  var ASSETS=[
+    {k:'home', label:'Единственное жильё', cls:'ok', note:'под защитой ст. 446 ГПК (кроме ипотечного залога)'},
+    {k:'mortgage', label:'Ипотечная квартира', cls:'risk', note:'залог банка — особый случай, защита через суд'},
+    {k:'home2', label:'Второе жильё / доля', cls:'risk', note:'входит в конкурсную массу — защищаем заранее'},
+    {k:'car', label:'Автомобиль', cls:'risk', note:'могут включить в массу; есть законные исключения'},
+    {k:'dacha', label:'Дача / участок', cls:'risk', note:'обычно реализуемое — защита заранее'},
+    {k:'goods', label:'Техника и мебель', cls:'ok', note:'предметы обихода защищает закон'},
+    {k:'income', label:'Зарплата / вклады', cls:'part', note:'прожиточный минимум сохраняется, остальное — в массу'}
   ];
-  var ans={}, idx=0, started=false;
-  var qbody=document.getElementById('qbody'), qbar=document.getElementById('qbar'),
-      qforecast=document.getElementById('qforecast'), qcontact=document.getElementById('qcontact'),
-      qsuccess=document.getElementById('qsuccess');
-
-  function renderQ(){
-    var Q=QUESTIONS[idx];
-    qbar.style.width=((idx+1)/QUESTIONS.length*100)+'%';
-    var h='<p class="quiz-step-label">Вопрос '+(idx+1)+' из '+QUESTIONS.length+'</p>';
-    h+='<h2 class="quiz-q">'+Q.q+'</h2><div class="quiz-options">';
-    Q.opts.forEach(function(o){ h+='<button type="button" class="quiz-opt" data-val="'+o[0]+'">'+o[1]+'</button>'; });
-    h+='</div>';
-    if(idx>0) h+='<button type="button" class="quiz-back" id="qback">← Назад</button>';
-    qbody.innerHTML=h;
-  }
-  qbody.addEventListener('click', function(e){
-    var b=e.target.closest('.quiz-opt');
-    if(b){
-      if(!started){ started=true; track('quiz_start'); }
-      ans[QUESTIONS[idx].id]=b.getAttribute('data-val');
-      if(idx<QUESTIONS.length-1){ idx++; renderQ(); }
-      else showForecast();
-      return;
-    }
-    if(e.target.id==='qback'){ if(idx>0){ idx--; renderQ(); } }
+  var chipsBox=document.getElementById('asset-chips'), runBtn=document.getElementById('check-run'),
+      resBox=document.getElementById('check-res'), started=false, chosen={};
+  ASSETS.forEach(function(a){
+    var b=document.createElement('button');
+    b.type='button'; b.className='achip'; b.setAttribute('aria-pressed','false'); b.setAttribute('data-k',a.k); b.textContent=a.label;
+    chipsBox.appendChild(b);
   });
-
-  function computeBand(){
-    var q2=ans.q2,q3=ans.q3,q4=ans.q4;
-    if(q4==='pristavy') return 'urgent';
-    if(q3==='mortgage') return 'mortgage';
-    if(q2==='single' && q3==='none') return 'protected';
-    return 'protect_needed';
-  }
-  var BANDS={
-    protected:{verdict:'Единственное жильё — как правило, под защитой закона',bridge:'В вашей ситуации единственное жильё защищено исполнительским иммунитетом, а долги можно списать через процедуру банкротства. На разборе подтвердим статус жилья по документам и наметим порядок действий.'},
-    mortgage:{verdict:'Ипотечное жильё — особый случай, нужна отдельная стратегия',bridge:'Квартира в ипотеке — это залог у банка, и банкротство само по себе её не сохраняет. Но есть законные варианты защиты ипотечного жилья. На разборе честно скажем, что реально сделать именно в вашем случае.'},
-    protect_needed:{verdict:'Есть имущество, которое стоит защитить заранее',bridge:'У вас есть реализуемое имущество (не единственное жильё, авто, доли). Его защиту важно выстроить до подачи заявления — досудебно или через суд. На разборе покажем, что и как защитить законными способами.'},
-    urgent:{verdict:'Аресты уже идут — действовать нужно сейчас',bridge:'Раз подключились приставы, время работает против вас. Процедура банкротства, как правило, приостанавливает взыскание, но чем раньше начать, тем больше вариантов защиты имущества. Разберём вашу ситуацию в приоритете.'}
-  };
-  function showForecast(){
-    var band=computeBand(), cfg=BANDS[band];
-    document.getElementById('hf-band').value=band;
-    document.getElementById('fc-range').textContent=cfg.verdict;
-    document.getElementById('fc-bridge').textContent=cfg.bridge;
-    qbody.classList.add('hidden');
-    qbar.parentNode.style.display='none';
-    qforecast.classList.remove('hidden');
-    qforecast.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
-    track('quiz_complete',{band:band,segment:'bfl_imushchestvo'});
-  }
-
-  document.getElementById('to-contact').addEventListener('click', function(){
-    qforecast.classList.add('hidden');
-    qcontact.classList.remove('hidden');
-    qcontact.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
-    track('form_start');
+  chipsBox.addEventListener('click', function(e){
+    var b=e.target.closest('.achip'); if(!b) return;
+    var on=b.getAttribute('aria-pressed')==='true'; b.setAttribute('aria-pressed', on?'false':'true');
+    chosen[b.getAttribute('data-k')]=!on;
+    if(!started){ started=true; track('quiz_start',{tool:'asset_checker'}); } // МИКРО (аналог quiz_start)
+    var any=Array.prototype.some.call(chipsBox.children,function(c){return c.getAttribute('aria-pressed')==='true';});
+    runBtn.disabled=!any;
+  });
+  runBtn.addEventListener('click', function(){
+    var okUl=document.getElementById('res-ok'), riskUl=document.getElementById('res-risk');
+    okUl.innerHTML=''; riskUl.innerHTML=''; var okN=0, riskN=0, picked=[];
+    ASSETS.forEach(function(a){
+      if(!chosen[a.k]) return; picked.push(a.k);
+      var li=document.createElement('li');
+      li.innerHTML='<b>'+a.label+'</b><br><span class="muted" style="font-size:.78rem">'+a.note+'</span>';
+      if(a.cls==='risk'){ riskUl.appendChild(li); riskN++; } else { okUl.appendChild(li); okN++; }
+    });
+    if(!okUl.children.length) okUl.innerHTML='<li class="muted" style="font-size:.84rem">Отметьте, что у вас есть, — покажем защищённое.</li>';
+    if(!riskUl.children.length) riskUl.innerHTML='<li class="muted" style="font-size:.84rem">По отмеченному явных рисков нет — проверим детали на разборе.</li>';
+    var br=document.getElementById('res-bridge');
+    if(riskN===0){ br.textContent='Похоже, основное под защитой закона. На разборе перепроверим по документам и посчитаем, как списать долги.'; }
+    else if(riskN>=2){ br.textContent='У вас несколько объектов в зоне риска — тут важно выстроить защиту ЗАРАНЕЕ, до подачи заявления. На разборе покажем законную стратегию по каждому.'; }
+    else { br.textContent='Один объект в зоне риска — это решаемо законными способами, если начать заранее. Разберём вашу ситуацию и посчитаем стоимость.'; }
+    document.getElementById('hf-assets').value=picked.join(',');
+    resBox.classList.add('show');
+    resBox.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'nearest'});
+    track('quiz_complete',{tool:'asset_checker',risk:riskN,protected:okN,segment:'bfl_imushchestvo'}); // МИКРО-разогрев (аналог quiz_complete)
   });
 
   /* ---------- динамическое поле контакта по каналу ---------- */
@@ -736,16 +559,15 @@ strong{color:var(--ink);font-weight:600}
   onChannel();
 
   /* ---------- отправка ---------- */
-  qcontact.addEventListener('submit', function(e){
+  var form=document.getElementById('lead-form');
+  form.addEventListener('submit', function(e){
     e.preventDefault();
     var err=document.getElementById('form-err'); err.textContent='';
     if(document.getElementById('hp-field').value){ return; } // honeypot
-    // time-trap: слишком быстрая отправка (<3с) — вероятный бот
-    var t0=parseInt(document.getElementById('ts_start').value,10)||0;
-    if(t0 && (Date.now()-t0)<3000){ return; }
+    var ts=parseInt(document.getElementById('ts_start').value,10)||0;
+    if(ts && (Date.now()-ts)<1500){ return; } // time-trap
     var ch=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат';
-    var need=CH[ch].field;
-    if(need && !cinput.value.trim()){ err.textContent='Укажите контакт для выбранного канала.'; cinput.focus(); return; }
+    if(CH[ch].field && !cinput.value.trim()){ err.textContent='Укажите контакт для выбранного канала.'; cinput.focus(); return; }
     if(!document.getElementById('c1').checked || !document.getElementById('c2').checked){
       err.textContent='Отметьте обязательные согласия (152-ФЗ), чтобы мы могли прислать разбор.'; return;
     }
@@ -758,7 +580,7 @@ strong{color:var(--ink);font-weight:600}
     function v(id){ var e=document.getElementById(id); return e?e.value:''; }
     return {
       channel:ch, name:v('name-input'), contact:document.getElementById('contact-input').value,
-      forecast_band:v('hf-band'), segment:v('hf-segment'),
+      segment:v('hf-segment'), assets:v('hf-assets'),
       consent_contact:document.getElementById('c1').checked, consent_review:document.getElementById('c2').checked,
       consent_info:document.getElementById('c3').checked, consent_ts:new Date().toISOString(),
       ts_start:v('ts_start'),
@@ -766,45 +588,41 @@ strong{color:var(--ink);font-weight:600}
       utm_content:v('hf-utm_content'),utm_term:v('hf-utm_term'),yclid:v('hf-yclid'),cep:v('hf-cep')
     };
   }
-
-  function done(ch, band){
-    track('submit_application',{band:band,channel:ch,segment:'bfl_imushchestvo'}); // МАКРО
+  function done(ch){
+    track('submit_application',{channel:ch,segment:'bfl_imushchestvo'}); // МАКРО
     document.getElementById('success-text').textContent = (ch==='Чат')
       ? 'Открываем чат — напишите нам прямо здесь, разбор уже с вашими ответами.'
       : 'Мы напишем вам в «'+ch+'».';
-    qcontact.classList.add('hidden');
-    qsuccess.classList.remove('hidden');
-    qsuccess.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
+    form.classList.add('hidden');
+    document.getElementById('form-success').classList.remove('hidden');
+    document.getElementById('form-success').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
   }
-
   function finishSubmit(payload, ch, btn, old, err){
-    var band=payload.forecast_band;
     if(/^https?:/.test(BITRIX_WEBHOOK)){
       fetch(BITRIX_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
         .then(function(r){ if(!r.ok) throw 0; return r; })
-        .then(function(){ done(ch,band); })
+        .then(function(){ done(ch); })
         .catch(function(){ btn.disabled=false; btn.textContent=old; err.textContent='Не удалось отправить. Попробуйте ещё раз или напишите в чат.'; });
     } else {
-      setTimeout(function(){ done(ch,band); }, 350); // плейсхолдер вебхука: эмулируем успех для превью
+      setTimeout(function(){ done(ch); }, 350); // плейсхолдер вебхука: эмуляция успеха для превью, лид не уходит
     }
   }
 
-  /* ---------- липкая кнопка (мобайл) ---------- */
-  var sticky=document.getElementById('sticky'), hero=document.getElementById('hero'), quizSec=document.getElementById('quiz');
+  /* липкая кнопка (мобайл) */
+  var sticky=document.getElementById('sticky'), hero=document.getElementById('hero'), formSec=document.getElementById('zayavka');
   if('IntersectionObserver' in window && sticky){
-    var heroOut=false, quizIn=false;
+    var heroOut=false, formIn=false;
     new IntersectionObserver(function(en){ heroOut=!en[0].isIntersecting; upd(); },{threshold:0}).observe(hero);
-    new IntersectionObserver(function(en){ quizIn=en[0].isIntersecting; upd(); },{threshold:.15}).observe(quizSec);
-    function upd(){ if(heroOut && !quizIn) sticky.classList.add('show'); else sticky.classList.remove('show'); }
+    new IntersectionObserver(function(en){ formIn=en[0].isIntersecting; upd(); },{threshold:.12}).observe(formSec);
+    function upd(){ if(heroOut && !formIn) sticky.classList.add('show'); else sticky.classList.remove('show'); }
   }
 
-  /* ---------- вовлечённость ---------- */
+  /* вовлечённость */
   var s75=false; window.addEventListener('scroll', function(){
     if(!s75 && (window.scrollY+window.innerHeight)/document.documentElement.scrollHeight>0.75){ s75=true; track('scroll_75'); }
   }, {passive:true});
   setTimeout(function(){ track('time_on_page_60'); }, 60000);
 
-  renderQ();
   document.getElementById('year').textContent=new Date().getFullYear();
 })();
 </script>

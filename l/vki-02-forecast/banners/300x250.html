@@ -1,43 +1,37 @@
 <!doctype html>
-<!-- banner:vki-02-forecast · 300x250 (medium rectangle) · БАЛЛ+ · угол «узнай свой балл». Самодостаточный HTML/SVG мокап. -->
-<html lang="ru">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>БАЛЛ+ 300×250</title>
+<!-- banner:vki-02-forecast · 300x250 (medium rectangle) · БАЛЛ+ · КОНЦЕПЦИЯ: тизер-калькулятор (живой метр балла). Самодостаточный HTML/SVG. -->
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>БАЛЛ+ 300x250</title>
 <style>
-  html,body{margin:0}
-  .ad{width:300px;height:250px;position:relative;overflow:hidden;border-radius:14px;
-    font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#08251B;
-    background:linear-gradient(160deg,#ECFDF5 0%,#D6F5E6 100%);border:1px solid #CFE9DC}
-  .ad *{box-sizing:border-box}
-  .brand{position:absolute;top:12px;left:14px;display:flex;align-items:center;gap:6px;font-weight:800;font-size:15px;color:#064E3B;letter-spacing:-.02em}
-  .mark{width:24px;height:22px;border-radius:6px;background:#064E3B;color:#34D399;display:grid;place-items:center;font-size:12px;font-weight:800}
-  .h{position:absolute;top:44px;left:14px;right:14px;font-size:18px;font-weight:800;line-height:1.15;letter-spacing:-.02em}
-  .h b{color:#059669}
-  .gauge{position:absolute;left:14px;top:118px;width:120px}
-  .sub{position:absolute;left:140px;top:120px;right:14px;font-size:12px;color:#284A3E;line-height:1.35}
-  .cta{position:absolute;left:14px;bottom:14px;right:14px;height:40px;border-radius:10px;background:#059669;color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;box-shadow:0 6px 16px -6px rgba(5,150,105,.5)}
-  .fine{position:absolute;left:14px;bottom:58px;font-size:8px;color:#5b7268}
-</style>
-</head>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:300px;height:250px;overflow:hidden}
+.b{width:300px;height:250px;position:relative;overflow:hidden;font-family:'Segoe UI',Roboto,Arial,sans-serif;
+  background:radial-gradient(120% 90% at 90% 0%,#0B3B2F,#0E1726);color:#fff;padding:16px 16px 14px;display:flex;flex-direction:column}
+.br{font-weight:800;font-size:13px;letter-spacing:.02em;color:#EAFBF3}
+.br b{color:#34D399}
+.h{font-weight:800;font-size:16px;line-height:1.18;margin:7px 0 2px;letter-spacing:-.01em}
+.h u{color:#5EEAD4;text-decoration:none}
+.cap{font-size:10px;color:#8FD9C0;letter-spacing:.04em;text-transform:uppercase;font-weight:700;margin-top:9px}
+.row{display:flex;align-items:flex-end;gap:8px;margin-top:2px}
+.num{font-family:ui-monospace,'Cascadia Mono',Menlo,monospace;font-weight:800;font-size:34px;line-height:.9;color:#fff}
+.dl{font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:13px;color:#5EEAD4;padding-bottom:4px}
+.track{position:relative;height:12px;border-radius:99px;margin-top:9px;overflow:hidden;
+  background:linear-gradient(90deg,#F87171,#FBBF24 46%,#34D399)}
+.mk{position:absolute;top:-3px;width:12px;height:18px}
+.mk::after{content:'';position:absolute;left:0;top:0;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #0B3B2F;box-shadow:0 1px 3px rgba(0,0,0,.5)}
+.mk2::after{border-color:#059669}
+.cta{margin-top:auto;background:linear-gradient(135deg,#10B981,#059669);color:#fff;font-weight:800;font-size:13px;
+  text-align:center;border-radius:10px;padding:10px;box-shadow:0 6px 14px -6px rgba(5,150,105,.9)}
+.fine{font-size:10px;color:#7FCBB6;text-align:center;margin-top:6px;line-height:1.3}
+</style></head>
 <body>
-<div class="ad" role="img" aria-label="БАЛЛ+ — узнайте свой кредитный балл и прогноз роста под ипотеку">
-  <div class="brand"><span class="mark">Б+</span>БАЛЛ+</div>
-  <div class="h">Узнайте свой <b>кредитный балл</b></div>
-  <svg class="gauge" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#DC2626"/><stop offset=".4" stop-color="#F59E0B"/>
-      <stop offset=".7" stop-color="#22C55E"/><stop offset="1" stop-color="#059669"/>
-    </linearGradient></defs>
-    <path d="M25 175 A135 135 0 0 1 295 175" fill="none" stroke="#CFE9DC" stroke-width="24" stroke-linecap="round"/>
-    <path d="M25 175 A135 135 0 0 1 250 92" fill="none" stroke="url(#g)" stroke-width="24" stroke-linecap="round"/>
-    <text x="160" y="150" text-anchor="middle" font-size="52" font-weight="800" fill="#08251B" font-family="Segoe UI,Arial">700</text>
-  </svg>
-  <div class="sub">и на сколько он вырастет под ипотеку.<br>Калькулятор за 5 вопросов.</div>
-  <div class="fine">Гарантия при выполнении рекомендаций</div>
-  <div class="cta">Узнать балл →</div>
+<div class="b">
+  <div class="br">БАЛЛ<b>+</b></div>
+  <div class="h">Узнайте свой <u>кредитный балл</u> — и рост под ипотеку</div>
+  <div class="cap">Прогноз за 2 минуты</div>
+  <div class="row"><div class="num">480→720</div><div class="dl">ориентир.</div></div>
+  <div class="track"><div class="mk" style="left:33%"></div><div class="mk mk2" style="left:76%"></div></div>
+  <div class="cta">Рассчитать мой прогноз →</div>
+  <div class="fine">+150–400 баллов за 6–9 мес или возврат · по договору</div>
 </div>
-</body>
-</html>
+</body></html>

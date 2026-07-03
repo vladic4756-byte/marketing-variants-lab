@@ -1,45 +1,34 @@
 <!doctype html>
-<!-- banner:bfl-05-ipoteka-728x90 · ОСТ · РСЯ leaderboard · угол «сохранить ипотечную квартиру» -->
-<html lang="ru">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ОСТ · 728×90</title>
+<!-- banner:bfl-05-ipoteka-728x90 · ОСТ · концепция: крупная цифра-оффер (цена от 49 900 ₽). Самодостаточный HTML, overflow:hidden. -->
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=728,height=90">
 <style>
-  html,body{margin:0}
-  .b{position:relative;width:728px;height:90px;overflow:hidden;box-sizing:border-box;
-    display:flex;align-items:center;gap:18px;
-    font-family:Georgia,'Times New Roman',serif;color:#fff;
-    background:linear-gradient(100deg,#0E2138 0%,#132a45 60%,#16324f 100%);
-    padding:0 20px;border:1px solid #16324f}
-  .brand{display:flex;align-items:center;gap:8px;flex:0 0 auto}
-  .brand .mk{width:34px;height:34px;border-radius:7px;background:#B08D57;color:#0E2138;display:grid;place-items:center;font-size:12px;font-weight:700}
-  .brand .nm{font-weight:700;font-size:15px;line-height:1.05}
-  .brand .sub{font-family:Arial,sans-serif;font-size:7.5px;letter-spacing:.11em;text-transform:uppercase;color:#9fb0c8;font-weight:600}
-  .sep{width:1px;height:46px;background:rgba(198,168,118,.35);flex:0 0 auto}
-  .mid{flex:1 1 auto;min-width:0}
-  .h{font-size:19px;line-height:1.14;font-weight:700}
-  .h b{color:#C6A876}
-  .p{font-family:Arial,sans-serif;font-size:10px;color:#c6d1e0;margin:3px 0 0}
-  .cta{flex:0 0 auto;background:#B08D57;color:#231703;font-family:Arial,sans-serif;font-weight:700;
-    font-size:12px;padding:10px 16px;border-radius:8px;white-space:nowrap}
-  .disc{position:absolute;left:0;right:0;bottom:0;padding:2px 12px;background:rgba(0,0,0,.26);
-    font-family:Arial,sans-serif;font-size:5.5px;line-height:1.2;color:#8ea0bb}
-</style>
-</head>
-<body>
-  <div class="b">
-    <div class="brand">
-      <span class="mk">ОСТ</span>
-      <span class="nm">ОСТ<br><span class="sub">остаться в своём жилье</span></span>
-    </div>
-    <div class="sep"></div>
-    <div class="mid">
-      <div class="h">Банк грозит забрать <b>ипотечную квартиру</b>? Её можно защитить — через суд</div>
-      <p class="p">Мировое соглашение с банком, утверждённое судом · рассрочка до 10 мес · разбор без звонка</p>
-    </div>
-    <span class="cta">Оценить шанс →</span>
-    <div class="disc">Реклама юр. услуг по урегулированию долгов/банкротству. Риски и последствия по закону. Сохранение залоговой квартиры не гарантировано, зависит от суда и банка. Возможно бесплатное внесудебное банкротство через МФЦ при условиях.</div>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:728px;height:90px;overflow:hidden}
+.b{width:728px;height:90px;background:radial-gradient(120% 300% at 12% 50%,#1a3a5e,#0E2138 60%,#0a1929);font-family:Georgia,'Times New Roman',serif;color:#fff;position:relative;display:flex;align-items:center;gap:20px;padding:0 20px}
+.b::before{content:"";position:absolute;inset:6px;border:1px solid rgba(176,141,87,.45);border-radius:4px;pointer-events:none}
+.z{position:relative;z-index:1}
+.brand{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.12em;font-size:15px;line-height:1.1;flex:0 0 auto}
+.brand small{display:block;font-weight:400;letter-spacing:.05em;font-size:10px;color:#c9a86e;text-transform:uppercase}
+.div{width:1px;height:52px;background:rgba(176,141,87,.4);flex:0 0 auto}
+.msg{flex:1 1 auto;min-width:0}
+.msg h1{font-size:19px;font-weight:700;line-height:1.15}
+.msg h1 em{font-style:italic;color:#c9a86e}
+.price{font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.8);margin-top:3px}
+.price b{color:#fff;font-weight:700}
+.num{flex:0 0 auto;text-align:center;line-height:1}
+.num .big{font-family:Georgia,serif;font-weight:700;font-size:27px;color:#c9a86e}
+.num .lab{font-family:Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.6);letter-spacing:.05em}
+.btn{flex:0 0 auto;font-family:Arial,sans-serif;font-weight:700;font-size:13px;background:#B08D57;color:#fff;border-radius:4px;padding:11px 16px;white-space:nowrap}
+.micro{position:absolute;right:10px;bottom:3px;z-index:1;font-family:Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.4)}
+</style></head>
+<body><div class="b">
+  <div class="z brand">ОСТ<small>защита жилья</small></div>
+  <div class="z div"></div>
+  <div class="z msg">
+    <h1>Сохранить <em>ипотечную квартиру</em> через суд</h1>
+    <div class="price">Мировое соглашение или реструктуризация · <b>рассрочка до 10 мес</b></div>
   </div>
-</body>
-</html>
+  <div class="z num"><div class="big">от 49 900 ₽</div><div class="lab">по остатку ипотеки</div></div>
+  <div class="z btn">Оценить шанс</div>
+  <div class="micro">Реклама · результат зависит от суда · 127-ФЗ</div>
+</div></body></html>

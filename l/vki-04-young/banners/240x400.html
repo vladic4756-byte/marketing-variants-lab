@@ -1,37 +1,38 @@
 <!doctype html>
-<!-- banner:vki-04-young 240x400 · СТАРТ · «одна ошибка ≠ приговор» · мокап РСЯ, самодостаточный HTML -->
+<!-- banner:vki-04-young 240x400 · концепция ДО→ПОСЛЕ (динамика рейтинга: отказ → одобрения) -->
 <html lang="ru"><head><meta charset="utf-8"/>
 <style>
-  html,body{margin:0}
-  .b{width:240px;height:400px;box-sizing:border-box;position:relative;overflow:hidden;
-    font-family:'Segoe UI',Arial,sans-serif;color:#f5f3ff;
-    background:radial-gradient(110% 60% at 80% 0%,rgba(217,70,239,.32),transparent 55%),linear-gradient(180deg,#0c0a1e,#180f3a 70%,#0c0a1e);
-    padding:22px 20px;display:flex;flex-direction:column;justify-content:space-between}
-  .brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px}
-  .brand i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#8b5cf6,#d946ef);
-    display:grid;place-items:center;font-style:normal;font-size:16px}
-  h1{margin:14px 0 0;font-size:27px;line-height:1.1;font-weight:800;letter-spacing:-.02em}
-  h1 b{background:linear-gradient(120deg,#a78bfa,#f0abfc);-webkit-background-clip:text;background-clip:text;color:transparent}
-  p{margin:12px 0 0;font-size:13px;line-height:1.4;color:#cfc7ee}
-  .gauge{margin:16px 0 0;height:8px;border-radius:999px;background:linear-gradient(90deg,#dc2626,#f59e0b,#22c55e,#059669);position:relative}
-  .gauge span{position:absolute;top:-4px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #8b5cf6;left:78%}
-  .glabel{margin-top:6px;font-size:10px;color:#8b84ad}
-  .cta{margin-top:14px;background:linear-gradient(135deg,#8b5cf6,#d946ef);color:#fff;
-    font-weight:700;font-size:14px;text-align:center;padding:13px;border-radius:999px}
-  .fine{margin-top:9px;font-size:8px;color:#8b84ad;line-height:1.3}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:240px;height:400px;overflow:hidden}
+.b{width:240px;height:400px;position:relative;overflow:hidden;
+  font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#f3f1fb;
+  background:radial-gradient(22rem 20rem at 50% -8%,#3a2870 0%,transparent 62%),#0c0a1e;padding:16px 15px;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:7px;margin-bottom:12px}
+.ava{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#d946ef);display:grid;place-items:center;font-weight:800;font-size:.7rem;color:#fff}
+.brand span{font-size:.72rem;font-weight:700}
+.h{font-size:1.12rem;font-weight:800;line-height:1.18;letter-spacing:-.01em;margin-bottom:14px}
+.h b{background:linear-gradient(135deg,#8b5cf6,#d946ef);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cmp{display:flex;flex-direction:column;gap:9px;margin-bottom:12px}
+.card{border-radius:12px;padding:9px 11px}
+.card--was{background:#1a1636;border:1px solid rgba(255,255,255,.08)}
+.card--now{background:linear-gradient(150deg,rgba(139,92,246,.2),rgba(217,70,239,.1));border:1px solid rgba(167,139,250,.45)}
+.lbl{font-size:.56rem;color:#a49dcb;letter-spacing:.06em;text-transform:uppercase}
+.num{font-size:1.5rem;font-weight:800;line-height:1.05}
+.num--was{color:#9a93bf}
+.num--now{background:linear-gradient(135deg,#8b5cf6,#d946ef);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-size:.6rem;color:#a49dcb;margin-top:1px}
+.arrow{text-align:center;font-size:.9rem;color:#a78bfa;margin:-3px 0}
+.cta{margin-top:auto;background:linear-gradient(135deg,#8b5cf6,#d946ef);color:#fff;border-radius:999px;padding:10px;text-align:center;font-size:.82rem;font-weight:700}
+.dis{font-size:.47rem;color:#8a83b0;margin-top:8px;line-height:1.25}
 </style></head>
-<body>
-  <div class="b">
-    <div>
-      <div class="brand"><i>С</i>СТАРТ</div>
-      <h1>Одна ошибка молодости — <b>не на всю жизнь</b></h1>
-      <p>Из-за одной просрочки везде отказ? Законно поднимем кредитный рейтинг.</p>
-      <div class="gauge" aria-hidden="true"><span></span></div>
-      <div class="glabel">рост рейтинга под одобрения</div>
-    </div>
-    <div>
-      <div class="cta">Узнать свой прогноз →</div>
-      <div class="fine">По договору. +150–400 баллов за 6–9 мес или возврат 100% стоимости при выполнении рекомендаций. Старт от 14 900 ₽.</div>
-    </div>
+<body><div class="b">
+  <div class="brand"><div class="ava">С</div><span>СТАРТ</span></div>
+  <div class="h">Испортил историю по молодости? <b>Ещё не приговор.</b></div>
+  <div class="cmp">
+    <div class="card card--was"><div class="lbl">было</div><div class="num num--was">480</div><div class="sub">отказ по карте и рассрочке</div></div>
+    <div class="arrow">↓</div>
+    <div class="card card--now"><div class="lbl">цель по договору</div><div class="num num--now">700+</div><div class="sub">рейтинг для одобрений</div></div>
   </div>
-</body></html>
+  <div class="cta">Узнать прогноз →</div>
+  <div class="dis">+150–400 баллов за 6–9 мес или возврат — при выполнении рекомендаций. Законно, историю не удаляем.</div>
+</div></body></html>

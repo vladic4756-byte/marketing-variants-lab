@@ -1,28 +1,35 @@
 <!doctype html>
-<!-- banner:bfl-02-imushchestvo-300x250 · ЩИТ · РСЯ medium rectangle. Мокап техники (HTML/inline). -->
+<!-- banner:bfl-02-imushchestvo-300x250 · ЩИТ · концепция: ЧЕК-ЛИСТ «что защищено» · protective green -->
 <html lang="ru"><head><meta charset="utf-8"/>
 <style>
   *{margin:0;box-sizing:border-box}
   html,body{width:300px;height:250px;overflow:hidden;font-family:'Segoe UI',Arial,sans-serif}
-  .b{position:relative;width:300px;height:250px;background:linear-gradient(155deg,#0B3D2E 0%,#12664F 100%);color:#fff;padding:16px 16px 0;display:flex;flex-direction:column}
+  .b{position:relative;width:300px;height:250px;background:linear-gradient(158deg,#0b382b 0%,#0e5540 100%);color:#eafaf3;padding:15px 15px 22px;display:flex;flex-direction:column}
   .top{display:flex;align-items:center;gap:7px}
-  .top svg{width:26px;height:26px;flex:0 0 auto}
-  .brand{font-weight:700;letter-spacing:.14em;font-size:15px}
-  .brand small{display:block;font-size:7px;letter-spacing:.1em;color:#9dbcb0;font-weight:600}
-  h1{margin-top:14px;font-size:21px;line-height:1.15;font-weight:800}
-  h1 b{color:#E0A100}
-  .sub{margin-top:8px;font-size:12px;line-height:1.35;color:#d7e8e0}
-  .cta{margin-top:auto;margin-bottom:10px}
-  .btn{display:block;background:#E0A100;color:#231a00;font-weight:700;font-size:14px;text-align:center;padding:10px;border-radius:9px}
-  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:6px;line-height:1.25;color:#7fa093;background:rgba(0,0,0,.18);padding:3px 8px}
+  .top svg{width:24px;height:27px;flex:0 0 auto}
+  .brand{font-weight:800;letter-spacing:.12em;font-size:14px;color:#fff}
+  .brand small{display:block;font-size:6.5px;letter-spacing:.1em;color:#8fe6c2;font-weight:600}
+  h1{margin-top:11px;font-size:17px;line-height:1.15;font-weight:800;color:#fff}
+  .list{margin-top:10px;display:flex;flex-direction:column;gap:7px}
+  .li{display:flex;align-items:center;gap:8px;font-size:11.5px;line-height:1.2}
+  .ic{width:17px;height:17px;flex:0 0 auto;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+  .ok .ic{background:#8fe6c2;color:#0b382b}
+  .rk .ic{background:#f6c67a;color:#5a3a00}
+  .cta{margin-top:auto}
+  .btn{display:block;background:#0e9f6e;color:#fff;font-weight:800;font-size:13px;text-align:center;padding:9px;border-radius:9px}
+  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:6px;line-height:1.25;color:#9fd7c3;background:rgba(0,0,0,.22);padding:2px 8px}
 </style></head>
 <body><div class="b">
   <div class="top">
-    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 15 V33 C54 46 44 54 32 58 C20 54 10 46 10 33 V15 Z" fill="none" stroke="#E0A100" stroke-width="5" stroke-linejoin="round"/><path d="M23 33 l7 7 l12 -15" fill="none" stroke="#E0A100" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg viewBox="0 0 26 30" fill="none" aria-hidden="true"><path d="M13 1 24 5v9c0 8-5.4 12.6-11 15C7.4 26.6 2 22 2 14V5L13 1Z" fill="#0e9f6e"/><path d="M8 15.2l3.4 3.4L18.5 11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <span class="brand">ЩИТ<small>банкротство · защита имущества</small></span>
   </div>
-  <h1>Списываем долги — <b>защищаем имущество</b></h1>
-  <p class="sub">Единственное жильё — под защитой закона.* Разбор без звонка.</p>
-  <div class="cta"><span class="btn">Узнать, что защищено</span></div>
-  <div class="disc">*Кроме ипотечного/залогового. Реклама услуг банкротства. Услуга платная. Банкротство влечёт последствия по 127-ФЗ; часть долгов не списывается. ФЗ-332 ст.28.1.</div>
+  <h1>Что останется с вами при банкротстве</h1>
+  <div class="list">
+    <div class="li ok"><span class="ic">✓</span>Единственное жильё — защищает закон*</div>
+    <div class="li ok"><span class="ic">✓</span>Вещи, мебель, техника</div>
+    <div class="li rk"><span class="ic">!</span>Ипотека и авто — защита заранее</div>
+  </div>
+  <div class="cta"><span class="btn">Проверить, что защищено</span></div>
+  <div class="disc">*Кроме ипотечного/залогового. Реклама услуг банкротства. Услуга платная. Банкротство влечёт последствия по 127-ФЗ; часть долгов не списывается. ФЗ-332 ст. 28.1.</div>
 </div></body></html>

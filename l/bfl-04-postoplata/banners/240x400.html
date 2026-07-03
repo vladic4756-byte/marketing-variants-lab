@@ -1,35 +1,33 @@
 <!doctype html>
-<!-- Баннер 240×400 · ЛЕГЧЕ · БФЛ постоплата · угол «платите после подачи» · мокап (HTML/CSS) -->
+<!-- Баннер 240×400 · ЛЕГЧЕ · БФЛ постоплата · КОНЦЕПЦИЯ: крупная цифра-оффер (10%) на светлом фоне -->
 <html lang="ru"><head><meta charset="utf-8"/>
 <style>
   *{margin:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,Arial,sans-serif}
-  .b{width:240px;height:400px;overflow:hidden;position:relative;color:#fff;
-     background:linear-gradient(165deg,#134E48 0%,#1a655b 65%,#1b6b60 100%);padding:20px 18px 0;border-radius:16px}
-  .brand{font-weight:700;font-size:15px;letter-spacing:.05em;display:flex;align-items:center;gap:7px}
-  .mark{width:24px;height:24px;border-radius:7px;background:#fff;color:#134E48;display:grid;place-items:center;font-weight:700}
-  h1{font-size:24px;line-height:1.16;font-weight:700;margin:16px 0 10px;letter-spacing:-.01em}
-  h1 b{color:#F0A05A}
-  .sub{font-size:12px;color:#cbe2dd;line-height:1.4;margin-bottom:14px}
-  .pay{display:grid;gap:8px;margin-top:4px}
-  .row{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:11px;padding:9px 11px;display:flex;align-items:center;gap:10px}
-  .row .p{width:40px;height:40px;border-radius:9px;background:#2E9E6B;display:grid;place-items:center;font-weight:700;font-size:14px;flex:0 0 auto}
-  .row .p.o{background:#F0A05A;color:#2c1600}
-  .row b{display:block;font-size:13px}
-  .row span{font-size:10px;color:#cbe2dd}
-  .cta{position:absolute;left:18px;bottom:40px;width:204px;text-align:center;background:#F0A05A;color:#2c1600;
-       font-weight:700;font-size:14px;padding:11px 0;border-radius:999px}
-  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:6.5px;line-height:1.3;color:#9dbeb7;
-        padding:5px 18px;background:rgba(0,0,0,.18)}
+  .b{width:240px;height:400px;overflow:hidden;position:relative;background:#F6EFE2;color:#122824;padding:16px 16px 0}
+  .brand{font-weight:700;font-size:13px;letter-spacing:.04em;display:flex;align-items:center;gap:6px;color:#134E48}
+  .mark{width:20px;height:20px;border-radius:6px;background:#134E48;color:#fff;display:grid;place-items:center;font-weight:800;font-size:12px}
+  .kick{font-size:11px;font-weight:700;color:#c4863a;text-transform:uppercase;letter-spacing:.05em;margin-top:18px}
+  .big{font-size:92px;line-height:.9;font-weight:800;color:#134E48;margin:2px 0 0;letter-spacing:-.03em}
+  .big span{color:#E0A458}
+  .sub{font-size:15px;font-weight:700;line-height:1.2;margin-top:6px}
+  .rest{background:#fff;border:1px solid #e4dcc9;border-radius:11px;padding:10px 12px;margin-top:16px}
+  .rest b{font-size:14px;color:#134E48;display:block}
+  .rest span{font-size:10.5px;color:#5d6b64}
+  .cta{position:absolute;left:16px;right:16px;bottom:32px;background:#E0A458;color:#3a2a10;font-weight:800;
+       font-size:14px;padding:11px;border-radius:11px;text-align:center}
+  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:6px;line-height:1.2;color:#7a8a83;
+        padding:3px 12px;background:rgba(19,78,72,.06)}
 </style></head><body>
 <div class="b">
   <div class="brand"><span class="mark">Л</span> ЛЕГЧЕ</div>
-  <h1>Списание долгов — <b>платите после подачи</b></h1>
-  <div class="sub">Не нужно отдавать всю сумму вперёд. Начните с 10% при подаче заявления в суд.</div>
-  <div class="pay">
-    <div class="row"><span class="p o">10%</span><span><b>При подаче</b><span>заявления в суд</span></span></div>
-    <div class="row"><span class="p">90%</span><span><b>Рассрочка</b><span>на 8 месяцев</span></span></div>
+  <div class="kick">При подаче заявления</div>
+  <div class="big"><span>10</span>%</div>
+  <div class="sub">И только когда заявление подано в&nbsp;суд</div>
+  <div class="rest">
+    <b>Остальные 90%</b>
+    <span>рассрочкой на 8 месяцев по посильному графику</span>
   </div>
-  <div class="cta">Рассчитать за 5 вопросов</div>
-  <div class="disc">Реклама услуг сопровождения банкротства граждан (ФЗ-127). Освобождение от обязательств — по решению суда, наступает не во всех случаях (ст. 213.28, 28.1 ФЗ). Постоплата — график платежей, не бесплатность.</div>
+  <div class="cta">Рассчитать платёж →</div>
+  <div class="disc">Реклама услуг сопровождения банкротства физлиц. Освобождение от долгов — по решению суда, не во всех случаях (ст. 28.1 ФЗ «О рекламе»). Постоплата — график, не бесплатность.</div>
 </div>
 </body></html>

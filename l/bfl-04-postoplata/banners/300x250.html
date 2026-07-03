@@ -1,31 +1,36 @@
 <!doctype html>
-<!-- Баннер 300×250 · ЛЕГЧЕ · БФЛ постоплата · угол «платите после подачи» · мокап (HTML/CSS) -->
+<!-- Баннер 300×250 · ЛЕГЧЕ · БФЛ постоплата · КОНЦЕПЦИЯ: мини-таймлайн процесса (станции оплаты) -->
 <html lang="ru"><head><meta charset="utf-8"/>
 <style>
   *{margin:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,Arial,sans-serif}
   .b{width:300px;height:250px;overflow:hidden;position:relative;color:#fff;
-     background:linear-gradient(160deg,#134E48 0%,#1a655b 70%,#1b6b60 100%);padding:18px 18px 0;border-radius:14px}
-  .brand{font-weight:700;font-size:14px;letter-spacing:.05em;display:flex;align-items:center;gap:6px}
-  .mark{width:22px;height:22px;border-radius:6px;background:#fff;color:#134E48;display:grid;place-items:center;font-weight:700}
-  h1{font-size:21px;line-height:1.14;font-weight:700;margin:12px 0 8px;letter-spacing:-.01em}
-  h1 b{color:#F0A05A}
-  .pay{display:flex;gap:6px;margin:6px 0 0}
-  .chip{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:6px 8px}
-  .chip b{display:block;font-size:16px;color:#8fe6c2}
-  .chip span{font-size:9px;color:#cbe2dd}
-  .cta{position:absolute;left:18px;bottom:26px;background:#F0A05A;color:#2c1600;font-weight:700;
-       font-size:13px;padding:9px 16px;border-radius:999px}
-  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:6.5px;line-height:1.25;color:#9dbeb7;
-        padding:4px 18px;background:rgba(0,0,0,.18)}
+     background:linear-gradient(160deg,#134E48,#0e3b36);padding:14px 16px}
+  .brand{font-weight:700;font-size:13px;letter-spacing:.04em;display:flex;align-items:center;gap:6px}
+  .mark{width:20px;height:20px;border-radius:6px;background:#fff;color:#134E48;display:grid;place-items:center;font-weight:800;font-size:12px}
+  h1{font-size:15px;line-height:1.18;font-weight:800;margin:9px 0 10px}
+  h1 b{color:#E0A458}
+  .rail{position:relative;padding-left:16px}
+  .rail::before{content:"";position:absolute;left:5px;top:4px;bottom:14px;width:2px;background:rgba(255,255,255,.25)}
+  .st{position:relative;margin-bottom:8px;padding-left:6px}
+  .st::before{content:"";position:absolute;left:-14px;top:3px;width:11px;height:11px;border-radius:50%;background:#fff;border:2px solid #134E48}
+  .st.pay::before{background:#E0A458;box-shadow:0 0 0 2px rgba(224,164,88,.4)}
+  .st b{font-size:12.5px;color:#fff}
+  .st.pay b{color:#E0A458}
+  .st span{font-size:9.5px;color:#bcd6cf;display:block}
+  .cta{position:absolute;right:14px;bottom:24px;background:#E0A458;color:#3a2a10;font-weight:800;
+       font-size:12px;padding:8px 13px;border-radius:999px}
+  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:6px;line-height:1.2;color:#93b3ac;
+        padding:3px 10px;background:rgba(0,0,0,.22)}
 </style></head><body>
 <div class="b">
   <div class="brand"><span class="mark">Л</span> ЛЕГЧЕ</div>
-  <h1>Банкротство: <b>платите после подачи</b> заявления</h1>
-  <div class="pay">
-    <div class="chip"><b>10%</b><span>при подаче в суд</span></div>
-    <div class="chip"><b>90%</b><span>рассрочка 8 мес</span></div>
+  <h1>Банкротство: <b>платите после подачи</b></h1>
+  <div class="rail">
+    <div class="st"><b>Подача заявления в суд</b><span>процедуру запускаем</span></div>
+    <div class="st pay"><b>10% — первый платёж</b><span>только после подачи</span></div>
+    <div class="st pay"><b>90% — рассрочка</b><span>на 8 месяцев по графику</span></div>
   </div>
-  <div class="cta">Узнать условия →</div>
-  <div class="disc">Реклама услуг сопровождения банкротства (ФЗ-127). Освобождение от долгов — по решению суда, не во всех случаях (ст. 213.28, 28.1 ФЗ). Постоплата — график платежей, не бесплатность.</div>
+  <div class="cta">Рассчитать →</div>
+  <div class="disc">Реклама услуг сопровождения банкротства физлиц. Освобождение от долгов — по решению суда, не во всех случаях (ст. 213.28 ФЗ-127, ст. 28.1 ФЗ «О рекламе»). Постоплата — график платежей, не отсутствие оплаты.</div>
 </div>
 </body></html>

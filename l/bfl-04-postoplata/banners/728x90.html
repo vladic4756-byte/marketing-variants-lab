@@ -1,30 +1,38 @@
 <!doctype html>
-<!-- Баннер 728×90 · ЛЕГЧЕ · БФЛ постоплата · угол «платите после подачи» · мокап (HTML/CSS) -->
+<!-- Баннер 728×90 · ЛЕГЧЕ · БФЛ постоплата · КОНЦЕПЦИЯ: горизонтальный таймлайн-рельс (подача → 10% → 8 мес → суд) -->
 <html lang="ru"><head><meta charset="utf-8"/>
 <style>
   *{margin:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,Arial,sans-serif}
-  .b{width:728px;height:90px;overflow:hidden;position:relative;color:#fff;display:flex;align-items:center;gap:18px;
-     background:linear-gradient(100deg,#134E48 0%,#1a655b 60%,#1b6b60 100%);padding:0 20px;border-radius:12px}
-  .brand{font-weight:700;font-size:15px;letter-spacing:.04em;display:flex;align-items:center;gap:7px;flex:0 0 auto}
-  .mark{width:26px;height:26px;border-radius:7px;background:#fff;color:#134E48;display:grid;place-items:center;font-weight:700}
-  h1{font-size:20px;line-height:1.12;font-weight:700;flex:0 0 auto;max-width:300px;letter-spacing:-.01em}
-  h1 b{color:#F0A05A}
-  .pay{display:flex;gap:8px;flex:0 0 auto}
-  .chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:6px 11px;text-align:center}
-  .chip b{display:block;font-size:15px;color:#8fe6c2}
-  .chip.o b{color:#F0A05A}
-  .chip span{font-size:8.5px;color:#cbe2dd}
-  .cta{margin-left:auto;flex:0 0 auto;background:#F0A05A;color:#2c1600;font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px;white-space:nowrap}
-  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:6px;line-height:1.2;color:#9dbeb7;padding:2px 20px;background:rgba(0,0,0,.16)}
+  .b{width:728px;height:90px;overflow:hidden;position:relative;color:#fff;display:flex;align-items:center;gap:16px;
+     background:linear-gradient(100deg,#134E48,#0e3b36);padding:0 18px}
+  .brand{font-weight:800;font-size:14px;letter-spacing:.03em;display:flex;align-items:center;gap:6px;flex:0 0 auto}
+  .mark{width:24px;height:24px;border-radius:7px;background:#fff;color:#134E48;display:grid;place-items:center;font-weight:800;font-size:13px}
+  h1{font-size:16px;line-height:1.12;font-weight:800;flex:0 0 auto;max-width:172px}
+  h1 b{color:#E0A458}
+  .rail{display:flex;align-items:center;gap:4px;flex:0 0 auto}
+  .node{text-align:center;padding:0 4px}
+  .node .d{width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid #0e3b36;margin:0 auto 3px}
+  .node.pay .d{background:#E0A458}
+  .node b{font-size:11.5px;display:block;line-height:1}
+  .node.pay b{color:#E0A458}
+  .node span{font-size:8px;color:#bcd6cf}
+  .arw{color:rgba(255,255,255,.4);font-size:13px;flex:0 0 auto}
+  .cta{margin-left:auto;flex:0 0 auto;background:#E0A458;color:#3a2a10;font-weight:800;font-size:13px;padding:10px 16px;border-radius:999px;white-space:nowrap}
+  .disc{position:absolute;left:0;bottom:0;width:100%;font-size:5.5px;line-height:1.15;color:#93b3ac;padding:2px 18px;background:rgba(0,0,0,.18)}
 </style></head><body>
 <div class="b">
   <div class="brand"><span class="mark">Л</span> ЛЕГЧЕ</div>
   <h1>Банкротство: <b>платите после подачи</b></h1>
-  <div class="pay">
-    <div class="chip o"><b>10%</b><span>при подаче</span></div>
-    <div class="chip"><b>90%</b><span>рассрочка 8 мес</span></div>
+  <div class="rail">
+    <div class="node"><div class="d"></div><b>Подача</b><span>в суд</span></div>
+    <span class="arw">→</span>
+    <div class="node pay"><div class="d"></div><b>10%</b><span>при подаче</span></div>
+    <span class="arw">→</span>
+    <div class="node pay"><div class="d"></div><b>90%</b><span>8 мес</span></div>
+    <span class="arw">→</span>
+    <div class="node"><div class="d"></div><b>Суд</b><span>решение</span></div>
   </div>
-  <div class="cta">Узнать условия →</div>
-  <div class="disc">Реклама услуг сопровождения банкротства (ФЗ-127). Освобождение от долгов — по решению суда, не во всех случаях (ст. 213.28, 28.1 ФЗ). Постоплата — график платежей, не бесплатность.</div>
+  <div class="cta">Рассчитать →</div>
+  <div class="disc">Реклама услуг сопровождения банкротства физлиц. Освобождение от долгов — по решению суда, не во всех случаях (ст. 213.28 ФЗ-127, ст. 28.1 ФЗ «О рекламе»). Постоплата — график платежей, не отсутствие оплаты.</div>
 </div>
 </body></html>

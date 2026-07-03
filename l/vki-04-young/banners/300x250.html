@@ -1,32 +1,26 @@
 <!doctype html>
-<!-- banner:vki-04-young 300x250 · СТАРТ · «одна ошибка ≠ приговор» · мокап РСЯ, самодостаточный HTML -->
+<!-- banner:vki-04-young 300x250 · концепция ЧАТ-ТИЗЕР (пузырьки переписки + чип-CTA) — перекликается с архетипом лендинга -->
 <html lang="ru"><head><meta charset="utf-8"/>
 <style>
-  html,body{margin:0}
-  .b{width:300px;height:250px;box-sizing:border-box;position:relative;overflow:hidden;
-    font-family:'Segoe UI',Arial,sans-serif;color:#f5f3ff;
-    background:radial-gradient(120% 90% at 85% -10%,rgba(217,70,239,.35),transparent 55%),linear-gradient(160deg,#0c0a1e,#1a1140);
-    padding:18px 18px 16px;display:flex;flex-direction:column;justify-content:space-between}
-  .brand{display:flex;align-items:center;gap:7px;font-weight:800;font-size:15px;letter-spacing:.02em}
-  .brand i{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,#8b5cf6,#d946ef);
-    display:grid;place-items:center;font-style:normal;font-size:15px}
-  h1{margin:8px 0 0;font-size:23px;line-height:1.12;font-weight:800;letter-spacing:-.02em}
-  h1 b{background:linear-gradient(120deg,#a78bfa,#f0abfc);-webkit-background-clip:text;background-clip:text;color:transparent}
-  p{margin:6px 0 0;font-size:12px;line-height:1.35;color:#cfc7ee}
-  .cta{margin-top:12px;background:linear-gradient(135deg,#8b5cf6,#d946ef);color:#fff;
-    font-weight:700;font-size:13px;text-align:center;padding:11px;border-radius:999px}
-  .fine{margin-top:7px;font-size:8px;color:#8b84ad;line-height:1.3}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:300px;height:250px;overflow:hidden}
+.b{width:300px;height:250px;position:relative;overflow:hidden;
+  font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#f3f1fb;
+  background:radial-gradient(28rem 16rem at 82% -12%,#3a2870 0%,transparent 60%),#0c0a1e;padding:13px 14px;display:flex;flex-direction:column}
+.hd{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.ava{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#d946ef);display:grid;place-items:center;font-weight:800;font-size:.75rem;color:#fff}
+.nm{font-size:.72rem;font-weight:700;line-height:1.05}
+.st{font-size:.55rem;color:#34d399}
+.bot{background:#221c47;border:1px solid rgba(255,255,255,.09);border-radius:12px;border-bottom-left-radius:4px;padding:7px 9px;font-size:.73rem;line-height:1.28;max-width:90%;margin-bottom:6px}
+.bot b{color:#fff}
+.usr{align-self:flex-end;background:linear-gradient(135deg,#8b5cf6,#d946ef);color:#fff;border-radius:12px;border-bottom-right-radius:4px;padding:6px 10px;font-size:.7rem;font-weight:600;margin-bottom:8px}
+.cta{margin-top:auto;background:linear-gradient(135deg,#8b5cf6,#d946ef);color:#fff;border-radius:999px;padding:9px;text-align:center;font-size:.82rem;font-weight:700}
+.dis{font-size:.48rem;color:#8a83b0;margin-top:6px;line-height:1.22}
 </style></head>
-<body>
-  <div class="b">
-    <div>
-      <div class="brand"><i>С</i>СТАРТ</div>
-      <h1>Одна просрочка — <b>не приговор</b></h1>
-      <p>Исправим кредитную историю быстро и законно. Рост рейтинга или возврат стоимости.</p>
-    </div>
-    <div>
-      <div class="cta">Узнать свой прогноз →</div>
-      <div class="fine">По договору. +150–400 баллов за 6–9 мес или возврат 100% стоимости при выполнении рекомендаций.</div>
-    </div>
-  </div>
-</body></html>
+<body><div class="b">
+  <div class="hd"><div class="ava">С</div><div><div class="nm">СТАРТ</div><div class="st">● автопомощник онлайн</div></div></div>
+  <div class="bot">Одна просрочка по молодости — и банк отказывает? <b>Это чинится.</b> Законно.</div>
+  <div class="usr">разберём мой случай?</div>
+  <div class="cta">Пройти разбор за 2 мин →</div>
+  <div class="dis">Рост рейтинга по договору при выполнении рекомендаций. Историю не удаляем.</div>
+</div></body></html>
