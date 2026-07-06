@@ -756,7 +756,7 @@ img{max-width:100%}
 (function(){
   "use strict";
   var METRIKA_ID = "110463482";
-  var BITRIX_WEBHOOK = "__BITRIX_WEBHOOK_URL__"; // токен на бэке, НЕ в этом JS
+  var LEAD_ENDPOINT = "submit.php"; // серверный прокси; секрет вебхука Bitrix — на бэке, не в этом JS
 
   function track(goal, params){
     var p={};
@@ -892,14 +892,12 @@ img{max-width:100%}
     document.getElementById('success').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
   }
   function finishSubmit(payload, ch, btn, old, err){
-    if(/^https?:/.test(BITRIX_WEBHOOK)){
-      fetch(BITRIX_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-        .then(function(r){ if(!r.ok) throw 0; return r; })
-        .then(function(){ done(ch); })
-        .catch(function(){ btn.disabled=false; btn.textContent=old; err.style.display=''; err.textContent='Не удалось отправить. Попробуйте ещё раз или напишите в чат.'; });
-    } else {
-      setTimeout(function(){ done(ch); }, 350);
-    }
+    // Превью GitHub Pages не исполняет PHP — эмулируем успех для демонстрации, лид не уходит
+    if(location.hostname.indexOf('github.io')>-1){ setTimeout(function(){ done(ch); }, 350); return; }
+    fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){ if(j && j.ok){ done(ch); } else { throw 0; } })
+      .catch(function(){ btn.disabled=false; btn.textContent=old; err.style.display=''; err.textContent='Не удалось отправить. Попробуйте ещё раз или напишите в чат.'; });
   }
 
   /* ---------- липкая кнопка ---------- */
