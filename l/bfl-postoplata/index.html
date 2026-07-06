@@ -862,7 +862,21 @@ img{max-width:100%}
     var t0=parseInt(document.getElementById('ts_start').value,10)||0;
     if(t0 && (Date.now()-t0)<3000){ return; }
     var ch=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат';
-    if(CH[ch].field && !cinput.value.trim()){ err.textContent='Укажите контакт для выбранного канала.'; cinput.focus(); return; }
+    var nm=(document.getElementById('name-input').value||'').trim();
+    if(nm.length<2){ err.textContent='Пожалуйста, укажите, как к вам обращаться.'; document.getElementById('name-input').focus(); return; }
+    if(CH[ch].field){
+      var cv=cinput.value.trim();
+      if(!cv){ err.textContent='Укажите контакт для выбранного канала.'; cinput.focus(); return; }
+      if(ch==='Telegram'){
+        var td=cv.replace(/\D/g,'');
+        if(!((cv.charAt(0)==='@'&&cv.length>=5)||(td.length>=10&&td.length<=11))){ err.textContent='Укажите @username или телефон в формате +7…'; cinput.focus(); return; }
+      } else {
+        var dg=cv.replace(/\D/g,'');
+        if(dg.length===11&&dg.charAt(0)==='8') dg='7'+dg.slice(1);
+        if(dg.length===10) dg='7'+dg;
+        if(!(dg.length===11&&dg.charAt(0)==='7')){ err.textContent='Проверьте номер — нужен российский телефон, например +7 900 123-45-67.'; cinput.focus(); return; }
+      }
+    }
     if(!document.getElementById('c1').checked || !document.getElementById('c2').checked){
       err.textContent='Отметьте обязательные согласия (152-ФЗ), чтобы мы могли прислать разбор.'; return;
     }
