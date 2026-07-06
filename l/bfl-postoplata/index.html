@@ -29,7 +29,7 @@
   --accent:#E0A458; --accent-700:#c4863a; --sand:#F6EFE2; --sand-2:#efe6d3;
   --card:#ffffff; --line:#e4dcc9; --line-2:#d6cbb2; --ok:#2f8f6b; --alarm:#b5462f;
   --radius:16px; --shadow:0 10px 30px rgba(19,78,72,.10);
-  --maxw:1120px;
+  --maxw:1200px;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -115,7 +115,11 @@ img{max-width:100%}
 
 /* QUIZ */
 .quiz-sec{background:linear-gradient(180deg,#fff,#fbf7ee)}
-.quiz{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);max-width:640px;margin:0 auto;overflow:hidden}
+.quiz{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.split__aside{align-self:center}
+.split__aside h2{font-size:1.7rem}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:26px}}
 .quiz__bar{height:6px;background:#eee4cf}
 .quiz__fill{height:100%;width:20%;background:linear-gradient(90deg,var(--primary),var(--accent));transition:width .3s ease}
 .quiz__in{padding:26px}
@@ -183,6 +187,8 @@ img{max-width:100%}
 .list li{display:flex;gap:.6rem;align-items:flex-start;padding:.4rem 0;font-size:.96rem}
 .list li::before{content:"✓";color:var(--ok);font-weight:800;flex:0 0 auto}
 .list--x li::before{content:"—";color:var(--muted)}
+.list--light li{color:#eaf5f0}
+.list--light li::before{content:"✓";color:var(--accent)}
 .honest{background:#fbf7ee;border:1px solid var(--line-2);border-left:4px solid var(--accent-700);border-radius:12px;padding:18px 20px}
 .honest h3{margin-bottom:.4rem}
 .honest p{font-size:.92rem;color:#4a4132;margin:0}
@@ -206,7 +212,7 @@ img{max-width:100%}
 .cmp-scroll{overflow-x:auto}
 
 /* price honest */
-.price{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:26px;max-width:680px;margin:0 auto;text-align:center}
+.price{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:30px;max-width:900px;margin:0 auto;text-align:center}
 .price__row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:.6rem 0 1rem}
 .price__box{flex:1;min-width:150px;background:#fbf8f0;border:1px solid var(--line);border-radius:13px;padding:16px}
 .price__box.pay{border-color:var(--accent);background:#fdf5e8}
@@ -361,12 +367,18 @@ img{max-width:100%}
 <!-- QUIZ -->
 <section class="sec quiz-sec" id="quiz">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:1.4rem">
-      <span class="eyebrow">Бесплатный тест · 1 минута</span>
-      <h2>Проверьте, подходит ли вам банкротство</h2>
-      <p class="muted" style="max-width:40rem;margin:0 auto">5 вопросов — и мы скажем, реально ли списать ваши долги и какой будет платёж. Тест ни к чему не обязывает.</p>
-    </div>
-    <div class="quiz" id="quizBox">
+    <div class="split">
+      <div class="split__aside">
+        <span class="eyebrow">Бесплатный тест · 1 минута</span>
+        <h2>Проверьте, спишутся ли ваши долги</h2>
+        <p class="muted">5 вопросов — и мы скажем, реально ли списать ваши долги и каким будет платёж по постоплате. Тест ни к чему не обязывает и занимает минуту.</p>
+        <ul class="list" style="margin-top:1.1rem">
+          <li>Узнаете, подходит ли банкротство именно вам</li>
+          <li>Поймёте первый взнос и размер рассрочки</li>
+          <li>Ответы конфиденциальны — не передаём банкам и коллекторам</li>
+        </ul>
+      </div>
+      <div class="quiz" id="quizBox">
       <div class="quiz__bar"><div class="quiz__fill" id="quizFill"></div></div>
       <div class="quiz__in">
 
@@ -435,6 +447,7 @@ img{max-width:100%}
           <svg class="ic" viewBox="0 0 24 24" style="color:var(--ok)"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span>Ответы конфиденциальны. Мы не передаём их банкам и коллекторам. Уйти с теста можно в любой момент.</span>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -609,7 +622,7 @@ img{max-width:100%}
         <li>Все последствия банкротства проговариваем на разборе до подписания</li>
       </ul>
     </div>
-    <div class="faq" aria-label="Частые вопросы">
+    <div class="faq">
       <h2 style="font-size:1.5rem">Частые вопросы</h2>
       <details><summary>Правда, что не нужно платить всю сумму вперёд?</summary><p>Да. Первый взнос от 20 000 ₽ вносится, когда заявление подано в арбитражный суд, остаток — рассрочкой до 8 месяцев по графику из договора. Это снимает риск заплатить крупную сумму до старта процедуры.</p></details>
       <details><summary>Это не развод? Почему оплата потом?</summary><p>Оплата после подачи — это и есть защита от «плати за воздух»: первый взнос вы вносите, только когда заявление уже в суде. Тариф и график зафиксированы письменно в договоре до старта, доплат по ходу нет.</p></details>
@@ -622,16 +635,19 @@ img{max-width:100%}
 <!-- FORM -->
 <section class="sec form-sec" id="form">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:1rem">
-      <h2 style="color:#fff">Бесплатный разбор вашей ситуации</h2>
-      <p style="color:#bcd6cf;max-width:34rem;margin:0 auto .8rem">Оставьте контакт — юрист разберёт долги и пришлёт точный тариф и график постоплаты в удобный вам канал.</p>
-    </div>
-    <div class="form-trust">
-      <span>✓ 2456 дел до списания</span>
-      <span>✓ Оплата после подачи в суд</span>
-      <span>✓ Вернём деньги, если не сможем</span>
-    </div>
-    <div class="form-res" id="form-res"></div>
+    <div class="split">
+      <div class="split__aside">
+        <h2 style="color:#fff">Бесплатный разбор вашей ситуации</h2>
+        <p style="color:#bcd6cf">Оставьте контакт — юрист разберёт ваши долги и пришлёт точный тариф и график постоплаты в удобный вам канал. Бесплатно и ни к чему не обязывает.</p>
+        <ul class="list list--light" style="margin-top:1.1rem">
+          <li>2456 дел доведено до списания долгов</li>
+          <li>Первый взнос — только после подачи заявления в суд</li>
+          <li>Вернём деньги, если не сможем довести до банкротства</li>
+          <li>Звонок не обязателен — можем написать в мессенджер</li>
+        </ul>
+        <div class="form-res" id="form-res"></div>
+      </div>
+      <div>
     <form class="form-card" id="lead-form" novalidate>
       <div class="field">
         <label for="name-input">Как к вам обращаться</label>
@@ -687,6 +703,8 @@ img{max-width:100%}
       </div>
     </form>
     <p class="form-disc">Реклама услуг по сопровождению процедуры банкротства физических лиц. Услуги оказываются на возмездной основе. Процедура влечёт последствия, предусмотренные ФЗ-127 «О несостоятельности (банкротстве)». Информация приведена в соответствии со ст. 28.1 Федерального закона «О рекламе» (введена ФЗ-332 от 04.08.2023). Подробности — в подвале страницы.</p>
+      </div>
+    </div>
   </div>
 </section>
 
