@@ -375,12 +375,12 @@ img{max-width:100%}
     <div class="split">
       <div class="split__aside">
         <span class="eyebrow">Бесплатный тест · 1 минута</span>
-        <h2>Проверьте, спишутся ли ваши долги</h2>
-        <p class="muted">5 вопросов — и мы скажем, реально ли списать ваши долги и каким будет платёж по постоплате. Тест ни к чему не обязывает и занимает минуту.</p>
+        <h2>Узнайте, спишутся ли ваши долги</h2>
+        <p class="muted">Ответьте на 4 коротких вопроса — и юрист бесплатно разберёт вашу ситуацию, назовёт точный тариф и график постоплаты. Займёт минуту.</p>
         <ul class="list" style="margin-top:1.1rem">
           <li>Узнаете, подходит ли банкротство именно вам</li>
           <li>Поймёте первый взнос и размер рассрочки</li>
-          <li>Ответы конфиденциальны — не передаём банкам и коллекторам</li>
+          <li>Данные конфиденциальны — не передаём банкам и коллекторам</li>
         </ul>
       </div>
       <div class="quiz" id="quizBox">
@@ -388,7 +388,7 @@ img{max-width:100%}
       <div class="quiz__in">
 
         <div class="quiz__step on" data-step="1">
-          <div class="quiz__k">Вопрос 1 из 5</div>
+          <div class="quiz__k">Вопрос 1 из 4</div>
           <div class="quiz__q">Какая у вас общая сумма долга?</div>
           <div class="quiz__opts">
             <button type="button" class="qopt" data-name="debt" data-val="до 300 000 ₽"><span class="qopt__b">1</span> До 300 000 ₽</button>
@@ -399,7 +399,7 @@ img{max-width:100%}
         </div>
 
         <div class="quiz__step" data-step="2">
-          <div class="quiz__k">Вопрос 2 из 5</div>
+          <div class="quiz__k">Вопрос 2 из 4</div>
           <div class="quiz__q">Перед кем долги?</div>
           <div class="quiz__opts">
             <button type="button" class="qopt" data-name="creditor" data-val="Банки"><span class="qopt__b">1</span> Кредиты банков</button>
@@ -410,7 +410,7 @@ img{max-width:100%}
         </div>
 
         <div class="quiz__step" data-step="3">
-          <div class="quiz__k">Вопрос 3 из 5</div>
+          <div class="quiz__k">Вопрос 3 из 4</div>
           <div class="quiz__q">Как обстоит с платежами?</div>
           <div class="quiz__opts">
             <button type="button" class="qopt" data-name="delay" data-val="Плачу вовремя"><span class="qopt__b">1</span> Пока плачу вовремя</button>
@@ -421,7 +421,7 @@ img{max-width:100%}
         </div>
 
         <div class="quiz__step" data-step="4">
-          <div class="quiz__k">Вопрос 4 из 5</div>
+          <div class="quiz__k">Вопрос 4 из 4</div>
           <div class="quiz__q">Официальный доход?</div>
           <div class="quiz__opts">
             <button type="button" class="qopt" data-name="income" data-val="Стабильный"><span class="qopt__b">1</span> Есть, стабильный</button>
@@ -432,25 +432,35 @@ img{max-width:100%}
         </div>
 
         <div class="quiz__step" data-step="5">
-          <div class="quiz__k">Вопрос 5 из 5</div>
-          <div class="quiz__q">Ваш город?</div>
-          <input class="inp" type="text" id="quiz-city" placeholder="Например, Краснодар" autocomplete="address-level2">
+          <div class="quiz__k">Последний шаг</div>
+          <div class="quiz__q">Куда прислать бесплатный разбор?</div>
+          <p class="muted" style="font-size:.92rem;margin:-.3rem 0 1rem">Юрист разберёт вашу ситуацию и назовёт точный тариф и график постоплаты. Ни к чему не обязывает.</p>
+          <div class="field"><label for="f-name">Ваше имя</label><input class="inp" id="f-name" type="text" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="field"><label for="f-phone">Телефон</label><input class="inp" id="f-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 123-45-67"></div>
+          <div class="field"><label for="f-city">Город</label><input class="inp" id="f-city" type="text" autocomplete="address-level2" placeholder="Например, Краснодар"></div>
+          <fieldset class="consents" style="border:none;padding:0;margin:.8rem 0 .2rem">
+            <legend style="font-size:.82rem;color:var(--muted);margin-bottom:.3rem">Согласия (152-ФЗ):</legend>
+            <label class="consent"><input type="checkbox" id="c1"><span>Согласен(а) на обработку персональных данных для связи по заявке. <a href="#pdn-policy" data-scroll="footer" rel="noopener">Политика ПДн</a></span></label>
+            <label class="consent"><input type="checkbox" id="c2"><span>Согласен(а) получить бесплатный разбор и приглашение на консультацию.</span></label>
+          </fieldset>
+          <div class="err" id="form-err"></div>
+          <div class="hp" aria-hidden="true"><input type="text" id="hp-field" tabindex="-1" autocomplete="off"></div>
           <div class="quiz__nav">
             <button type="button" class="quiz__back" data-back>← назад</button>
-            <button type="button" class="btn btn--primary" id="quizFinish" data-goal="quiz_complete">Показать результат</button>
+            <button type="button" class="btn btn--primary" id="quizSubmit" data-goal="submit_application">Получить разбор</button>
           </div>
+          <p class="note" style="text-align:center;margin-top:.7rem">Перезвоним в течение рабочего дня.</p>
         </div>
 
         <div class="quiz__result" id="quizResult">
-          <h3>Похоже, ваш случай — рабочий ✓</h3>
-          <div class="rband" id="quizBand">10% при подаче + 90% рассрочка на 8 месяцев · от 99 900 ₽</div>
-          <p class="muted" id="quizResultText">Оставьте контакт — юрист бесплатно разберёт вашу ситуацию и назовёт точный тариф и график постоплаты. Это ни к чему не обязывает.</p>
-          <a href="#form" class="btn btn--primary btn--block" data-scroll="form" data-goal="quiz_to_form">Получить бесплатный разбор</a>
+          <div class="success__ic" style="margin:0 auto 1rem">✓</div>
+          <h3>Заявка принята</h3>
+          <p class="muted" id="quizResultText">Юрист свяжется с вами по телефону, разберёт ситуацию и назовёт точный тариф и график постоплаты. Спасибо!</p>
         </div>
 
         <div class="quiz__note" id="quizNote">
           <svg class="ic" viewBox="0 0 24 24" style="color:var(--ok)"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          <span>Ответы конфиденциальны. Мы не передаём их банкам и коллекторам. Уйти с теста можно в любой момент.</span>
+          <span>Данные конфиденциальны — не передаём банкам и коллекторам. Только для разбора вашей ситуации.</span>
         </div>
       </div>
       </div>
@@ -648,81 +658,7 @@ img{max-width:100%}
   </div>
 </section>
 
-<!-- FORM -->
-<section class="sec form-sec" id="form">
-  <div class="wrap">
-    <div class="split">
-      <div class="split__aside">
-        <h2 style="color:#fff">Бесплатный разбор вашей ситуации</h2>
-        <p style="color:#bcd6cf">Оставьте контакт — юрист разберёт ваши долги и пришлёт точный тариф и график постоплаты в удобный вам канал. Бесплатно и ни к чему не обязывает.</p>
-        <ul class="list list--light" style="margin-top:1.1rem">
-          <li>2456 дел доведено до списания долгов</li>
-          <li>Первый взнос — только после подачи заявления в суд</li>
-          <li>Вернём деньги, если не сможем довести до банкротства</li>
-          <li>Звонок не обязателен — можем написать в мессенджер</li>
-        </ul>
-        <div class="form-res" id="form-res"></div>
-      </div>
-      <div>
-    <form class="form-card" id="lead-form" novalidate>
-      <div class="field">
-        <label for="name-input">Как к вам обращаться</label>
-        <input class="inp" type="text" id="name-input" name="name" autocomplete="name" placeholder="Имя">
-      </div>
-      <div class="field">
-        <label>Куда прислать разбор и график</label>
-        <div class="channels">
-          <label><input type="radio" name="channel" value="Чат" checked> Чат на сайте</label>
-          <label><input type="radio" name="channel" value="MAX"> MAX</label>
-          <label><input type="radio" name="channel" value="Telegram"> Telegram</label>
-          <label><input type="radio" name="channel" value="WhatsApp"> WhatsApp</label>
-          <label><input type="radio" name="channel" value="Звонок"> Звонок</label>
-        </div>
-        <p class="note" id="channel-note">Чат откроется прямо здесь — контакт вводить не нужно.</p>
-      </div>
-      <div class="field hidden" id="contact-wrap">
-        <label id="contact-label" for="contact-input">Контакт</label>
-        <input class="inp" type="text" id="contact-input" name="contact" inputmode="tel" autocomplete="off" aria-describedby="channel-note">
-      </div>
-
-      <fieldset class="consents" style="border:none;padding:0;margin:1.1rem 0 .4rem">
-        <legend style="font-size:.82rem;color:var(--muted);margin-bottom:.3rem">Согласия (152-ФЗ):</legend>
-        <label class="consent"><input type="checkbox" id="c1" name="consent_contact"><span>Согласен(а) на обработку персональных данных для связи по моей заявке и разбора ситуации по банкротству. <a href="#pdn-policy" data-scroll="footer" rel="noopener">Политика обработки ПДн</a></span></label>
-        <label class="consent"><input type="checkbox" id="c2" name="consent_review"><span>Согласен(а) получить персональный разбор и приглашение на консультацию в выбранный канал.</span></label>
-        <label class="consent"><input type="checkbox" id="c3" name="consent_info"><span>Согласен(а) получать информационные материалы. Отписаться — в один клик. <span class="muted">(по желанию)</span></span></label>
-      </fieldset>
-
-      <div class="hp" aria-hidden="true"><label>Не заполняйте это поле<input type="text" id="hp-field" name="company" tabindex="-1" autocomplete="off"></label></div>
-      <input type="hidden" id="ts_start" name="ts_start">
-      <input type="hidden" name="segment" id="hf-segment" value="bfl_postoplata">
-      <input type="hidden" name="quiz_debt" id="hf-quiz_debt">
-      <input type="hidden" name="quiz_creditor" id="hf-quiz_creditor">
-      <input type="hidden" name="quiz_delay" id="hf-quiz_delay">
-      <input type="hidden" name="quiz_income" id="hf-quiz_income">
-      <input type="hidden" name="quiz_city" id="hf-quiz_city">
-      <input type="hidden" name="utm_source" id="hf-utm_source">
-      <input type="hidden" name="utm_medium" id="hf-utm_medium">
-      <input type="hidden" name="utm_campaign" id="hf-utm_campaign">
-      <input type="hidden" name="utm_content" id="hf-utm_content">
-      <input type="hidden" name="utm_term" id="hf-utm_term">
-      <input type="hidden" name="yclid" id="hf-yclid">
-      <input type="hidden" name="cep" id="hf-cep">
-
-      <div class="err" id="form-err"></div>
-      <button type="submit" class="btn btn--primary btn--block" id="submit-btn" data-goal="submit_application">Получить бесплатный разбор</button>
-      <p class="note" style="text-align:center;margin-top:.7rem">Отвечаем в течение рабочего дня. Звонок не обязателен — можем написать.</p>
-
-      <div class="success" id="success">
-        <div class="success__ic">✓</div>
-        <h3>Заявка принята</h3>
-        <p id="success-text">Мы свяжемся с вами в выбранном канале.</p>
-      </div>
-    </form>
-    <p class="form-disc">Реклама услуг по сопровождению процедуры банкротства физических лиц. Услуги оказываются на возмездной основе. Процедура влечёт последствия, предусмотренные ФЗ-127 «О несостоятельности (банкротстве)». Информация приведена в соответствии со ст. 28.1 Федерального закона «О рекламе» (введена ФЗ-332 от 04.08.2023). Подробности — в подвале страницы.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Форма объединена с квизом выше («Последний шаг»: имя, телефон, город) -->
 
 </main>
 
@@ -730,11 +666,7 @@ img{max-width:100%}
   <div class="wrap">
     <div class="brand"><span class="brand__m">Э</span>Экспресс Банкрот</div>
     <div class="footer__chan">
-      <a href="#form" data-scroll="form" data-goal="chat_click">Чат на сайте</a>
-      <a href="#form" data-scroll="form" data-goal="max_click">MAX</a>
-      <a href="#form" data-scroll="form" data-goal="telegram_click">Telegram</a>
-      <a href="#form" data-scroll="form" data-goal="whatsapp_click">WhatsApp</a>
-      <a href="#form" data-scroll="form" data-goal="callback_click">Перезвонить</a>
+      <a href="#quiz" data-scroll="quiz" data-goal="footer_cta_click">Оставить заявку — пройти тест</a>
     </div>
     <p class="footer__legal" id="pdn-policy">
       <!-- Реквизиты ИП получены 2026-07-06; уточнить ФИО ИП -->
@@ -772,155 +704,94 @@ img{max-width:100%}
   });
 
   /* ---------- атрибуция ---------- */
-  function attribution(){
+  var ATTR={}, TS=Date.now();
+  (function attribution(){
     var p=new URLSearchParams(location.search), keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid','cep'], store={};
     try{ store=JSON.parse(localStorage.getItem('eb_attr')||'{}'); }catch(e){}
     keys.forEach(function(k){ if(p.get(k)) store[k]=p.get(k); });
     try{ localStorage.setItem('eb_attr', JSON.stringify(store)); }catch(e){}
-    keys.forEach(function(k){ var el=document.getElementById('hf-'+k); if(el&&store[k]) el.value=store[k]; });
-  }
-  attribution();
-  var tss=document.getElementById('ts_start'); if(tss) tss.value=String(Date.now());
+    ATTR=store;
+  })();
 
-  /* ---------- КВИЗ-ТЕСТ ---------- */
-  var quiz=document.getElementById('quizBox'), steps=quiz?quiz.querySelectorAll('.quiz__step'):[],
-      fill=document.getElementById('quizFill'), answers={}, cur=1, total=5, quizStarted=false;
+  /* ---------- КВИЗ + КОНТАКТ (единый блок) ---------- */
+  var quiz=document.getElementById('quizBox'),
+      steps=quiz?quiz.querySelectorAll('.quiz__step'):[],
+      fill=document.getElementById('quizFill'),
+      answers={}, cur=1, total=5, quizStarted=false, quizDone=false, contactTracked=false;
   function showStep(n){
     cur=Math.max(1,Math.min(total,n));
     Array.prototype.forEach.call(steps,function(s){ s.classList.toggle('on', +s.getAttribute('data-step')===cur); });
     if(fill) fill.style.width=(cur/total*100)+'%';
+    if(cur===total && !quizDone){ quizDone=true; track('quiz_complete',{debt:answers.debt,creditor:answers.creditor,delay:answers.delay,income:answers.income,segment:'bfl_postoplata'}); }
   }
-  function setHidden(name,val){ var el=document.getElementById('hf-quiz_'+name); if(el) el.value=val; }
+  function normPhone(v){
+    var d=(v||'').replace(/\D/g,'');
+    if(d.length===11 && d.charAt(0)==='8') d='7'+d.slice(1);
+    if(d.length===10) d='7'+d;
+    return (d.length===11 && d.charAt(0)==='7') ? '+'+d : '';
+  }
   if(quiz){
     quiz.addEventListener('click', function(e){
-      var opt=e.target.closest('.qopt'); if(!opt) return;
-      if(!quizStarted){ quizStarted=true; track('quiz_start',{widget:'test'}); }
-      var name=opt.getAttribute('data-name'), val=opt.getAttribute('data-val');
-      answers[name]=val; setHidden(name,val);
-      if(cur<total){ showStep(cur+1); }
-    });
-    quiz.addEventListener('click', function(e){
-      if(e.target.closest('[data-back]')){ showStep(cur-1); }
-    });
-    var finish=document.getElementById('quizFinish');
-    if(finish) finish.addEventListener('click', function(){
-      var city=(document.getElementById('quiz-city')||{}).value||'';
-      answers.city=city; setHidden('city',city);
-      // результат
-      var res=document.getElementById('quizResult'), note=document.getElementById('quizNote');
-      Array.prototype.forEach.call(steps,function(s){ s.classList.remove('on'); });
-      if(res) res.classList.add('on'); if(note) note.style.display='none'; if(fill) fill.style.width='100%';
-      // мягкая дисквалификация
-      var rt=document.getElementById('quizResultText'), rh=document.querySelector('#quizResult h3');
-      if(answers.delay==='Плачу вовремя' && answers.debt==='до 300 000 ₽'){
-        if(rh) rh.textContent='Возможно, вам подойдёт не только банкротство';
-        if(rt) rt.textContent='При небольшом долге и платежах вовремя иногда выгоднее реструктуризация. Оставьте контакт — юрист бесплатно подскажет оптимальный путь именно для вас. Это ни к чему не обязывает.';
+      var opt=e.target.closest('.qopt');
+      if(opt){
+        if(!quizStarted){ quizStarted=true; track('quiz_start',{widget:'test'}); }
+        answers[opt.getAttribute('data-name')]=opt.getAttribute('data-val');
+        if(cur<total) showStep(cur+1);
+        return;
       }
-      track('quiz_complete',{debt:answers.debt,creditor:answers.creditor,delay:answers.delay,income:answers.income,segment:'bfl_postoplata'});
+      if(e.target.closest('[data-back]')) showStep(cur-1);
     });
+    ['f-name','f-phone','f-city'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el) el.addEventListener('input', function(){ if(!contactTracked){ contactTracked=true; track('form_start'); } });
+    });
+    var subBtn=document.getElementById('quizSubmit');
+    if(subBtn) subBtn.addEventListener('click', submitLead);
     showStep(1);
   }
 
-  /* ---------- баннер результата над формой ---------- */
-  function fillFormRes(){
-    var box=document.getElementById('form-res'); if(!box) return;
-    if(answers.debt){
-      box.classList.add('on');
-      box.innerHTML='Ваши ответы: долг <b>'+ (answers.debt||'—') +'</b>'+ (answers.city?', город <b>'+answers.city+'</b>':'') +'. Юрист учтёт это на разборе.';
-    }
-  }
-
-  /* ---------- канал → поле контакта ---------- */
-  var wrap=document.getElementById('contact-wrap'), cinput=document.getElementById('contact-input'),
-      clabel=document.getElementById('contact-label'), cnote=document.getElementById('channel-note');
-  var CH={
-    'Чат':{field:false,note:'Чат откроется прямо здесь — контакт вводить не нужно.'},
-    'MAX':{field:true,label:'Номер телефона (аккаунт MAX)',ph:'+7 ___ ___-__-__',mode:'tel',note:'Пришлём разбор в MAX — госмессенджер, работает стабильно.'},
-    'Telegram':{field:true,label:'@username или телефон',ph:'@username или +7…',mode:'text',note:'Telegram в РФ работает не у всех — если недоступен, выберите другой канал.'},
-    'WhatsApp':{field:true,label:'Номер телефона',ph:'+7 ___ ___-__-__',mode:'tel',note:'WhatsApp в РФ работает не у всех — если недоступен, выберите другой канал.'},
-    'Звонок':{field:true,label:'Номер телефона',ph:'+7 ___ ___-__-__',mode:'tel',note:'Перезвоним по вашему запросу. Звонок не обязателен — можем и написать.'}
-  };
-  function onChannel(){
-    var v=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат', c=CH[v];
-    cnote.textContent=c.note;
-    if(c.field){ wrap.classList.remove('hidden'); clabel.textContent=c.label; cinput.placeholder=c.ph; cinput.setAttribute('inputmode',c.mode); }
-    else { wrap.classList.add('hidden'); cinput.value=''; }
-  }
-  Array.prototype.forEach.call(document.querySelectorAll('input[name="channel"]'), function(r){ r.addEventListener('change', onChannel); });
-  onChannel();
-
-  /* показать баннер результата при переходе к форме */
-  document.addEventListener('click', function(e){ if(e.target.closest('[data-goal="quiz_to_form"]')) fillFormRes(); });
-
-  /* ---------- отправка ---------- */
-  var form=document.getElementById('lead-form'), formStarted=false;
-  form.addEventListener('input', function(){ if(!formStarted){ formStarted=true; track('form_start'); } });
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
+  /* ---------- отправка заявки ---------- */
+  function submitLead(){
     var err=document.getElementById('form-err'); err.textContent='';
-    if(document.getElementById('hp-field').value){ return; }
-    var t0=parseInt(document.getElementById('ts_start').value,10)||0;
-    if(t0 && (Date.now()-t0)<3000){ return; }
-    var ch=(document.querySelector('input[name="channel"]:checked')||{}).value||'Чат';
-    var nm=(document.getElementById('name-input').value||'').trim();
-    if(nm.length<2){ err.textContent='Пожалуйста, укажите, как к вам обращаться.'; document.getElementById('name-input').focus(); return; }
-    if(CH[ch].field){
-      var cv=cinput.value.trim();
-      if(!cv){ err.textContent='Укажите контакт для выбранного канала.'; cinput.focus(); return; }
-      if(ch==='Telegram'){
-        var td=cv.replace(/\D/g,'');
-        if(!((cv.charAt(0)==='@'&&cv.length>=5)||(td.length>=10&&td.length<=11))){ err.textContent='Укажите @username или телефон в формате +7…'; cinput.focus(); return; }
-      } else {
-        var dg=cv.replace(/\D/g,'');
-        if(dg.length===11&&dg.charAt(0)==='8') dg='7'+dg.slice(1);
-        if(dg.length===10) dg='7'+dg;
-        if(!(dg.length===11&&dg.charAt(0)==='7')){ err.textContent='Проверьте номер — нужен российский телефон, например +7 900 123-45-67.'; cinput.focus(); return; }
-      }
-    }
-    if(!document.getElementById('c1').checked || !document.getElementById('c2').checked){
-      err.textContent='Отметьте обязательные согласия (152-ФЗ), чтобы мы могли прислать разбор.'; return;
-    }
-    var btn=document.getElementById('submit-btn'); btn.disabled=true; var old=btn.textContent; btn.textContent='Отправляем…';
-    finishSubmit(collect(ch), ch, btn, old, err);
-  });
-
-  function collect(ch){
-    function v(id){ var e=document.getElementById(id); return e?e.value:''; }
-    return {
-      channel:ch, name:v('name-input'), contact:document.getElementById('contact-input').value, segment:v('hf-segment'),
-      quiz_debt:v('hf-quiz_debt'),quiz_creditor:v('hf-quiz_creditor'),quiz_delay:v('hf-quiz_delay'),
-      quiz_income:v('hf-quiz_income'),quiz_city:v('hf-quiz_city'),
-      consent_contact:document.getElementById('c1').checked, consent_review:document.getElementById('c2').checked,
-      consent_info:document.getElementById('c3').checked, consent_ts:new Date().toISOString(), ts_start:v('ts_start'),
-      utm_source:v('hf-utm_source'),utm_medium:v('hf-utm_medium'),utm_campaign:v('hf-utm_campaign'),
-      utm_content:v('hf-utm_content'),utm_term:v('hf-utm_term'),yclid:v('hf-yclid'),cep:v('hf-cep')
-    };
+    if((document.getElementById('hp-field')||{}).value){ done(); return; } // honeypot
+    var name=(document.getElementById('f-name').value||'').trim();
+    var phone=normPhone(document.getElementById('f-phone').value);
+    var city=(document.getElementById('f-city').value||'').trim();
+    if(name.length<2){ err.textContent='Пожалуйста, укажите имя.'; document.getElementById('f-name').focus(); return; }
+    if(!phone){ err.textContent='Проверьте номер — нужен российский телефон, например +7 900 123-45-67.'; document.getElementById('f-phone').focus(); return; }
+    if(city.length<2){ err.textContent='Укажите ваш город.'; document.getElementById('f-city').focus(); return; }
+    if(!document.getElementById('c1').checked || !document.getElementById('c2').checked){ err.textContent='Отметьте согласия (152-ФЗ), чтобы мы могли связаться.'; return; }
+    var btn=document.getElementById('quizSubmit'); btn.disabled=true; var old=btn.textContent; btn.textContent='Отправляем…';
+    var payload={ name:name, phone:phone, city:city, segment:'bfl_postoplata',
+      quiz_debt:answers.debt||'', quiz_creditor:answers.creditor||'', quiz_delay:answers.delay||'', quiz_income:answers.income||'', quiz_city:city,
+      consent_contact:true, consent_review:true, consent_ts:new Date().toISOString(), ts_start:String(TS) };
+    for(var k in ATTR){ if(Object.prototype.hasOwnProperty.call(ATTR,k)) payload[k]=ATTR[k]; }
+    finishSubmit(payload, btn, old, err);
   }
-  function done(ch){
-    track('submit_application',{channel:ch,segment:'bfl_postoplata'});
-    document.getElementById('success-text').textContent = (ch==='Чат')
-      ? 'Открываем чат — напишите прямо здесь, ваши ответы уже с нами.'
-      : 'Мы напишем вам в «'+ch+'» и пришлём точный график постоплаты.';
-    Array.prototype.forEach.call(form.querySelectorAll('.field,.consents,#submit-btn,.form-card > .note,.err'), function(el){ el.style.display='none'; });
-    document.getElementById('success').classList.add('on');
-    document.getElementById('success').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
+  function done(){
+    track('submit_application',{segment:'bfl_postoplata'});
+    Array.prototype.forEach.call(steps,function(s){ s.classList.remove('on'); });
+    var note=document.getElementById('quizNote'); if(note) note.style.display='none';
+    var res=document.getElementById('quizResult');
+    if(res){ res.classList.add('on'); res.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'}); }
+    if(fill) fill.style.width='100%';
   }
-  function finishSubmit(payload, ch, btn, old, err){
+  function finishSubmit(payload, btn, old, err){
     // Превью GitHub Pages не исполняет PHP — эмулируем успех для демонстрации, лид не уходит
-    if(location.hostname.indexOf('github.io')>-1){ setTimeout(function(){ done(ch); }, 350); return; }
+    if(location.hostname.indexOf('github.io')>-1){ setTimeout(done, 350); return; }
     fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
       .then(function(r){ if(!r.ok) throw 0; return r.json(); })
-      .then(function(j){ if(j && j.ok){ done(ch); } else { throw 0; } })
-      .catch(function(){ btn.disabled=false; btn.textContent=old; err.style.display=''; err.textContent='Не удалось отправить. Попробуйте ещё раз или напишите в чат.'; });
+      .then(function(j){ if(j && j.ok){ done(); } else { throw 0; } })
+      .catch(function(){ btn.disabled=false; btn.textContent=old; err.textContent='Не удалось отправить. Попробуйте ещё раз.'; });
   }
 
   /* ---------- липкая кнопка ---------- */
-  var sticky=document.getElementById('sticky'), hero=document.getElementById('hero'), formSec=document.getElementById('form');
-  if('IntersectionObserver' in window && sticky){
-    var heroOut=false, formIn=false;
+  var sticky=document.getElementById('sticky'), hero=document.getElementById('hero'), quizSec=document.getElementById('quiz');
+  if('IntersectionObserver' in window && sticky && hero && quizSec){
+    var heroOut=false, quizIn=false;
     new IntersectionObserver(function(en){ heroOut=!en[0].isIntersecting; upd(); },{threshold:0}).observe(hero);
-    new IntersectionObserver(function(en){ formIn=en[0].isIntersecting; upd(); },{threshold:.15}).observe(formSec);
-    function upd(){ if(heroOut && !formIn) sticky.classList.add('show'); else sticky.classList.remove('show'); }
+    new IntersectionObserver(function(en){ quizIn=en[0].isIntersecting; upd(); },{threshold:.15}).observe(quizSec);
+    function upd(){ if(heroOut && !quizIn) sticky.classList.add('show'); else sticky.classList.remove('show'); }
   }
 
   /* ---------- вовлечённость ---------- */
